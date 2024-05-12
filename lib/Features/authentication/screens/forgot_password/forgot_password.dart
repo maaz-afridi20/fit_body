@@ -27,7 +27,9 @@ class ForgotPasswordScreen extends StatelessWidget {
           MHelperFunctions.giveHeight(37.h),
           ResizableContainer(widgets: [
             MHelperFunctions.giveHeight(25.h),
-          ])
+          ]),
+          Text(MTextString.loremIpsum,
+              style: MTextStyles.mNormalStyle(), textAlign: TextAlign.center),
         ],
       ),
     );
