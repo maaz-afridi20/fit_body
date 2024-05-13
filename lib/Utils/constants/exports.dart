@@ -31,3 +31,7 @@ export 'package:fit_body/Features/authentication/screens/signup/widgets/signup_f
 export 'package:fit_body/Features/authentication/screens/forgot_password/forgot_password.dart';
 export 'package:fit_body/Features/authentication/screens/forgot_password/set_password.dart';
 export 'package:fit_body/Features/authentication/screens/login/widgets/fingerprint_signup.dart';
+export 'package:fit_body/Features/gym/screens/setup/setup_gender.dart';
+export 'package:fit_body/Features/gym/screens/setup/setup_age.dart';
+
+export 'package:fit_body/Features/gym/screens/setup/widgets/gender_container.dart';

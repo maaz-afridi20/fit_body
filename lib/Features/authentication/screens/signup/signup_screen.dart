@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 import '../../../../Utils/constants/exports.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -51,7 +49,7 @@ class SignUpScreen extends StatelessWidget {
             //! already have account
             MHelperFunctions.giveHeight(16.h),
             GestureDetector(
-              onTap: () => Get.back(),
+              onTap: () => MHelperFunctions.navigateBack(context),
               child: RichText(
                   text: TextSpan(children: [
                 TextSpan(

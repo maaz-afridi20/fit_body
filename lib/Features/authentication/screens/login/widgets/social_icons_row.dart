@@ -7,9 +7,9 @@ class MSocialIconRow extends StatelessWidget {
       this.facebookOnPress,
       this.gmailOnPress});
 
-  final Function()? fingerprintOnPress;
-  final Function()? facebookOnPress;
-  final Function()? gmailOnPress;
+  final void Function()? fingerprintOnPress;
+  final void Function()? facebookOnPress;
+  final void Function()? gmailOnPress;
 
   @override
   Widget build(BuildContext context) {
@@ -17,19 +17,19 @@ class MSocialIconRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         GestureDetector(
-          onTap: () => gmailOnPress,
+          onTap: gmailOnPress,
           child: const MLoginSignupIconContainer(
               logo: AssetImage(MImageStrings.gmailLogo)),
         ),
         MHelperFunctions.giveWidth(16.w),
         GestureDetector(
-          onTap: () => facebookOnPress,
+          onTap: facebookOnPress,
           child: const MLoginSignupIconContainer(
               logo: AssetImage(MImageStrings.facebookLogo)),
         ),
         MHelperFunctions.giveWidth(16.w),
         GestureDetector(
-          onTap: () => fingerprintOnPress,
+          onTap: fingerprintOnPress,
           child: const MLoginSignupIconContainer(
               logo: AssetImage(MImageStrings.fingerprintlogo)),
         ),

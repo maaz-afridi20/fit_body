@@ -30,8 +30,8 @@ class MLoginForm extends StatelessWidget {
           Align(
               alignment: Alignment.centerRight,
               child: GestureDetector(
-                onTap: () =>
-                    MHelperFunctions.navigate(const ForgotPasswordScreen()),
+                onTap: () => MHelperFunctions.navigateTo(
+                    context, const ForgotPasswordScreen()),
                 child: Text("Forgot Password?",
                     style: MTextStyles.mNormalStyle(
                         color: MColors.balckColor,

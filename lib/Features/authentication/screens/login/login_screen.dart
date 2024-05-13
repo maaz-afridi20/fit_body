@@ -49,7 +49,8 @@ class LoginScreen extends StatelessWidget {
 
           const Spacer(),
           GestureDetector(
-            onTap: () => MHelperFunctions.navigate(const SignUpScreen()),
+            onTap: () =>
+                MHelperFunctions.navigateTo(context, const SignUpScreen()),
             child: RichText(
                 text: TextSpan(children: [
               TextSpan(

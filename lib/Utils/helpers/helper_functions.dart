@@ -54,12 +54,20 @@ class MHelperFunctions {
     );
   }
 
-  static void navigate(Widget screen) {
-    Get.to(() => screen);
+  static void navigateTo(BuildContext context, screen) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => screen));
   }
 
-  static void navigateOff(screen) {
-    Get.off(() => screen);
+  static void navigateBack(BuildContext context) {
+    Navigator.of(context).pop();
+  }
+
+  static void navigateOff(BuildContext context, Widget nextPage) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => nextPage,
+      ),
+    );
   }
 
   static bool isDarkMode() {

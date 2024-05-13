@@ -23,5 +23,8 @@ class MTextString {
   static String alreadyaccount = "Already have an account?";
   static String enteremail = "Enter your email address";
   static String resetpass = "Reset Password";
+  static String whatsyourgendr = "What's Your Gender";
+  static String consistencyiskey =
+      "Consistency Is The Key To Progress Don't Give Up!";
   static String starss = "* * * * * * *";
 }

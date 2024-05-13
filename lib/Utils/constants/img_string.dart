@@ -19,4 +19,6 @@ class MImageStrings {
   static const gmailLogo = "assets/icons/gmail.png";
   static const facebookLogo = "assets/icons/facebook.png";
   static const fingerprintlogo = "assets/icons/mark.png";
+  static const gendermale = "assets/icons/gendermale.png";
+  static const genderfemale = "assets/icons/genderfemale.png";
 }
