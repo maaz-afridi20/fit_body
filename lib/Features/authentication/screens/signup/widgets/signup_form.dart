@@ -10,22 +10,26 @@ class SignupForm extends StatelessWidget {
         widgets: [
           MHelperFunctions.giveHeight(32.h),
           Text(MTextString.fullname,
-              style: MTextStyles.mHeadingStyle(color: MColors.balckColor)),
+              style: MTextStyles.mHeadingStyle(
+                  color: MColors.balckColor, fontWeight: FontWeight.w500)),
           MHelperFunctions.giveHeight(7.h),
           const MTextField(hintText: "Example peter"),
           MHelperFunctions.giveHeight(19.h),
           Text(MTextString.emailormobile,
-              style: MTextStyles.mHeadingStyle(color: MColors.balckColor)),
+              style: MTextStyles.mHeadingStyle(
+                  color: MColors.balckColor, fontWeight: FontWeight.w500)),
           MHelperFunctions.giveHeight(7.h),
           const MTextField(hintText: "+9246372891"),
           MHelperFunctions.giveHeight(19.h),
           Text(MTextString.password,
-              style: MTextStyles.mHeadingStyle(color: MColors.balckColor)),
+              style: MTextStyles.mHeadingStyle(
+                  color: MColors.balckColor, fontWeight: FontWeight.w500)),
           MHelperFunctions.giveHeight(7.h),
           const MTextField(hintText: "* * * * *"),
           MHelperFunctions.giveHeight(19.h),
           Text(MTextString.confirmpassword,
-              style: MTextStyles.mHeadingStyle(color: MColors.balckColor)),
+              style: MTextStyles.mHeadingStyle(
+                  color: MColors.balckColor, fontWeight: FontWeight.w500)),
           const MTextField(hintText: "* * * * *"),
           MHelperFunctions.giveHeight(29.h),
         ]);

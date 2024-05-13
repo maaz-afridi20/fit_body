@@ -3,10 +3,12 @@ class MTextString {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi taciti sociosqu ad litora torque";
 
   static String dontaccount = "Don't have an account? ";
+  static String examplpe = "example@gmail.com ";
   static String signup = " SignUp";
   static String orsignupwith = "or sign up with";
   static String login = "Login";
-  static String forgotpass = "Forgot password";
+  static String forgotpass = "Forgot password?";
+  static String setpass = "Set password";
   static String password = "Password";
   static String usernameoremail = "Username or Email";
   static String wellcome = "Wellcome";
@@ -19,4 +21,7 @@ class MTextString {
   static String termsofuse = "Terms of Use";
   static String privacypolicy = "Privacy Policy";
   static String alreadyaccount = "Already have an account?";
+  static String enteremail = "Enter your email address";
+  static String resetpass = "Reset Password";
+  static String starss = "* * * * * * *";
 }

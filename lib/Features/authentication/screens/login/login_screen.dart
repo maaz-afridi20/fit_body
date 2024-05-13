@@ -16,6 +16,7 @@ class LoginScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           MHelperFunctions.giveHeight(50.h),
           Text(MTextString.wellcome, style: MTextStyles.mHeadingStyle())
@@ -41,7 +42,10 @@ class LoginScreen extends StatelessWidget {
 
           //!social icons row...
           MHelperFunctions.giveHeight(20.h),
-          const MSocialIconRow(),
+          MSocialIconRow(
+            fingerprintOnPress: () =>
+                Get.to(() => const FingerPrintSignupScreen()),
+          ),
 
           const Spacer(),
           GestureDetector(

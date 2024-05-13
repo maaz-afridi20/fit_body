@@ -1,21 +1,38 @@
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class MSocialIconRow extends StatelessWidget {
-  const MSocialIconRow({super.key});
+  const MSocialIconRow(
+      {super.key,
+      this.fingerprintOnPress,
+      this.facebookOnPress,
+      this.gmailOnPress});
+
+  final Function()? fingerprintOnPress;
+  final Function()? facebookOnPress;
+  final Function()? gmailOnPress;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const MLoginSignupIconContainer(
-            logo: AssetImage(MImageStrings.gmailLogo)),
+        GestureDetector(
+          onTap: () => gmailOnPress,
+          child: const MLoginSignupIconContainer(
+              logo: AssetImage(MImageStrings.gmailLogo)),
+        ),
         MHelperFunctions.giveWidth(16.w),
-        const MLoginSignupIconContainer(
-            logo: AssetImage(MImageStrings.facebookLogo)),
+        GestureDetector(
+          onTap: () => facebookOnPress,
+          child: const MLoginSignupIconContainer(
+              logo: AssetImage(MImageStrings.facebookLogo)),
+        ),
         MHelperFunctions.giveWidth(16.w),
-        const MLoginSignupIconContainer(
-            logo: AssetImage(MImageStrings.fingerprintlogo)),
+        GestureDetector(
+          onTap: () => fingerprintOnPress,
+          child: const MLoginSignupIconContainer(
+              logo: AssetImage(MImageStrings.fingerprintlogo)),
+        ),
       ],
     );
   }

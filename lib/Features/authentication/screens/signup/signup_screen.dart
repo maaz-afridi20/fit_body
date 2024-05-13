@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '../../../../Utils/constants/exports.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -13,10 +15,15 @@ class SignUpScreen extends StatelessWidget {
         title: Text(MTextString.createaccount,
             style: MTextStyles.mHeadingStyle(color: MColors.yellowishColor)),
         centerTitle: true,
+        leading: GestureDetector(
+            onTap: () => Get.back(),
+            child: const Icon(Icons.arrow_back_ios,
+                color: MColors.yellowishColor)),
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             MHelperFunctions.giveHeight(30.h),
             Text(MTextString.letstart, style: MTextStyles.mHeadingStyle()),
@@ -41,20 +48,24 @@ class SignUpScreen extends StatelessWidget {
             MHelperFunctions.giveHeight(18.h),
             const MSocialIconRow(),
 
-            //! MSocialIconRow
+            //! already have account
             MHelperFunctions.giveHeight(16.h),
-            RichText(
-                text: TextSpan(children: [
-              TextSpan(
-                text: MTextString.alreadyaccount,
-                style: MTextStyles.mNormalStyle(),
-              ),
-              const TextSpan(text: " "),
-              TextSpan(
-                text: MTextString.login,
-                style: MTextStyles.mNormalStyle(color: MColors.yellowishColor),
-              )
-            ])),
+            GestureDetector(
+              onTap: () => Get.back(),
+              child: RichText(
+                  text: TextSpan(children: [
+                TextSpan(
+                  text: MTextString.alreadyaccount,
+                  style: MTextStyles.mNormalStyle(),
+                ),
+                const TextSpan(text: " "),
+                TextSpan(
+                  text: MTextString.login,
+                  style:
+                      MTextStyles.mNormalStyle(color: MColors.yellowishColor),
+                )
+              ])),
+            ),
             MHelperFunctions.giveHeight(20.h),
           ],
         ),

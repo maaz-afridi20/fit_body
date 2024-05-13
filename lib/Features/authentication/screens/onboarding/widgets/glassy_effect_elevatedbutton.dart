@@ -1,9 +1,11 @@
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class GlassyEffectElevatedBtn extends StatelessWidget {
-  const GlassyEffectElevatedBtn({super.key, required this.btnText});
+  const GlassyEffectElevatedBtn(
+      {super.key, required this.btnText, this.onPress});
 
   final String btnText;
+  final Function()? onPress;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class GlassyEffectElevatedBtn extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 side: const BorderSide(width: 0.7, color: Colors.white)),
           ),
-          onPressed: () => OnboardingController.instance.nextPage(),
+          onPressed: onPress,
           child: Text(
             btnText,
             style: MTextStyles.mHeadingStyle(fontSize: 18.sp),

@@ -29,3 +29,5 @@ export 'package:fit_body/Features/authentication/screens/login/widgets/social_ic
 export 'package:fit_body/Features/authentication/screens/signup/widgets/privacy_policy_text_widget.dart';
 export 'package:fit_body/Features/authentication/screens/signup/widgets/signup_form.dart';
 export 'package:fit_body/Features/authentication/screens/forgot_password/forgot_password.dart';
+export 'package:fit_body/Features/authentication/screens/forgot_password/set_password.dart';
+export 'package:fit_body/Features/authentication/screens/login/widgets/fingerprint_signup.dart';

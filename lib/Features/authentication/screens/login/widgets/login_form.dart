@@ -10,7 +10,8 @@ class MLoginForm extends StatelessWidget {
         widgets: [
           MHelperFunctions.giveHeight(28.h),
           Text("Username & Email",
-              style: MTextStyles.mHeadingStyle(color: MColors.balckColor)),
+              style: MTextStyles.mHeadingStyle(
+                  color: MColors.balckColor, fontWeight: FontWeight.w500)),
           MHelperFunctions.giveHeight(7.h),
 
           //! Textfields..
@@ -19,7 +20,8 @@ class MLoginForm extends StatelessWidget {
 
           //!----- password text
           Text("Password",
-              style: MTextStyles.mHeadingStyle(color: MColors.balckColor)),
+              style: MTextStyles.mHeadingStyle(
+                  color: MColors.balckColor, fontWeight: FontWeight.w500)),
           MHelperFunctions.giveHeight(7.h),
           //!-----Textfield
           const MTextField(hintText: " * * * * * * "),

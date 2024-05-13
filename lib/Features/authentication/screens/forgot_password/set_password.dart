@@ -1,7 +1,7 @@
-import '../../../../Utils/constants/exports.dart';
+import 'package:fit_body/Utils/constants/exports.dart';
 
-class ForgotPasswordScreen extends StatelessWidget {
-  const ForgotPasswordScreen({super.key});
+class SetPasswordScreen extends StatelessWidget {
+  const SetPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,38 +14,44 @@ class ForgotPasswordScreen extends StatelessWidget {
             onTap: () => Get.back(),
             child: const Icon(Icons.arrow_back_ios,
                 color: MColors.yellowishColor)),
-        title: Text(MTextString.forgotpass,
+        title: Text(MTextString.setpass,
             style: MTextStyles.mHeadingStyle(color: MColors.yellowishColor)),
         centerTitle: true,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           MHelperFunctions.giveHeight(30.h),
-          Text(MTextString.forgotpass, style: MTextStyles.mHeadingStyle()),
-          MHelperFunctions.giveHeight(20.h),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 35.w),
             child: Text(MTextString.loremIpsum,
                 style: MTextStyles.mNormalStyle(), textAlign: TextAlign.center),
           ),
-          MHelperFunctions.giveHeight(37.h),
+          MHelperFunctions.giveHeight(39.h),
+          //
+          //! form...
           ResizableContainer(
               applyWidgetPadding: EdgeInsets.symmetric(horizontal: 45.w),
               widgets: [
                 MHelperFunctions.giveHeight(25.h),
-                Text(MTextString.enteremail,
+                Text(MTextString.password,
                     style: MTextStyles.mHeadingStyle(
-                        color: MColors.balckColor,
-                        fontWeight: FontWeight.w500)),
+                        fontWeight: FontWeight.w500,
+                        color: MColors.balckColor)),
                 MHelperFunctions.giveHeight(9.h),
-                MTextField(hintText: MTextString.examplpe),
-                MHelperFunctions.giveHeight(26.h),
+                MTextField(hintText: MTextString.starss),
+                MHelperFunctions.giveHeight(13.h),
+                Text(MTextString.confirmpassword,
+                    style: MTextStyles.mHeadingStyle(
+                        fontWeight: FontWeight.w500,
+                        color: MColors.balckColor)),
+                MHelperFunctions.giveHeight(9.h),
+                MTextField(hintText: MTextString.starss),
+                MHelperFunctions.giveHeight(35.h),
               ]),
+          //
+          //! reset pass text.
           MHelperFunctions.giveHeight(45.h),
-          GlassyEffectElevatedBtn(
-              btnText: "Continue",
-              onPress: () => Get.to(() => const SetPasswordScreen())),
+          GlassyEffectElevatedBtn(btnText: MTextString.resetpass),
         ],
       ),
     );

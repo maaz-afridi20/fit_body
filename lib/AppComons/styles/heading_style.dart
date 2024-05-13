@@ -1,10 +1,11 @@
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class MTextStyles {
-  static TextStyle mHeadingStyle({Color? color, double? fontSize}) {
+  static TextStyle mHeadingStyle(
+      {Color? color, double? fontSize, FontWeight? fontWeight}) {
     return TextStyle(
         fontSize: fontSize ?? 20.sp,
-        fontWeight: FontWeight.bold,
+        fontWeight: fontWeight ?? FontWeight.bold,
         color: color ?? Colors.white);
   }
 
