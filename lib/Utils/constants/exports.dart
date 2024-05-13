@@ -40,3 +40,4 @@ export 'package:fit_body/Features/gym/screens/setup/setup_height.dart';
 export 'package:fit_body/Features/gym/screens/setup/widgets/kg_lb_selection.dart';
 export 'package:fit_body/Features/gym/screens/setup/setup_goal.dart';
 export 'package:fit_body/Features/gym/screens/setup/widgets/height_selector.dart';
+export 'package:fit_body/Features/gym/controllers/setup_body/height_select_controller.dart';
