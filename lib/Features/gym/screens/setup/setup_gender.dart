@@ -11,7 +11,7 @@ class SetupGenderScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: GestureDetector(
-            onTap: () => Get.back(),
+            onTap: () => MHelperFunctions.navigateBack(context),
             child: Icon(Icons.arrow_back_ios,
                 size: 15.sp, color: MColors.yellowishColor)),
         title: Text('Back',

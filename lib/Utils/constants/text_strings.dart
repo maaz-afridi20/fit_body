@@ -24,6 +24,11 @@ class MTextString {
   static String enteremail = "Enter your email address";
   static String resetpass = "Reset Password";
   static String whatsyourgendr = "What's Your Gender";
+  static String howoldareu = "How Old Are You?";
+  static String whatisyourweight = "What Is Your Weight?";
+  static String whatisyourheight = "What Is Your Height?";
+  static String whatisyourgoal = "What Is Your Goal?";
+
   static String consistencyiskey =
       "Consistency Is The Key To Progress Don't Give Up!";
   static String starss = "* * * * * * *";

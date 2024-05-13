@@ -34,7 +34,10 @@ class LoginScreen extends StatelessWidget {
 
           //! login btn..
           MHelperFunctions.giveHeight(40.h),
-          GlassyEffectElevatedBtn(btnText: MTextString.login),
+          GlassyEffectElevatedBtn(
+              btnText: MTextString.login,
+              onPress: () => MHelperFunctions.navigateOff(
+                  context, const SetupStartScreen())),
 
           //!
           MHelperFunctions.giveHeight(29.h),

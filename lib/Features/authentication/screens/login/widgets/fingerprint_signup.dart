@@ -1,4 +1,3 @@
-import 'package:fit_body/Features/gym/screens/setup/setup_start.dart';
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class FingerPrintSignupScreen extends StatelessWidget {
@@ -40,10 +39,7 @@ class FingerPrintSignupScreen extends StatelessWidget {
             onPress: () => MHelperFunctions.navigateBack(context),
           ),
           MHelperFunctions.giveHeight(16.h),
-          GlassyEffectElevatedBtn(
-              btnText: "Continue",
-              onPress: () => MHelperFunctions.navigateOff(
-                  context, const SetupStartScreen())),
+          const GlassyEffectElevatedBtn(btnText: "Continue"),
         ],
       ),
     );

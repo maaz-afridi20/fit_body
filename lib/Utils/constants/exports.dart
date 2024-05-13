@@ -33,5 +33,10 @@ export 'package:fit_body/Features/authentication/screens/forgot_password/set_pas
 export 'package:fit_body/Features/authentication/screens/login/widgets/fingerprint_signup.dart';
 export 'package:fit_body/Features/gym/screens/setup/setup_gender.dart';
 export 'package:fit_body/Features/gym/screens/setup/setup_age.dart';
-
+export 'package:fit_body/Features/gym/screens/setup/setup_start.dart';
 export 'package:fit_body/Features/gym/screens/setup/widgets/gender_container.dart';
+export 'package:fit_body/Features/gym/screens/setup/widgets/number_selector.dart';
+export 'package:fit_body/Features/gym/screens/setup/setup_height.dart';
+export 'package:fit_body/Features/gym/screens/setup/widgets/kg_lb_selection.dart';
+export 'package:fit_body/Features/gym/screens/setup/setup_goal.dart';
+export 'package:fit_body/Features/gym/screens/setup/widgets/height_selector.dart';
