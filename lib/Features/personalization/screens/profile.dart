@@ -36,9 +36,15 @@ class ProfileScreen extends StatelessWidget {
             //! Profile image...
             MHelperFunctions.giveHeight(20.h),
             ResizableContainer(widgets: [
-              MHelperFunctions.giveHeight(10.h),
-              Center(child: Image.asset(MImageStrings.profile)),
-              MHelperFunctions.giveHeight(10.h),
+              Stack(children: [
+                MHelperFunctions.giveHeight(10.h),
+                Center(child: Image.asset(MImageStrings.profile)),
+                Positioned(
+                    right: MHelperFunctions.screenWidth() * 0.35,
+                    bottom: 10,
+                    child: Image.asset("assets/icons/pencil.png")),
+                MHelperFunctions.giveHeight(10.h),
+              ])
             ]),
 
             //! profile info...
