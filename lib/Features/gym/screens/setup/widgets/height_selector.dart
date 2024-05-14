@@ -7,7 +7,7 @@ class HeightSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final HeightSelectController controller = Get.put(HeightSelectController());
+    final controller = Get.put(HeightWeightSelectController());
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -20,8 +20,7 @@ class HeightSelector extends StatelessWidget {
                   controller.updateSelectedHeight(value + 1),
               overAndUnderCenterOpacity: 0.5,
               magnification: 1.4,
-              diameterRatio: 0.9,
-              itemExtent: 50,
+              itemExtent: 80,
               children: List.generate(
                   250,
                   (index) => Center(
@@ -29,24 +28,7 @@ class HeightSelector extends StatelessWidget {
                           style: MTextStyles.mHeadingStyle(fontSize: 40.sp))))),
         ),
         MHelperFunctions.giveWidth(5.w),
-        Container(
-          width: 80.w,
-          height: 300.h,
-          decoration: BoxDecoration(
-              color: MColors.purpleColor,
-              borderRadius: BorderRadius.circular(10.r)),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: List.generate(20, (index) {
-              double lineWidth = (index % 5 == 0) ? 46.w : 25.w;
-              return Container(
-                  height: 2.h,
-                  width: lineWidth,
-                  decoration: const BoxDecoration(color: Colors.white));
-            }),
-          ),
-        ),
+        const LinerInContainer(direction: Axis.vertical)
       ],
     );
   }

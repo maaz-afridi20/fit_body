@@ -1,4 +1,5 @@
 import 'package:fit_body/Utils/constants/exports.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 
 class MHelperFunctions {
@@ -29,29 +30,26 @@ class MHelperFunctions {
     return exitApp ?? false;
   }
 
-  static void showAppExitingDialogue(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: const Text('Do you want to close the app'),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: const Text('Cancel'),
-            ),
-            TextButton(
-              onPressed: () {
-                SystemNavigator.pop();
-              },
-              child: const Text('Confirm'),
-            ),
-          ],
-        );
-      },
-    );
+  static void showAppExitDialogue(BuildContext context) {
+    showAdaptiveDialog(
+        context: context,
+        builder: (context) => CupertinoAlertDialog(
+              title: const Text('Do you want to close the app'),
+              actions: [
+                CupertinoDialogAction(
+                  onPressed: () {
+                    SystemNavigator.pop();
+                  },
+                  child: const Text('Confirm'),
+                ),
+                CupertinoDialogAction(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text('Cancel'),
+                ),
+              ],
+            ));
   }
 
   static void navigateTo(BuildContext context, screen) {

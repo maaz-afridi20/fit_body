@@ -41,3 +41,11 @@ export 'package:fit_body/Features/gym/screens/setup/widgets/kg_lb_selection.dart
 export 'package:fit_body/Features/gym/screens/setup/setup_goal.dart';
 export 'package:fit_body/Features/gym/screens/setup/widgets/height_selector.dart';
 export 'package:fit_body/Features/gym/controllers/setup_body/height_select_controller.dart';
+export 'package:fit_body/Features/gym/controllers/setup_body/setup_goal_controller.dart';
+export 'package:fit_body/Features/gym/screens/setup/widgets/select_goal_radio_btn.dart';
+export 'package:fit_body/Features/gym/screens/setup/widgets/goal_selector_form.dart';
+export 'package:fit_body/Features/gym/screens/setup/setup_physical_activity_level.dart';
+export 'package:fit_body/AppComons/widgets/container/circular_container.dart';
+export 'package:fit_body/Features/personalization/widgets/profile_info_form.dart';
+export 'package:fit_body/Features/personalization/screens/profile.dart';
+export 'package:fit_body/Features/gym/screens/setup/widgets/lines_in_container.dart';

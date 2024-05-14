@@ -6,7 +6,7 @@ class SetupGoal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
+      backgroundColor: MColors.balckColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -28,6 +28,18 @@ class SetupGoal extends StatelessWidget {
                   textAlign: TextAlign.center)
               .px(35.w),
           MHelperFunctions.giveHeight(40.h),
+
+          //
+          //! Goal selecting radio form...
+          const GoalSelectorForm(),
+
+          //
+          const Spacer(),
+          GlassyEffectElevatedBtn(
+              btnText: "Continue",
+              onPress: () => MHelperFunctions.navigateTo(
+                  context, const SetupPhysicalActivityLevel())),
+          MHelperFunctions.giveHeight(30.h),
         ],
       ),
     );
