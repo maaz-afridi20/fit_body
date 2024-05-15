@@ -55,3 +55,4 @@ export 'package:fit_body/Features/gym/screens/home/widgets/small_line.dart';
 export 'package:fit_body/AppComons/widgets/appbar/homescreen_appbar.dart';
 export 'package:fit_body/Features/gym/screens/home/widgets/workout_row.dart';
 export 'package:fit_body/Features/gym/screens/home/widgets/recommendation_row.dart';
+export 'package:shared_preferences/shared_preferences.dart';

@@ -1,7 +1,5 @@
 import 'dart:async';
-
 import 'package:fit_body/Utils/constants/exports.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashController extends GetxController {
   //

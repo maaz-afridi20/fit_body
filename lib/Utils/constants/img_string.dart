@@ -13,7 +13,7 @@ class MImageStrings {
   static const profile = "assets/images/profile.png";
   static const setupscreenwomen = "assets/images/setup_screen_women_img.png";
   static const supplimentwomen = "assets/images/supplimentwomen.png";
-  static const wokingoutwomen = "assets/images/workingoutwomen.png";
+  static const wokingoutwomen = "assets/images/workingoutwomen.jpg";
   static const onboardingwomen = "assets/images/onboardingwomen.jpg";
   static const board1 = "assets/images/board1.png";
   static const board2 = "assets/images/board2.png";
