@@ -7,17 +7,7 @@ class SetupGoal extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MColors.balckColor,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: GestureDetector(
-            onTap: () => MHelperFunctions.navigateBack(context),
-            child: Icon(Icons.arrow_back_ios,
-                size: 15.sp, color: MColors.yellowishColor)),
-        title: Text("Back",
-            style: MTextStyles.mNormalStyle(
-                fontSize: 15, color: MColors.yellowishColor)),
-      ),
+      appBar: MAppbar(titleColor: MColors.yellowishColor, titleFontsize: 14.sp),
       body: Column(
         children: [
           Text(MTextString.whatisyourgoal,

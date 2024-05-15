@@ -6,8 +6,8 @@ class OnboardingSkipPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      right: 10,
-      top: 40,
+      right: 35.w,
+      top: 50.h,
       child: GestureDetector(
         onTap: () => OnboardingController.instance.skipPage(),
         child: const Row(mainAxisSize: MainAxisSize.min, children: [

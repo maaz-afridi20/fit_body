@@ -7,17 +7,10 @@ class ForgotPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MColors.balckColor,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: GestureDetector(
-            onTap: () => Get.back(),
-            child: const Icon(Icons.arrow_back_ios,
-                color: MColors.yellowishColor)),
-        title: Text(MTextString.forgotpass,
-            style: MTextStyles.mHeadingStyle(color: MColors.yellowishColor)),
-        centerTitle: true,
-      ),
+      appBar: const MAppbar(
+          centerTitle: true,
+          appbarTitle: "Forgot Password",
+          titleColor: MColors.yellowishColor),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

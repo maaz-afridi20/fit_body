@@ -7,17 +7,7 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MColors.balckColor,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: GestureDetector(
-            onTap: () => MHelperFunctions.navigateBack(context),
-            child: Icon(Icons.arrow_back_ios,
-                size: 15.sp, color: MColors.yellowishColor)),
-        title: Text("Back",
-            style: MTextStyles.mNormalStyle(
-                fontSize: 15, color: MColors.yellowishColor)),
-      ),
+      appBar: MAppbar(titleColor: MColors.yellowishColor, titleFontsize: 14.sp),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
@@ -36,15 +26,15 @@ class ProfileScreen extends StatelessWidget {
             //! Profile image...
             MHelperFunctions.giveHeight(20.h),
             ResizableContainer(widgets: [
+              MHelperFunctions.giveHeight(10.h),
               Stack(children: [
-                MHelperFunctions.giveHeight(10.h),
                 Center(child: Image.asset(MImageStrings.profile)),
                 Positioned(
                     right: MHelperFunctions.screenWidth() * 0.35,
                     bottom: 10,
                     child: Image.asset("assets/icons/pencil.png")),
-                MHelperFunctions.giveHeight(10.h),
-              ])
+              ]),
+              MHelperFunctions.giveHeight(10.h),
             ]),
 
             //! profile info...

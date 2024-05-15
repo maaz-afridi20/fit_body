@@ -30,6 +30,7 @@ class MTextString {
   static String whatisyourgoal = "What Is Your Goal?";
   static String physicalactiviylevel = "Physical Activity Level";
   static String fillprofile = "Fill Your Profile";
+  static String chellengeyourlimit = "It's time to challenge your limit";
 
   static String consistencyiskey =
       "Consistency Is The Key To Progress Don't Give Up!";

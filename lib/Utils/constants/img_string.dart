@@ -4,9 +4,11 @@ class MImageStrings {
   static const fitbody = "assets/logos/fitbody.png";
   static const nutrituion = "assets/logos/nutritution.png";
   static const workout = "assets/logos/workout.png";
+  static const dumble = "assets/icons/dumble.png";
+  static const progress = "assets/logos/progress.png";
   static const dailyroutinemen = "assets/images/dailyroutinemen.png";
   static const fingerprintmarkimage = "assets/images/fingerprintmark.png";
-  static const multiplewomens = "assets/images/multiplewomens.png";
+  static const multiplewomens = "assets/images/multiplewomens.jpg";
   static const plankwomen = "assets/images/plankwomen.png";
   static const profile = "assets/images/profile.png";
   static const setupscreenwomen = "assets/images/setup_screen_women_img.png";
