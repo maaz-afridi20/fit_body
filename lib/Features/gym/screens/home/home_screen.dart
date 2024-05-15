@@ -1,8 +1,5 @@
 import 'package:fit_body/AppComons/widgets/home/workout_time_container.dart';
 import 'package:fit_body/Utils/constants/exports.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -29,9 +26,9 @@ class HomeScreen extends StatelessWidget {
             MHelperFunctions.giveHeight(6.h),
             //
             //! image row...
-            WorkoutTimeContainer(),
+           const WorkoutTimeContainer(),
             MHelperFunctions.giveWidth(10.w),
-            WorkoutTimeContainer(),
+           const WorkoutTimeContainer(),
           ],
         ),
       ),
