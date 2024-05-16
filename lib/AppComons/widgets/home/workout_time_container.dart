@@ -12,7 +12,7 @@ class WorkoutTimeContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    RxBool isFavourite = false.obs;
+    final RxBool isFavourite = false.obs;
     return Expanded(
       child: Container(
           height: 160.h,
@@ -38,47 +38,72 @@ class WorkoutTimeContainer extends StatelessWidget {
                   MHelperFunctions.giveHeight(5.h),
                   Text(containerTitle,
                           style: MTextStyles.mNormalStyle(
-                              fontSize: 12.sp, color: MColors.yellowishColor))
+                              fontSize: 12.sp, color: MColors.yellowishColor),
+                          overflow: TextOverflow.ellipsis)
                       .px(11.w),
                   MHelperFunctions.giveHeight(5.h),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          const SizedBox(
-                            child: Icon(Icons.access_time_filled_rounded,
-                                color: Colors.white, size: 15),
+                  Flexible(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const SizedBox(
+                              child: Icon(Icons.access_time_filled_rounded,
+                                  color: Colors.white, size: 15),
+                            ),
+                            MHelperFunctions.giveWidth(5.w),
+                            Flexible(
+                              child: Text('12 Minutes',
+                                  style:
+                                      MTextStyles.mNormalStyle(fontSize: 12.sp),
+                                  overflow: TextOverflow.ellipsis),
+                            ),
+                          ],
+                        ),
+                        Flexible(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              const SizedBox(
+                                child: Icon(Icons.fire_extinguisher,
+                                    color: Colors.white, size: 15),
+                              ),
+                              MHelperFunctions.giveWidth(3.w),
+                              Flexible(
+                                child: Text(
+                                  '120 KCal',
+                                  style:
+                                      MTextStyles.mNormalStyle(fontSize: 12.sp),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ],
                           ),
-                          MHelperFunctions.giveWidth(5.w),
-                          Text('12 Minutes',
-                              style: MTextStyles.mNormalStyle(fontSize: 12.sp)),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          const SizedBox(
-                            child: Icon(Icons.fire_extinguisher,
-                                color: Colors.white, size: 15),
-                          ),
-                          MHelperFunctions.giveWidth(5.w),
-                          Text('120 KCal',
-                              style: MTextStyles.mNormalStyle(fontSize: 12.sp)),
-                        ],
-                      )
-                    ],
-                  ).px(11.w)
+                        )
+                      ],
+                    ).px(11.w),
+                  )
                 ],
               ),
-              GestureDetector(
-                onTap: () => isFavourite.toggle(),
-                child: Positioned(
-                    right: 10.w,
-                    top: 8.h,
-                    child: Obx(() => Icon(Icons.star_rounded,
-                        color: isFavourite.value
-                            ? MColors.yellowishColor
-                            : Colors.transparent))),
+              Positioned(
+                right: 10.w,
+                top: 8.h,
+                child: GestureDetector(
+                  onTap: () {
+                    isFavourite.toggle();
+                    isFavourite.value
+                        ? MHelperFunctions.showSnackBar('added to favourites')
+                        : MHelperFunctions.showSnackBar(
+                            'removed from favourites');
+                  },
+                  child: Obx(() => Icon(Icons.star_rounded,
+                      color: isFavourite.value
+                          ? MColors.yellowishColor
+                          : Colors.white)),
+                ),
               ),
               Positioned(
                 right: 10.w,

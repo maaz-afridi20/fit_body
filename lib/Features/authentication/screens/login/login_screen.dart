@@ -12,6 +12,7 @@ class LoginScreen extends StatelessWidget {
         backgroundColor: MColors.balckColor,
         appBar: const MAppbar(
             centerTitle: true,
+            showLeading: Text(''),
             appbarTitle: "Login",
             titleColor: MColors.yellowishColor),
         body: Column(

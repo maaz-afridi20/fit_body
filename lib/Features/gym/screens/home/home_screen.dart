@@ -1,4 +1,3 @@
-import 'package:fit_body/AppComons/widgets/home/workout_time_container.dart';
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,6 +12,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: MColors.balckColor,
         appBar: const HomeScreenAppbar(),
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //
             //! workout row..
@@ -38,27 +38,46 @@ class HomeScreen extends StatelessWidget {
               ],
             ).px(35.w),
 
+            //
+            //! row continer with and image...
             MHelperFunctions.giveHeight(19.h),
-            ResizableContainer(widgets: [
-              Container(
-                width: MHelperFunctions.screenWidth(),
-                height: 325.h,
-                decoration: BoxDecoration(
-                    color: const Color(0xff212020),
-                    borderRadius: BorderRadius.circular(20.r)),
-                child: Row(
-                  children: [
-                    Text(
-                      'Weekly Challenge',
-                      style: MTextStyles.mHeadingStyle(
-                          fontSize: 24.sp, color: MColors.yellowishColor),
-                      textAlign: TextAlign.center,
-                    ),
-                    Image.asset(MImageStrings.plankwomen)
-                  ],
-                ),
-              ),
-            ])
+            ResizableContainer(
+                applyWidgetPadding:
+                    EdgeInsets.symmetric(horizontal: 35.w, vertical: 25.h),
+                widgets: [
+                  RowContainerWithAndImg(
+                    imageString: MImageStrings.plankwomen,
+                    backgroundColor: const Color(0xff212020),
+                    childrensInColumn: [
+                      Text(
+                        'Weekly Challenge',
+                        style: MTextStyles.mHeadingStyle(
+                            fontSize: 24.sp, color: MColors.yellowishColor),
+                        textAlign: TextAlign.center,
+                      ),
+                      MHelperFunctions.giveHeight(2.h),
+                      Text('Plank With Hip Twist',
+                          style: MTextStyles.mNormalStyle(fontSize: 12.sp),
+                          textAlign: TextAlign.center,
+                          overflow: TextOverflow.ellipsis),
+                    ],
+                  )
+                ]),
+            //
+            //!
+            MHelperFunctions.giveHeight(16.h),
+            Text('Articles And Tips',
+                style: MTextStyles.mNormalStyle(color: MColors.yellowishColor)),
+
+            //
+            //! only image container...
+            MHelperFunctions.giveHeight(8.h),
+            const Row(
+              children: [
+                OnlyImageContainer(imageString: MImageStrings.supplimentwomen),
+                OnlyImageContainer(imageString: MImageStrings.dailyroutinemen),
+              ],
+            ),
           ],
         ),
       ),
