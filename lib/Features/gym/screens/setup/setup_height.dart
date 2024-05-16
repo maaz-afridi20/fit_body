@@ -1,4 +1,5 @@
 import 'package:fit_body/Utils/constants/exports.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class SetupHeight extends StatelessWidget {
   const SetupHeight({super.key});
@@ -11,13 +12,17 @@ class SetupHeight extends StatelessWidget {
       appBar: MAppbar(titleColor: MColors.yellowishColor, titleFontsize: 14.sp),
       body: Column(
         children: [
-          Text(MTextString.whatisyourweight,
-              style: MTextStyles.mHeadingStyle(fontSize: 25)),
+          Text(MTextString.whatisyourheight,
+                  style: MTextStyles.mHeadingStyle(fontSize: 25))
+              .animate()
+              .fadeIn(duration: const Duration(seconds: 3)),
           MHelperFunctions.giveHeight(30.h),
           Text(MTextString.loremIpsum,
                   style: MTextStyles.mNormalStyle(),
                   textAlign: TextAlign.center)
-              .px(35.w),
+              .px(35.w)
+              .animate()
+              .fadeIn(duration: const Duration(seconds: 3)),
 
           //! height CM
           MHelperFunctions.giveHeight(40.h),

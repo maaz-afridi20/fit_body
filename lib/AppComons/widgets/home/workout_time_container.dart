@@ -96,10 +96,12 @@ class WorkoutTimeContainer extends StatelessWidget {
                   onTap: () {
                     controller.toggleFavourite(id!);
                   },
-                  child: Obx(() => Icon(Icons.star_rounded,
-                      color: controller.favouriteStates[id] ?? false
-                          ? MColors.yellowishColor
-                          : Colors.white)),
+                  child: Obx(
+                    () => Icon(Icons.star_rounded,
+                        color: controller.favouriteStates[id] ?? false
+                            ? MColors.yellowishColor
+                            : Colors.white),
+                  ),
                 ),
               ),
               Positioned(

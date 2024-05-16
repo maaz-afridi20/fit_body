@@ -1,4 +1,5 @@
 import 'package:fit_body/Utils/constants/exports.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class SetupProfileScreen extends StatelessWidget {
   const SetupProfileScreen({super.key});
@@ -41,7 +42,7 @@ class SetupProfileScreen extends StatelessWidget {
             MHelperFunctions.giveHeight(20.h),
             const ProfileInfoForm()
           ],
-        ),
+        ).animate().fadeIn(duration: const Duration(seconds: 3)),
       ),
     );
   }

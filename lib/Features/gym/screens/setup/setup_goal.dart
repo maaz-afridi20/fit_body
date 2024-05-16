@@ -1,4 +1,5 @@
 import 'package:fit_body/Utils/constants/exports.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class SetupGoal extends StatelessWidget {
   const SetupGoal({super.key});
@@ -11,12 +12,16 @@ class SetupGoal extends StatelessWidget {
       body: Column(
         children: [
           Text(MTextString.whatisyourgoal,
-              style: MTextStyles.mHeadingStyle(fontSize: 25)),
+                  style: MTextStyles.mHeadingStyle(fontSize: 25))
+              .animate()
+              .fadeIn(duration: const Duration(seconds: 3)),
           MHelperFunctions.giveHeight(30.h),
           Text(MTextString.loremIpsum,
                   style: MTextStyles.mNormalStyle(),
                   textAlign: TextAlign.center)
-              .px(35.w),
+              .px(35.w)
+              .animate()
+              .fadeIn(duration: const Duration(seconds: 3)),
           MHelperFunctions.giveHeight(40.h),
 
           //

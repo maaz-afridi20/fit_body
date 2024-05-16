@@ -1,3 +1,5 @@
+import 'package:flutter_animate/flutter_animate.dart';
+
 import '../../../../Utils/constants/exports.dart';
 
 class SetupGenderScreen extends StatelessWidget {
@@ -12,7 +14,9 @@ class SetupGenderScreen extends StatelessWidget {
         children: [
           MHelperFunctions.giveHeight(30.h),
           Text(MTextString.whatsyourgendr,
-              style: MTextStyles.mHeadingStyle(fontSize: 25)),
+                  style: MTextStyles.mHeadingStyle(fontSize: 25))
+              .animate()
+              .fadeIn(duration: const Duration(seconds: 2)),
           MHelperFunctions.giveHeight(15.h),
           ResizableContainer(
               applyWidgetPadding: EdgeInsets.symmetric(horizontal: 35.w),
@@ -22,7 +26,7 @@ class SetupGenderScreen extends StatelessWidget {
                   MTextString.loremIpsum,
                   style: MTextStyles.mNormalStyle(),
                   textAlign: TextAlign.center,
-                ),
+                ).animate().fadeIn(duration: const Duration(seconds: 3)),
                 MHelperFunctions.giveHeight(18.h),
               ]),
           MHelperFunctions.giveHeight(45.h),

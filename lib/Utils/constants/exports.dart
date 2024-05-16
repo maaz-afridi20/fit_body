@@ -66,3 +66,5 @@ export 'package:fit_body/Features/gym/screens/home/home_navbar.dart';
 export 'package:fit_body/Features/personalization/screens/main_profile_screen.dart';
 export 'package:fit_body/AppComons/widgets/container/staright_verticle_line.dart';
 export 'package:fit_body/Features/personalization/widgets/user_body_info_row_container.dart';
+export 'package:fit_body/Features/personalization/widgets/profile_listile.dart';
+export 'package:fit_body/Features/personalization/screens/edit_profile.dart';

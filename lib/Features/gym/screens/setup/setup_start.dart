@@ -1,4 +1,5 @@
 import 'package:fit_body/Utils/constants/exports.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class SetupStartScreen extends StatelessWidget {
   const SetupStartScreen({super.key});
@@ -20,20 +21,24 @@ class SetupStartScreen extends StatelessWidget {
             ),
             MHelperFunctions.giveHeight(30.h),
             Text(MTextString.consistencyiskey,
-                style: MTextStyles.mHeadingStyle(
-                    fontSize: 30.sp,
-                    color: MColors.yellowishColor,
-                    fontWeight: FontWeight.w500),
-                textAlign: TextAlign.center),
+                    style: MTextStyles.mHeadingStyle(
+                        fontSize: 30.sp,
+                        color: MColors.yellowishColor,
+                        fontWeight: FontWeight.w500),
+                    textAlign: TextAlign.center)
+                .animate()
+                .fadeIn(duration: const Duration(seconds: 2)),
             MHelperFunctions.giveHeight(30.h),
             ResizableContainer(
                 applyWidgetPadding: EdgeInsets.symmetric(horizontal: 35.w),
                 widgets: [
                   MHelperFunctions.giveHeight(30.h),
                   Text(MTextString.loremIpsum,
-                      style:
-                          MTextStyles.mNormalStyle(color: MColors.balckColor),
-                      textAlign: TextAlign.center),
+                          style: MTextStyles.mNormalStyle(
+                              color: MColors.balckColor),
+                          textAlign: TextAlign.center)
+                      .animate()
+                      .fadeIn(duration: const Duration(seconds: 3)),
                   MHelperFunctions.giveHeight(30.h),
                 ]),
             MHelperFunctions.giveHeight(30.h),

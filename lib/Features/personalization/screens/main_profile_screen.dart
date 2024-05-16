@@ -1,4 +1,5 @@
 import 'package:fit_body/Utils/constants/exports.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class MainProfileScreen extends StatelessWidget {
   const MainProfileScreen({super.key});
@@ -37,17 +38,29 @@ class MainProfileScreen extends StatelessWidget {
                         ],
                       ),
                     ],
-                  ),
+                  ).animate().fadeIn(duration: const Duration(seconds: 3)),
                 ),
               ]),
             ),
+            //
+            //! profile listile...
             MHelperFunctions.giveHeight(48.h),
-            Text('Name', style: MTextStyles.mHeadingStyle()),
+            const ProfileTileIconList()
           ],
         ),
         //
         //! showing user weight, height container.
-        Positioned(top: 270.h, child: const UserBodyInfoRowContainer()),
+        // const UserBodyInfoRowContainer(),
+        Positioned(
+          // top: 275.h,
+          top: 270,
+          child: Container(
+            height: 60,
+            width: double.infinity,
+            decoration: BoxDecoration(
+                color: Colors.amber, borderRadius: BorderRadius.circular(20)),
+          ),
+        ),
       ]),
     );
   }

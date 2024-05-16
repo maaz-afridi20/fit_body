@@ -1,4 +1,5 @@
 import 'package:fit_body/Utils/constants/exports.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class SetupAgeScreen extends StatelessWidget {
   const SetupAgeScreen({super.key});
@@ -15,12 +16,16 @@ class SetupAgeScreen extends StatelessWidget {
               children: [
                 MHelperFunctions.giveHeight(30.h),
                 Text(MTextString.howoldareu,
-                    style: MTextStyles.mHeadingStyle(fontSize: 25)),
+                        style: MTextStyles.mHeadingStyle(fontSize: 25))
+                    .animate()
+                    .fadeIn(duration: const Duration(seconds: 2)),
                 MHelperFunctions.giveHeight(30.h),
                 Text(MTextString.loremIpsum,
                         style: MTextStyles.mNormalStyle(),
                         textAlign: TextAlign.center)
-                    .px(35.w),
+                    .px(35.w)
+                    .animate()
+                    .fadeIn(duration: const Duration(seconds: 3)),
                 MHelperFunctions.giveHeight(80.h),
                 Text('80', style: MTextStyles.mHeadingStyle(fontSize: 65)),
                 MHelperFunctions.giveHeight(30.h),

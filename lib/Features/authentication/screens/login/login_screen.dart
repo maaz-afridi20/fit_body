@@ -1,4 +1,5 @@
 import 'package:fit_body/Utils/constants/exports.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -22,10 +23,13 @@ class LoginScreen extends StatelessWidget {
             Text(MTextString.wellcome, style: MTextStyles.mHeadingStyle())
                 .px(35.w),
             MHelperFunctions.giveHeight(23.h),
-            Text(MTextString.loremIpsum,
-                    style: MTextStyles.mNormalStyle(),
-                    textAlign: TextAlign.center)
-                .px(35.w),
+            Animate(
+              effects: const [FadeEffect(duration: Duration(seconds: 3))],
+              child: Text(MTextString.loremIpsum,
+                      style: MTextStyles.mNormalStyle(),
+                      textAlign: TextAlign.center)
+                  .px(35.w),
+            ),
             MHelperFunctions.giveHeight(74.h),
 
             //
