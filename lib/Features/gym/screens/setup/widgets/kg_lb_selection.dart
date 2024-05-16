@@ -15,10 +15,7 @@ class KgLbSelection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           const Text('KG'),
-          Container(
-              height: 40.h,
-              width: 3.w,
-              decoration: const BoxDecoration(color: MColors.balckColor)),
+          StraightVerticleLine(height: 41.h, color: MColors.balckColor),
           const Text('LB')
         ],
       ),
