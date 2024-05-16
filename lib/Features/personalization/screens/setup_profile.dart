@@ -1,7 +1,7 @@
 import 'package:fit_body/Utils/constants/exports.dart';
 
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+class SetupProfileScreen extends StatelessWidget {
+  const SetupProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

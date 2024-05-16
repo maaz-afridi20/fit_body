@@ -41,8 +41,8 @@ class SetupPhysicalActivityLevel extends StatelessWidget {
           const Spacer(),
           GlassyEffectElevatedBtn(
               btnText: "Continue",
-              onPress: () =>
-                  MHelperFunctions.navigateTo(context, const ProfileScreen())),
+              onPress: () => MHelperFunctions.navigateTo(
+                  context, const SetupProfileScreen())),
 
           MHelperFunctions.giveHeight(30.h),
         ],

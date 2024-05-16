@@ -1,16 +1,17 @@
 import '../../../Utils/constants/exports.dart';
 
 class OnlyImageContainer extends StatelessWidget {
-  const OnlyImageContainer({super.key, required this.imageString});
+  const OnlyImageContainer({super.key, required this.imageString, this.id});
 
   final String imageString;
+  final String? id;
 
   @override
   Widget build(BuildContext context) {
-    final RxBool isFavourite = false.obs;
+    final controller = LikeBtnController.instance;
     return Container(
-      height: 145.h,
-      width: 170.w,
+      height: 134.h,
+      width: 157.w,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.r),
           image: DecorationImage(
@@ -21,14 +22,14 @@ class OnlyImageContainer extends StatelessWidget {
           top: 8.h,
           child: GestureDetector(
             onTap: () {
-              isFavourite.toggle();
-              isFavourite.value
-                  ? MHelperFunctions.showSnackBar('added to favourites')
-                  : MHelperFunctions.showSnackBar('removed from favourites');
+              controller.toggleFavourite(id!);
             },
-            child: Obx(() => Icon(Icons.star_rounded,
-                color:
-                    isFavourite.value ? MColors.yellowishColor : Colors.white)),
+            child: Obx(() => Icon(
+                  Icons.star_rounded,
+                  color: controller.favouriteStates[id] ?? false
+                      ? MColors.yellowishColor
+                      : Colors.white,
+                )),
           ),
         ),
       ]),

@@ -1,5 +1,6 @@
 import '../../../../Utils/constants/exports.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }

@@ -47,7 +47,7 @@ export 'package:fit_body/Features/gym/screens/setup/widgets/goal_selector_form.d
 export 'package:fit_body/Features/gym/screens/setup/setup_physical_activity_level.dart';
 export 'package:fit_body/AppComons/widgets/container/circular_container.dart';
 export 'package:fit_body/Features/personalization/widgets/profile_info_form.dart';
-export 'package:fit_body/Features/personalization/screens/profile.dart';
+export 'package:fit_body/Features/personalization/screens/setup_profile.dart';
 export 'package:fit_body/Features/gym/screens/setup/widgets/lines_in_container.dart';
 export 'package:fit_body/AppComons/widgets/appbar/appbar.dart';
 export 'package:fit_body/Features/gym/screens/setup/setup_weight.dart';
@@ -59,3 +59,8 @@ export 'package:shared_preferences/shared_preferences.dart';
 export 'package:fit_body/AppComons/widgets/home/row_container_with_txt_and_img.dart';
 export 'package:fit_body/AppComons/widgets/home/workout_time_container.dart';
 export 'package:fit_body/AppComons/widgets/home/only_image_container.dart';
+export 'package:fit_body/Features/gym/controllers/home_controllers/like_btn_controller.dart';
+export 'package:fit_body/Features/gym/controllers/home_controllers/navbar_controller.dart';
+export 'package:fit_body/Features/gym/screens/home/widgets/navbar.dart';
+export 'package:fit_body/Features/gym/screens/home/home_navbar.dart';
+export 'package:fit_body/Features/personalization/screens/main_profile_screen.dart';

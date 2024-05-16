@@ -1,18 +1,19 @@
 import '../../../Utils/constants/exports.dart';
 
 class WorkoutTimeContainer extends StatelessWidget {
-  const WorkoutTimeContainer({
-    super.key,
-    required this.containerImage,
-    required this.containerTitle,
-  });
+  const WorkoutTimeContainer(
+      {super.key,
+      required this.containerImage,
+      required this.containerTitle,
+      this.id});
 
   final String containerImage;
   final String containerTitle;
+  final String? id;
 
   @override
   Widget build(BuildContext context) {
-    final RxBool isFavourite = false.obs;
+    final controller = Get.put(LikeBtnController());
     return Expanded(
       child: Container(
           height: 160.h,
@@ -93,14 +94,10 @@ class WorkoutTimeContainer extends StatelessWidget {
                 top: 8.h,
                 child: GestureDetector(
                   onTap: () {
-                    isFavourite.toggle();
-                    isFavourite.value
-                        ? MHelperFunctions.showSnackBar('added to favourites')
-                        : MHelperFunctions.showSnackBar(
-                            'removed from favourites');
+                    controller.toggleFavourite(id!);
                   },
                   child: Obx(() => Icon(Icons.star_rounded,
-                      color: isFavourite.value
+                      color: controller.favouriteStates[id] ?? false
                           ? MColors.yellowishColor
                           : Colors.white)),
                 ),
