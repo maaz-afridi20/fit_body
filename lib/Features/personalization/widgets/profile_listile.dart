@@ -6,11 +6,13 @@ class ProfileTileIconList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
         ProfileListile(
             tileIcon: Icons.person_rounded,
             tileText: "Profile",
-            onTap: () => const EditProfileScreen()),
+            onTap: () => MHelperFunctions.navigateTo(
+                context, const EditProfileScreen())),
         const ProfileListile(
             tileIcon: Icons.star_rounded, tileText: "Favourite"),
         const ProfileListile(

@@ -1,16 +1,17 @@
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class MTextField extends StatelessWidget {
-  const MTextField({super.key, required this.hintText});
+  const MTextField({super.key, required this.hintText, this.keyboardInputType});
 
   final String hintText;
-
+  final TextInputType? keyboardInputType;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 45.h,
       child: TextFormField(
           textAlign: TextAlign.left,
+          keyboardType: keyboardInputType,
           // textAlignVertical: TextAlignVertical.center,
           decoration: InputDecoration(
               hintText: hintText,
