@@ -69,3 +69,5 @@ export 'package:fit_body/Features/personalization/widgets/user_body_info_row_con
 export 'package:fit_body/Features/personalization/widgets/profile_listile.dart';
 export 'package:fit_body/Features/personalization/screens/edit_profile.dart';
 export 'package:fit_body/Features/personalization/widgets/edit_profile_form.dart';
+export 'package:fit_body/Features/gym/favourites/favourites.dart';
+export 'package:fit_body/AppComons/widgets/chips/choice_chips.dart';
