@@ -6,6 +6,7 @@ class SetupAgeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(SetupAgeController());
     return Scaffold(
         backgroundColor: MColors.balckColor,
         appBar:
@@ -26,8 +27,11 @@ class SetupAgeScreen extends StatelessWidget {
                     .px(35.w)
                     .animate()
                     .fadeIn(duration: const Duration(seconds: 3)),
+
                 MHelperFunctions.giveHeight(80.h),
-                Text('80', style: MTextStyles.mHeadingStyle(fontSize: 65)),
+                Obx(() => Text("${controller.selectedNumber.value}",
+                    style: MTextStyles.mHeadingStyle(fontSize: 65))),
+
                 MHelperFunctions.giveHeight(30.h),
                 const Image(image: AssetImage(MImageStrings.polygon)),
                 // MHelperFunctions.giveHeight(23.h),
@@ -46,22 +50,12 @@ class SetupAgeScreen extends StatelessWidget {
             Positioned(
               left: MHelperFunctions.screenWidth() * 0.40,
               top: MHelperFunctions.screenHeight() * 0.465,
-              child: Container(
-                  height: 120.h,
-                  width: 3.w,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10.r))),
+              child: const StraightVerticleLine(height: 120),
             ),
             Positioned(
               right: MHelperFunctions.screenWidth() * 0.40,
               top: MHelperFunctions.screenHeight() * 0.465,
-              child: Container(
-                  height: 120.h,
-                  width: 3.w,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10.r))),
+              child: const StraightVerticleLine(height: 120),
             ),
           ],
         ));

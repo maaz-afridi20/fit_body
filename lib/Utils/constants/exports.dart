@@ -71,3 +71,4 @@ export 'package:fit_body/Features/personalization/screens/edit_profile.dart';
 export 'package:fit_body/Features/personalization/widgets/edit_profile_form.dart';
 export 'package:fit_body/Features/gym/favourites/favourites.dart';
 export 'package:fit_body/AppComons/widgets/chips/choice_chips.dart';
+export 'package:fit_body/Features/gym/controllers/setup_body_controllers/setup_age_controller.dart';
