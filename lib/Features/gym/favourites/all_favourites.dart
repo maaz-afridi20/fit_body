@@ -1,4 +1,3 @@
-import 'package:fit_body/Features/gym/favourites/widgets/favourite_screen_container_list.dart';
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class AllFavouritesScreen extends StatelessWidget {

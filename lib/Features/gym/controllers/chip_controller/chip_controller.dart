@@ -1,7 +1,7 @@
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class ChipController extends GetxController {
-  var selectedChip = ''.obs;
+  var selectedChip = 'All'.obs;
 
   void selectChip(String chipTitle) {
     if (selectedChip.value == chipTitle) {
@@ -9,5 +9,9 @@ class ChipController extends GetxController {
     } else {
       selectedChip.value = chipTitle;
     }
+  }
+
+  void resetChip() {
+    selectedChip.value = 'All';
   }
 }

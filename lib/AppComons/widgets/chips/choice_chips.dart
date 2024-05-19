@@ -1,6 +1,3 @@
-import 'package:fit_body/Features/gym/controllers/chip_controller/chip_controller.dart';
-import 'package:fit_body/Features/gym/favourites/favourite_articles.dart';
-import 'package:fit_body/Features/gym/favourites/favourite_videos.dart';
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class ChoiceChipsWidget extends StatelessWidget {
@@ -31,10 +28,11 @@ class ChoiceChipsWidget extends StatelessWidget {
               onSelected: (selected) {
                 controller.selectChip(chipTitle);
                 if (chipTitle == 'Video') {
-                  MHelperFunctions.navigateTo(context, const FavouriteVideos());
+                  Get.to(() => const FavouriteVideos())!
+                      .then((value) => controller.resetChip());
                 } else if (chipTitle == 'Articles') {
-                  MHelperFunctions.navigateTo(
-                      context, const FavouriteArticles());
+                  Get.to(() => const FavouriteArticles())!
+                      .then((value) => controller.resetChip());
                 }
               },
               selectedColor: isSelected

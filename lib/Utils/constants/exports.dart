@@ -74,3 +74,7 @@ export 'package:fit_body/AppComons/widgets/chips/choice_chips.dart';
 export 'package:fit_body/Features/gym/controllers/setup_body_controllers/setup_age_controller.dart';
 export 'package:fit_body/Features/gym/favourites/widgets/choice_chips_row.dart';
 export 'package:fit_body/Features/gym/favourites/widgets/favourites_screen_container.dart';
+export 'package:fit_body/Features/gym/controllers/chip_controller/chip_controller.dart';
+export 'package:fit_body/Features/gym/favourites/favourite_articles.dart';
+export 'package:fit_body/Features/gym/favourites/favourite_videos.dart';
+export 'package:fit_body/Features/gym/favourites/widgets/favourite_screen_container_list.dart';

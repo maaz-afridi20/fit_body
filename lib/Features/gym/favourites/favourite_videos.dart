@@ -6,8 +6,9 @@ class FavouriteVideos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('videos'),
+      appBar: AppBar(title: const Text('videos')),
+      body: Column(
+        children: [],
       ),
     );
   }
