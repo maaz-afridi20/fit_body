@@ -17,14 +17,11 @@ class ChoicChipsRow extends StatelessWidget {
               style: MTextStyles.mNormalStyle(
                   fontSize: 12.sp, color: MColors.yellowishColor)),
           MHelperFunctions.giveWidth(17.w),
-          const ChoiceChipsWidget(
-              chipTitle: "All", backgroundColor: MColors.yellowishColor),
+          const ChoiceChipsWidget(chipTitle: "All"),
           MHelperFunctions.giveWidth(17.w),
-          const ChoiceChipsWidget(
-              chipTitle: "Video", titleColor: MColors.purpleColor),
+          const ChoiceChipsWidget(chipTitle: "Video"),
           MHelperFunctions.giveWidth(17.w),
-          const ChoiceChipsWidget(
-              chipTitle: "Articles", titleColor: MColors.purpleColor),
+          const ChoiceChipsWidget(chipTitle: "Articles"),
         ],
       ),
     );

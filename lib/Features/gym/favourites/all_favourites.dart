@@ -1,8 +1,8 @@
 import 'package:fit_body/Features/gym/favourites/widgets/favourite_screen_container_list.dart';
 import 'package:fit_body/Utils/constants/exports.dart';
 
-class FavouritesScreen extends StatelessWidget {
-  const FavouritesScreen({super.key});
+class AllFavouritesScreen extends StatelessWidget {
+  const AllFavouritesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
