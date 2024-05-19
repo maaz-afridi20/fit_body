@@ -7,28 +7,25 @@ class NumberSelector extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(SetupAgeController());
     return SizedBox(
-      height: 80.h,
-      child: SizedBox(
-        width: MHelperFunctions.screenWidth(),
-        height: 80,
-        child: RotatedBox(
-          quarterTurns: 1,
-          child: ListWheelScrollView(
-              physics: const FixedExtentScrollPhysics(),
-              itemExtent: 80,
-              onSelectedItemChanged: (value) => controller.updateAge(value + 1),
-              overAndUnderCenterOpacity: 0.5,
-              magnification: 1.4,
-              children: List.generate(100, (index) {
-                return SizedBox(
-                  child: RotatedBox(
-                    quarterTurns: 3,
-                    child: Text('${index + 1}',
-                        style: MTextStyles.mHeadingStyle(fontSize: 40.sp)),
-                  ),
-                );
-              })),
-        ),
+      width: MHelperFunctions.screenWidth(),
+      height: 80,
+      child: RotatedBox(
+        quarterTurns: 1,
+        child: ListWheelScrollView(
+            physics: const FixedExtentScrollPhysics(),
+            itemExtent: 80,
+            onSelectedItemChanged: (value) => controller.updateAge(value + 1),
+            overAndUnderCenterOpacity: 0.5,
+            magnification: 1.4,
+            children: List.generate(100, (index) {
+              return SizedBox(
+                child: RotatedBox(
+                  quarterTurns: 3,
+                  child: Text('${index + 1}',
+                      style: MTextStyles.mHeadingStyle(fontSize: 40.sp)),
+                ),
+              );
+            })),
       ),
     );
   }

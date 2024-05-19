@@ -40,7 +40,8 @@ class SetupProfileScreen extends StatelessWidget {
 
             //! profile info...
             MHelperFunctions.giveHeight(20.h),
-            const ProfileInfoForm()
+            const ProfileInfoForm(),
+            MHelperFunctions.giveHeight(30.h),
           ],
         ).animate().fadeIn(duration: const Duration(seconds: 3)),
       ),

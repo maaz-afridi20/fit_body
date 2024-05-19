@@ -20,9 +20,7 @@ class SetupHeight extends StatelessWidget {
           Text(MTextString.loremIpsum,
                   style: MTextStyles.mNormalStyle(),
                   textAlign: TextAlign.center)
-              .px(35.w)
-              .animate()
-              .fadeIn(duration: const Duration(seconds: 3)),
+              .px(35.w),
 
           //! height CM
           MHelperFunctions.giveHeight(40.h),
@@ -50,7 +48,7 @@ class SetupHeight extends StatelessWidget {
                   MHelperFunctions.navigateTo(context, const SetupGoal())),
           MHelperFunctions.giveHeight(30.h),
         ],
-      ),
+      ).animate().fadeIn(duration: const Duration(seconds: 3)),
     );
   }
 }

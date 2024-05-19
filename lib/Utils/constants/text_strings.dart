@@ -2,6 +2,8 @@ class MTextString {
   static String loremIpsum =
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi taciti sociosqu ad litora torque";
 
+  static String incorporating =
+      'Importing physical exercise into daily routine can boost your energy and you will be fit ';
   static String dontaccount = "Don't have an account? ";
   static String examplpe = "example@gmail.com ";
   static String signup = " SignUp";

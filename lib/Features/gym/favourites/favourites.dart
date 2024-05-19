@@ -1,3 +1,4 @@
+import 'package:fit_body/Features/gym/favourites/widgets/favourite_screen_container_list.dart';
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class FavouritesScreen extends StatelessWidget {
@@ -7,41 +8,50 @@ class FavouritesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MColors.balckColor,
-      appBar: MAppbar(
-        appbarTitle: "Favourites",
-        action: [
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.transparent),
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: SafeArea(
+          child: Column(
             children: [
-              const Icon(Icons.search, color: MColors.darkPurpleColor),
-              MHelperFunctions.giveWidth(20.w),
-              const Icon(Icons.notifications, color: MColors.darkPurpleColor),
-              MHelperFunctions.giveWidth(20.w),
-              const Icon(Icons.person_rounded, color: MColors.darkPurpleColor),
+              MAppbar(
+                appbarTitle: "Favourites",
+                action: [
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      const Icon(Icons.search, color: MColors.darkPurpleColor),
+                      MHelperFunctions.giveWidth(20.w),
+                      const Icon(Icons.notifications,
+                          color: MColors.darkPurpleColor),
+                      MHelperFunctions.giveWidth(20.w),
+                      const Icon(Icons.person_rounded,
+                          color: MColors.darkPurpleColor),
+                    ],
+                  )
+                ],
+              ),
+              //
+              //! sort by choice chips  (row.)
+              const ChoicChipsRow(),
+
+              //
+              //
+              //! favourites screen container list.
+              MHelperFunctions.giveHeight(30.h),
+              const FavouritesScreenContainerList(),
+
+              //
+              //
+              //!
+              MHelperFunctions.giveHeight(30.h),
             ],
-          )
-        ],
+          ).px(35.w),
+        ),
       ),
-      body: Column(
-        children: [
-          Row(
-            children: [
-              MHelperFunctions.giveWidth(17.w),
-              Text('Sort By',
-                  style: MTextStyles.mNormalStyle(
-                      fontSize: 12.sp, color: MColors.yellowishColor)),
-              MHelperFunctions.giveWidth(17.w),
-              const ChoiceChipsWidget(
-                  chipTitle: "All", backgroundColor: MColors.yellowishColor),
-              MHelperFunctions.giveWidth(17.w),
-              const ChoiceChipsWidget(chipTitle: "Video"),
-              MHelperFunctions.giveWidth(17.w),
-              const ChoiceChipsWidget(chipTitle: "Articles"),
-            ],
-          )
-        ],
-      ).px(35.w),
     );
   }
 }

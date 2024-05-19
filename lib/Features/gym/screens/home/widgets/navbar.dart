@@ -14,7 +14,6 @@ class NavBarWidget extends StatelessWidget {
             showUnselectedLabels: false,
             elevation: 0,
             selectedItemColor: MColors.yellowishColor,
-            type: BottomNavigationBarType.fixed,
             currentIndex: controller.currentIndex.value,
             backgroundColor: MColors.purpleColor,
             onTap: (value) {

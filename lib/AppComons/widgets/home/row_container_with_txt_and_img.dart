@@ -5,17 +5,18 @@ class RowContainerWithAndImg extends StatelessWidget {
       {super.key,
       required this.imageString,
       required this.childrensInColumn,
+      this.showPositonedIcon,
       this.backgroundColor});
 
   final String imageString;
   final Color? backgroundColor;
   final List<Widget> childrensInColumn;
+  final bool? showPositonedIcon;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: MHelperFunctions.screenWidth(),
-      height: 125.h,
       decoration: BoxDecoration(
           color: backgroundColor ?? Colors.white,
           borderRadius: BorderRadius.circular(20.r)),
@@ -25,14 +26,27 @@ class RowContainerWithAndImg extends StatelessWidget {
           Flexible(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: childrensInColumn,
             ).pOnly(left: 25.w, right: 18.w),
           ),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(20.r),
-            child: Image.asset(
-              imageString,
-              fit: BoxFit.cover,
+          Flexible(
+            child: Stack(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20.r),
+                  child: Image.asset(
+                    imageString,
+                    fit: BoxFit.fitHeight,
+                  ),
+                ),
+                if (showPositonedIcon != null)
+                  Positioned(
+                      top: 10.h,
+                      right: 8.w,
+                      child: const Icon(Icons.star_rounded,
+                          color: MColors.yellowishColor))
+              ],
             ),
           )
         ],

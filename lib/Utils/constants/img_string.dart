@@ -24,4 +24,9 @@ class MImageStrings {
   static const gendermale = "assets/icons/gendermale.png";
   static const genderfemale = "assets/icons/genderfemale.png";
   static const polygon = "assets/icons/polygon.png";
+  static const pulloutwomen = "assets/images/pullout.jpg";
+  static const singlefemale = "assets/images/singlefemale.jpg";
+  static const lowerbody = "assets/images/lowerbody.jpg";
+  static const uppperbody = "assets/images/upperbodyexercise.jpg";
+  static const avacadoandegg = "assets/images/avacadoandegg.jpg";
 }

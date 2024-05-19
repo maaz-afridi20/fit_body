@@ -15,9 +15,7 @@ class SetupWeightScreen extends StatelessWidget {
         child: Column(
           children: [
             Text(MTextString.whatisyourweight,
-                    style: MTextStyles.mHeadingStyle(fontSize: 25))
-                .animate()
-                .fadeIn(duration: const Duration(seconds: 3)),
+                style: MTextStyles.mHeadingStyle(fontSize: 25)),
             MHelperFunctions.giveHeight(30.h),
             Text(MTextString.loremIpsum,
                 style: MTextStyles.mNormalStyle(), textAlign: TextAlign.center),
@@ -86,7 +84,7 @@ class SetupWeightScreen extends StatelessWidget {
                     MHelperFunctions.navigateTo(context, const SetupHeight())),
             MHelperFunctions.giveHeight(20.h),
           ],
-        ),
+        ).animate().fadeIn(duration: const Duration(seconds: 3)),
       ),
     );
   }

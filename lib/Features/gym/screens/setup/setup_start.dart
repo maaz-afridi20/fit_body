@@ -46,6 +46,7 @@ class SetupStartScreen extends StatelessWidget {
                 btnText: "Next",
                 onPress: () => MHelperFunctions.navigateTo(
                     context, const SetupGenderScreen())),
+            MHelperFunctions.giveHeight(30.h),
           ],
         ),
       ),
