@@ -1,59 +1,101 @@
-import 'package:chewie/chewie.dart';
-import 'package:fit_body/Features/gym/controllers/playing_videos_controller/video_player_controller.dart';
+import 'package:appinio_video_player/appinio_video_player.dart';
 import 'package:fit_body/Utils/constants/exports.dart';
 
-class FavouriteVideos extends StatelessWidget {
+class FavouriteVideos extends StatefulWidget {
   const FavouriteVideos({super.key});
+
+  @override
+  State<FavouriteVideos> createState() => _FavouriteVideosState();
+}
+
+class _FavouriteVideosState extends State<FavouriteVideos> {
+  late CustomVideoPlayerController customVideoPlayerController;
+
+  @override
+  void initState() {
+    initializeVideoPlayer();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('videos')),
-        body: Column(
-          children: [
-            GetBuilder<VideoController>(
-              init: VideoController(),
-              builder: (controller) => Expanded(
-                  child: Center(
-                child: controller.chewieController != null &&
-                        controller.chewieController!.videoPlayerController.value
-                            .isInitialized
-                    ? Chewie(controller: controller.chewieController!)
-                    : const Center(
-                        child: CircularProgressIndicator(),
-                      ),
-              )),
-            )
-          ],
-        ));
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: CustomVideoPlayer(
+                customVideoPlayerController: customVideoPlayerController),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void initializeVideoPlayer() {
+    VideoPlayerController videoPlayerController;
+    // videoPlayerController =
+    //     VideoPlayerController.asset("assets/videos/butterfly.mp4")
+    //       ..initialize().then((value) {
+    //         setState(() {});
+    //       });
+
+    videoPlayerController =
+        VideoPlayerController.asset("assets/videos/butterfly.mp4")
+          ..initialize().then((value) {
+            setState(() {});
+          });
+
+    customVideoPlayerController = CustomVideoPlayerController(
+        customVideoPlayerSettings: CustomVideoPlayerSettings(
+            pauseButton: const Icon(Icons.pause, color: Colors.white),
+            playButton: const Icon(Icons.play_arrow, color: Colors.white),
+            showSeekButtons: true,
+            exitFullscreenOnEnd: true,
+            placeholderWidget: Container(
+              width: MHelperFunctions.screenWidth(),
+              height: 250.h,
+              color: Colors.black.withOpacity(0.5),
+            ),
+            showPlayButton: true),
+        context: context,
+        videoPlayerController: videoPlayerController);
   }
 }
 
 
-// Obx(() {
-            
-//           }),
 
 
-  //  if (controller.mVideoPlayerController.value.isInitialized) {
-  //                 return Column(
-  //                   children: [
-  //                     AspectRatio(
-  //                         aspectRatio: controller
-  //                             .mVideoPlayerController.value.aspectRatio,
-  //                         child:
-  //                             VideoPlayer(controller.mVideoPlayerController)),
-  //                     const SizedBox(height: 20),
-  //                     FloatingActionButton(
-  //                       onPressed: controller.togglePlayPause,
-  //                       child: Icon(
-  //                         controller.isPlaying.value
-  //                             ? Icons.pause
-  //                             : Icons.play_arrow,
-  //                       ),
-  //                     ),
-  //                   ],
-  //                 );
-  //               } else {
-  //                 return const Center(child: Text('Error'));
-  //               }
+
+
+
+
+
+// class FavouriteVideos extends StatelessWidget {
+//   const FavouriteVideos({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     final controller = Get.put(VideoController());
+//     return Scaffold(
+//         appBar: AppBar(title: const Text('videos')),
+//         body: Column(
+//           children: <Widget>[
+//             FutureBuilder(
+//               future: controller.initializeVideoPlayer(),
+//               builder: (context, snapshot) {
+//                 if (snapshot.connectionState == ConnectionState.waiting) {
+//                   return CircularProgressIndicator();
+//                 } else if (snapshot.hasError) {
+//                   return const Text('Error loading');
+//                 } else {
+//                   return CustomVideoPlayer(
+//                       customVideoPlayerController:
+//                           controller.customVideoPlayerController);
+//                 }
+//               },
+//             )
+//           ],
+//         ));
+//   }
+// }

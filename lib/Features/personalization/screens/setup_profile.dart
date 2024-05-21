@@ -29,7 +29,19 @@ class SetupProfileScreen extends StatelessWidget {
             ResizableContainer(widgets: [
               MHelperFunctions.giveHeight(10.h),
               Stack(children: [
-                Center(child: Image.asset(MImageStrings.profile)),
+                // Center(child: Image.asset(MImageStrings.profile)),
+                SizedBox(
+                  height: 200.h,
+                  width: 200.w,
+                  child: Center(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(250.r),
+                      child: const MCachedNetworkImage(
+                          imageUrl:
+                              "https://images.pexels.com/photos/1035673/pexels-photo-1035673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"),
+                    ),
+                  ),
+                ),
                 Positioned(
                     right: MHelperFunctions.screenWidth() * 0.35,
                     bottom: 10,

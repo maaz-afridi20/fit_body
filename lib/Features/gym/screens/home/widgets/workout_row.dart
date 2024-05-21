@@ -20,11 +20,20 @@ class WorkOutRow extends StatelessWidget {
   Widget columnWithImgAndText(String img, String text) {
     return Column(
       children: [
-        Image.asset(img),
+        // Image.asset(img),
+        getImageWidget(img),
         MHelperFunctions.giveHeight(6.h),
         Text(text,
             style: MTextStyles.mNormalStyle(color: MColors.yellowishColor))
       ],
     );
+  }
+
+  Widget getImageWidget(String img) {
+    if (img.startsWith('http') || img.startsWith('https')) {
+      return CachedNetworkImage(imageUrl: img);
+    } else {
+      return Image.asset(img);
+    }
   }
 }

@@ -12,13 +12,19 @@ class SetupStartScreen extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
+            // const SizedBox(
+            //   width: double.infinity,
+            //   child: Image(
+            //     image: AssetImage(MImageStrings.setupscreenwomen),
+            //     fit: BoxFit.fitWidth,
+            //   ),
+            // ),
             const SizedBox(
-              width: double.infinity,
-              child: Image(
-                image: AssetImage(MImageStrings.setupscreenwomen),
-                fit: BoxFit.fitWidth,
-              ),
-            ),
+                width: double.infinity,
+                child: MCachedNetworkImage(
+                    imageUrl:
+                        "https://images.pexels.com/photos/416809/pexels-photo-416809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")),
+
             MHelperFunctions.giveHeight(30.h),
             Text(MTextString.consistencyiskey,
                     style: MTextStyles.mHeadingStyle(

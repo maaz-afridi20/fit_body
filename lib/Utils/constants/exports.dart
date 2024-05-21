@@ -78,3 +78,6 @@ export 'package:fit_body/Features/gym/controllers/chip_controller/chip_controlle
 export 'package:fit_body/Features/gym/favourites/favourite_articles.dart';
 export 'package:fit_body/Features/gym/favourites/favourite_videos.dart';
 export 'package:fit_body/Features/gym/favourites/widgets/favourite_screen_container_list.dart';
+export 'package:cached_network_image/cached_network_image.dart';
+
+export 'package:fit_body/AppComons/widgets/all_app/cached_network_image.dart';

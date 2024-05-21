@@ -7,6 +7,7 @@ class FavouriteArticles extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MColors.balckColor,
+      appBar: const MAppbar(),
       body: SafeArea(
         child: Column(
           children: [
