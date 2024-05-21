@@ -35,8 +35,10 @@ class RowContainerWithAndImg extends StatelessWidget {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(20.r),
-                  child: Image.asset(
+                  child: getImageWidget(
                     imageString,
+                    placeHolder: (p0, p1) =>
+                        GeneralShimmer(height: 125.h, width: 150.w),
                     fit: BoxFit.fitHeight,
                   ),
                 ),

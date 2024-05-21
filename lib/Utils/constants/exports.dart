@@ -79,5 +79,8 @@ export 'package:fit_body/Features/gym/favourites/favourite_articles.dart';
 export 'package:fit_body/Features/gym/favourites/favourite_videos.dart';
 export 'package:fit_body/Features/gym/favourites/widgets/favourite_screen_container_list.dart';
 export 'package:cached_network_image/cached_network_image.dart';
-
+export 'package:fit_body/AppComons/widgets/network_or_asset_img/network_or_asset_img.dart';
 export 'package:fit_body/AppComons/widgets/all_app/cached_network_image.dart';
+export 'package:shimmer/shimmer.dart';
+export 'package:fit_body/Utils/shimmers/general_shimmer.dart';
+export 'package:fit_body/Utils/shimmers/profile_shimmer.dart';

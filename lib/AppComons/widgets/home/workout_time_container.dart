@@ -33,7 +33,12 @@ class WorkoutTimeContainer extends StatelessWidget {
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(16.r),
                           topRight: Radius.circular(16.r)),
-                      child: Image.asset(containerImage, fit: BoxFit.fitWidth),
+                      child: getImageWidget(
+                        containerImage,
+                        fit: BoxFit.fitWidth,
+                        placeHolder: (p0, p1) =>
+                            const GeneralShimmer(height: 90),
+                      ),
                     ),
                   ),
                   MHelperFunctions.giveHeight(5.h),

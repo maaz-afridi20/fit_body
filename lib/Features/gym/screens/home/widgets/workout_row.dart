@@ -28,12 +28,4 @@ class WorkOutRow extends StatelessWidget {
       ],
     );
   }
-
-  Widget getImageWidget(String img) {
-    if (img.startsWith('http') || img.startsWith('https')) {
-      return CachedNetworkImage(imageUrl: img);
-    } else {
-      return Image.asset(img);
-    }
-  }
 }

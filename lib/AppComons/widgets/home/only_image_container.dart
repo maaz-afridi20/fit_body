@@ -15,7 +15,11 @@ class OnlyImageContainer extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.r),
           image: DecorationImage(
-              image: AssetImage(imageString), fit: BoxFit.cover)),
+              image: CachedNetworkImageProvider(
+                imageString,
+                errorListener: (p0) => "Error While Loading".text.white.make(),
+              ),
+              fit: BoxFit.cover)),
       child: Stack(children: [
         Positioned(
           right: 15.w,

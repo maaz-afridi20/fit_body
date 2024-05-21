@@ -28,13 +28,16 @@ class HomeNavBar extends StatelessWidget {
               Row(
                 children: [
                   const WorkoutTimeContainer(
-                    containerImage: MImageStrings.multiplewomens,
+                    // containerImage: MImageStrings.multiplewomens,
+                    containerImage:
+                        "https://images.pexels.com/photos/3775566/pexels-photo-3775566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                     containerTitle: "Squat Exercise",
                     id: "workingTimeContainer1",
                   ),
                   MHelperFunctions.giveWidth(10.w),
                   const WorkoutTimeContainer(
-                    containerImage: "assets/images/workingwomen2.jpg",
+                    containerImage:
+                        "https://images.pexels.com/photos/4662352/pexels-photo-4662352.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                     containerTitle: "Full Body Stretching",
                     id: "workingTimeContainer2",
                   ),
@@ -48,7 +51,8 @@ class HomeNavBar extends StatelessWidget {
                       EdgeInsets.symmetric(horizontal: 35.w, vertical: 25.h),
                   widgets: [
                     RowContainerWithAndImg(
-                      imageString: MImageStrings.plankwomen,
+                      imageString:
+                          "https://images.pexels.com/photos/7592988/pexels-photo-7592988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                       backgroundColor: const Color(0xff212020),
                       childrensInColumn: [
                         Text(
@@ -81,13 +85,37 @@ class HomeNavBar extends StatelessWidget {
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const OnlyImageContainer(
-                        imageString: MImageStrings.supplimentwomen,
-                        id: 'onlyImgContainer1'),
-                    MHelperFunctions.giveWidth(10.w),
-                    const OnlyImageContainer(
-                        imageString: MImageStrings.dailyroutinemen,
-                        id: 'onlyImgContainer2'),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const OnlyImageContainer(
+                            imageString:
+                                "https://images.pexels.com/photos/8844377/pexels-photo-8844377.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                            id: 'onlyImgContainer1'),
+                        8.heightBox,
+                        Text('Suppliment Guide',
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.start,
+                            style: MTextStyles.mNormalStyle(fontSize: 12.sp))
+                      ],
+                    ),
+                    10.widthBox,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const OnlyImageContainer(
+                            imageString:
+                                'https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                            id: 'onlyImgContainer2'),
+                        8.heightBox,
+                        Text('15 Quick and effective\ndaily routine',
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.start,
+                            style: MTextStyles.mNormalStyle(fontSize: 12.sp))
+                      ],
+                    ),
                   ],
                 ).px(35.w),
               ),

@@ -49,6 +49,7 @@ class EditProfileForm extends StatelessWidget {
                 backgroundColor: MColors.yellowishColor,
                 textFontsize: 17.sp,
                 textFontWeight: FontWeight.w500,
+                onPress: () => Get.back(),
                 titleText: "Update Profile")),
         MHelperFunctions.giveHeight(30.h),
       ],

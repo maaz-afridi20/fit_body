@@ -25,7 +25,18 @@ class EditProfileScreen extends StatelessWidget {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Image.asset(MImageStrings.profile),
+                          SizedBox(
+                            height: 125.h,
+                            width: 125.w,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(50.r),
+                              child: getImageWidget(
+                                  "https://images.pexels.com/photos/634030/pexels-photo-634030.jpeg?auto=compress&cs=tinysrgb&w=600",
+                                  fit: BoxFit.fill,
+                                  placeHolder: (p0, p1) =>
+                                      const ProfileShimmer()),
+                            ),
+                          ),
                           MHelperFunctions.giveHeight(10.h),
                           Text('Madison Smith',
                               style: MTextStyles.mHeadingStyle()),

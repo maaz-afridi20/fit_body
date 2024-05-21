@@ -28,25 +28,25 @@ class SetupProfileScreen extends StatelessWidget {
             MHelperFunctions.giveHeight(20.h),
             ResizableContainer(widgets: [
               MHelperFunctions.giveHeight(10.h),
-              Stack(children: [
-                // Center(child: Image.asset(MImageStrings.profile)),
-                SizedBox(
-                  height: 200.h,
-                  width: 200.w,
-                  child: Center(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(250.r),
-                      child: const MCachedNetworkImage(
-                          imageUrl:
-                              "https://images.pexels.com/photos/1035673/pexels-photo-1035673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"),
-                    ),
+              Center(
+                child: Stack(children: [
+                  // Center(child: Image.asset(MImageStrings.profile)),
+                  Container(
+                    height: 125.h,
+                    width: 125.w,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(125.r),
+                        image: const DecorationImage(
+                            image: CachedNetworkImageProvider(
+                                "https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"),
+                            fit: BoxFit.fill)),
                   ),
-                ),
-                Positioned(
-                    right: MHelperFunctions.screenWidth() * 0.35,
-                    bottom: 10,
-                    child: Image.asset("assets/icons/pencil.png")),
-              ]),
+                  Positioned(
+                      right: 0.w,
+                      bottom: 10.h,
+                      child: Image.asset("assets/icons/pencil.png")),
+                ]),
+              ),
               MHelperFunctions.giveHeight(10.h),
             ]),
 
