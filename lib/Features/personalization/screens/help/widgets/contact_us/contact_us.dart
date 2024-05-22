@@ -5,34 +5,32 @@ class ContactUs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Expanded(
-              child: ListView.builder(
-            itemCount: listTileData.length,
-            itemBuilder: (context, index) {
-              final item = listTileData[index];
-              return ListTile(
-                leading: Container(
-                  height: 40.h,
-                  width: 40.w,
-                  decoration: BoxDecoration(
-                      color: MColors.darkPurpleColor,
-                      borderRadius: BorderRadius.circular(40.sp)),
-                  child: Center(
-                    child: Icon(item['icon'], color: Colors.white),
-                  ),
+    return Column(
+      children: [
+        Expanded(
+            child: ListView.builder(
+          itemCount: listTileData.length,
+          itemBuilder: (context, index) {
+            final item = listTileData[index];
+            return ListTile(
+              leading: Container(
+                height: 40.h,
+                width: 40.w,
+                decoration: BoxDecoration(
+                    color: MColors.darkPurpleColor,
+                    borderRadius: BorderRadius.circular(40.sp)),
+                child: Center(
+                  child: Icon(item['icon'], color: Colors.white),
                 ),
-                trailing: const Icon(Icons.expand_more,
-                    color: MColors.yellowishColor),
-                title: Text(item['text'],
-                    style: MTextStyles.mNormalStyle(fontSize: 18.sp)),
-              );
-            },
-          ))
-        ],
-      ),
+              ),
+              trailing:
+                  const Icon(Icons.expand_more, color: MColors.yellowishColor),
+              title: Text(item['text'],
+                  style: MTextStyles.mNormalStyle(fontSize: 18.sp)),
+            );
+          },
+        ))
+      ],
     );
   }
 
