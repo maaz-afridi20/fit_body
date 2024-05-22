@@ -6,11 +6,11 @@ class HelpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: MColors.balckColor,
         appBar: const MAppbar(appbarTitle: "Settings"),
         body: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
               50.heightBox,
               Text('How Can We Help You?',

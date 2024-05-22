@@ -6,13 +6,12 @@ class HomeNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MColors.balckColor,
       appBar: const HomeScreenAppbar(),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
               //
               //! workout row..

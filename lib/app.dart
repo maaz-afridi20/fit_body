@@ -1,3 +1,5 @@
+import 'package:fit_body/Utils/themes/themes.dart';
+
 import '../../../../Utils/constants/exports.dart';
 
 class MyApp extends StatelessWidget {
@@ -7,10 +9,12 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: Size(MediaQuery.of(context).size.width,
           MediaQuery.of(context).size.height),
-      builder: (_, child) => const GetMaterialApp(
+      builder: (_, child) => GetMaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Choopan Gym',
-        home: SplashScreen(),
+        themeMode: ThemeMode.system,
+        theme: MAppTheme.lightTheme,
+        home: const SplashScreen(),
       ),
     );
   }

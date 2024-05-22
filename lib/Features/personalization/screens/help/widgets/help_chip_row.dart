@@ -21,19 +21,19 @@ class HelpChipRow extends StatelessWidget {
           ],
         ),
         12.heightBox,
-        Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Expanded(child: GeneralChoiceChip(chipTitle: "General")),
-            6.widthBox,
-            const Expanded(
-                child: GeneralChoiceChip(
-                    chipTitle: "Account",
-                    backgroundColor: MColors.yellowishColor)),
-            6.widthBox,
-            const Expanded(child: GeneralChoiceChip(chipTitle: "Services")),
-          ],
-        ),
+        // Row(
+        //   mainAxisSize: MainAxisSize.min,
+        //   children: [
+        //     const Expanded(child: GeneralChoiceChip(chipTitle: "General")),
+        //     6.widthBox,
+        //     const Expanded(
+        //         child: GeneralChoiceChip(
+        //             chipTitle: "Account",
+        //             backgroundColor: MColors.yellowishColor)),
+        //     6.widthBox,
+        //     const Expanded(child: GeneralChoiceChip(chipTitle: "Services")),
+        //   ],
+        // ),
       ],
     );
   }

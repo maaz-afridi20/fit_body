@@ -6,9 +6,8 @@ class SetupHeight extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(HeightWeightSelectController());
+    final controller = HeightWeightSelectController.instance;
     return Scaffold(
-      backgroundColor: MColors.balckColor,
       appBar: MAppbar(titleColor: MColors.yellowishColor, titleFontsize: 14.sp),
       body: Column(
         children: [

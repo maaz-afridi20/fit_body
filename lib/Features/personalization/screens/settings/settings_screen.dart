@@ -6,7 +6,6 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MColors.balckColor,
       appBar: const MAppbar(appbarTitle: "Settings"),
       body: Column(
         children: <Widget>[

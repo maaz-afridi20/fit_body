@@ -7,7 +7,6 @@ class SetupPhysicalActivityLevel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MColors.balckColor,
       appBar: MAppbar(titleColor: MColors.yellowishColor, titleFontsize: 14.sp),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),

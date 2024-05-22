@@ -10,7 +10,6 @@ class LoginScreen extends StatelessWidget {
       canPop: false,
       onPopInvoked: (didPop) => MHelperFunctions.showAppExitDialogue(context),
       child: Scaffold(
-        backgroundColor: MColors.balckColor,
         appBar: const MAppbar(
             centerTitle: true,
             showLeading: Text(''),

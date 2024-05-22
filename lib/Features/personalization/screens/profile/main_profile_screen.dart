@@ -7,7 +7,6 @@ class MainProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MColors.balckColor,
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Stack(children: [

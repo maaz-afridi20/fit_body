@@ -8,7 +8,6 @@ class SetupWeightScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(HeightWeightSelectController());
     return Scaffold(
-      backgroundColor: MColors.balckColor,
       appBar: MAppbar(titleColor: MColors.yellowishColor, titleFontsize: 14.sp),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),

@@ -6,9 +6,10 @@ class ContactUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Expanded(
-            child: ListView.builder(
+        ListView.builder(
+          shrinkWrap: true,
           itemCount: listTileData.length,
           itemBuilder: (context, index) {
             final item = listTileData[index];
@@ -29,7 +30,7 @@ class ContactUs extends StatelessWidget {
                   style: MTextStyles.mNormalStyle(fontSize: 18.sp)),
             );
           },
-        ))
+        )
       ],
     );
   }
