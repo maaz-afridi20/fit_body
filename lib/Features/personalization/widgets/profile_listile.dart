@@ -22,9 +22,19 @@ class ProfileTileIconList extends StatelessWidget {
             tileText: "Settings",
             onTap: () =>
                 MHelperFunctions.navigateTo(context, const SettingsScreen())),
-        const ProfileListile(
-            tileIcon: Icons.description_sharp, tileText: "Help"),
-        const ProfileListile(tileIcon: Icons.logout, tileText: "LogOut"),
+        ProfileListile(
+            tileIcon: Icons.description_sharp,
+            tileText: "Help",
+            onTap: () =>
+                MHelperFunctions.navigateTo(context, const HelpScreen())),
+        ProfileListile(
+          tileIcon: Icons.logout,
+          tileText: "LogOut",
+          onTap: () => showModalBottomSheet(
+            context: context,
+            builder: (context) => const LogoutBottomNavSheet(),
+          ),
+        ),
       ],
     );
   }

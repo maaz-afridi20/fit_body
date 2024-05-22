@@ -1,4 +1,4 @@
-import '../../../../Utils/constants/exports.dart';
+import '../../../../../Utils/constants/exports.dart';
 
 class FavouritesScreenContainerList extends StatelessWidget {
   const FavouritesScreenContainerList({

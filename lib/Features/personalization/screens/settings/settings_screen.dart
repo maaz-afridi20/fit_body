@@ -1,4 +1,4 @@
-import '../../../Utils/constants/exports.dart';
+import '../../../../Utils/constants/exports.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -20,14 +20,8 @@ class SettingsScreen extends StatelessWidget {
               tileText: "Password Settings",
               onTap: () => MHelperFunctions.navigateTo(
                   context, const PasswordSettingsScreen())),
-          ProfileListile(
-            tileIcon: Iconsax.user,
-            tileText: "Delete Account",
-            onTap: () => showModalBottomSheet(
-              context: context,
-              builder: (context) => const LogoutBottomNavSheet(),
-            ),
-          )
+          const ProfileListile(
+              tileIcon: Iconsax.user, tileText: "Delete Account")
         ],
       ),
     );
