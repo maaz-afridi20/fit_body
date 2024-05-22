@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
         title: 'Choopan Gym',
         themeMode: ThemeMode.system,
         theme: MAppTheme.lightTheme,
+        darkTheme: MAppTheme.darkTheme,
         home: const SplashScreen(),
       ),
     );
