@@ -1,9 +1,15 @@
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class LogoutBottomNavSheet extends StatelessWidget {
-  const LogoutBottomNavSheet({
-    super.key,
-  });
+  const LogoutBottomNavSheet(
+      {super.key,
+      required this.confirmText,
+      required this.cancelText,
+      required this.confirmationText});
+
+  final String confirmText;
+  final String cancelText;
+  final String confirmationText;
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +23,14 @@ class LogoutBottomNavSheet extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Are You Sure To Log Out', style: MTextStyles.mHeadingStyle()),
+          Text(confirmationText, style: MTextStyles.mHeadingStyle()),
           40.heightBox,
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               Expanded(
                 child: MCircularContainer(
-                  titleText: "Cancel",
+                  titleText: cancelText,
                   textFontsize: 20,
                   textcolor: MColors.purpleColor,
                   heightOfContainer: 35.h,
@@ -34,7 +40,7 @@ class LogoutBottomNavSheet extends StatelessWidget {
               15.widthBox,
               Expanded(
                 child: MCircularContainer(
-                  titleText: "Yes, logout",
+                  titleText: confirmText,
                   heightOfContainer: 35.h,
                   textFontsize: 20,
                   backgroundColor: MColors.yellowishColor,

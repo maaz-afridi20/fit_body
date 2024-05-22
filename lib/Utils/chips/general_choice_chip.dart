@@ -1,4 +1,3 @@
-import 'package:fit_body/Features/gym/controllers/chip_controller/help_chip_controller.dart';
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class GeneralChoiceChip extends StatelessWidget {
@@ -15,7 +14,9 @@ class GeneralChoiceChip extends StatelessWidget {
       // final isSelected = controller.selectedChip.value == chipTitle;
       final isSelected = controller.selectedChips.contains(chipTitle);
       return MCircularContainer(
-        onPress: () => controller.toggleSelectedChips(chipTitle),
+        onPress: () {
+          controller.toggleSelectedChips(chipTitle);
+        },
         titleText: chipTitle,
         heightOfContainer: 30.h,
         widthOfContainer: MHelperFunctions.screenWidth(),

@@ -6,19 +6,28 @@ class HelpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MColors.balckColor,
-      appBar: const MAppbar(appbarTitle: "Settings"),
-      body: Column(
-        children: [
-          50.heightBox,
-          Text('How Can We Help You?',
-              style: MTextStyles.mHeadingStyle(fontWeight: FontWeight.w500)),
-          //
-          //! chip row
-          14.heightBox,
-          const HelpChipRow(),
-        ],
-      ).px(35.w),
-    );
+        backgroundColor: MColors.balckColor,
+        appBar: const MAppbar(appbarTitle: "Settings"),
+        body: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            children: [
+              50.heightBox,
+              Text('How Can We Help You?',
+                  style:
+                      MTextStyles.mHeadingStyle(fontWeight: FontWeight.w500)),
+              //
+              //! chip row
+              14.heightBox,
+              const HelpChipRow(),
+              //
+              //! Text Field
+              15.heightBox,
+              const MTextField(hintText: "Search"),
+              32.heightBox,
+              const VisibilityColumn(),
+            ],
+          ).px(35.w),
+        ));
   }
 }

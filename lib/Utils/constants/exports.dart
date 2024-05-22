@@ -94,3 +94,7 @@ export 'package:fit_body/Utils/chips/general_choice_chip.dart';
 export 'package:fit_body/Utils/bottom_sheets/delete_account_bottom_sheet.dart';
 export 'package:fit_body/Features/personalization/screens/help/help.dart';
 export 'package:fit_body/Features/personalization/screens/help/widgets/help_chip_row.dart';
+export 'package:fit_body/Features/gym/controllers/chip_controller/help_chip_controller.dart';
+export 'package:fit_body/Features/personalization/screens/help/widgets/visibility_column.dart';
+export 'package:fit_body/Utils/dividers/divider.dart';
+export 'package:fit_body/Features/personalization/screens/help/widgets/expandable_listile.dart';

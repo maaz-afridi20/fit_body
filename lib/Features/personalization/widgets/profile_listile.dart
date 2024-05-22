@@ -32,7 +32,11 @@ class ProfileTileIconList extends StatelessWidget {
           tileText: "LogOut",
           onTap: () => showModalBottomSheet(
             context: context,
-            builder: (context) => const LogoutBottomNavSheet(),
+            builder: (context) => const LogoutBottomNavSheet(
+              cancelText: "Cancel",
+              confirmText: "Yes, LogOut",
+              confirmationText: "Are you sure you want to logout",
+            ),
           ),
         ),
       ],
