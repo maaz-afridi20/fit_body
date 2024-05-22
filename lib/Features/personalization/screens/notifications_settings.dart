@@ -9,7 +9,7 @@ class NotificationSettings extends StatelessWidget {
       backgroundColor: MColors.balckColor,
       appBar: const MAppbar(appbarTitle: "Notification Settings"),
       body: Column(
-        children: <Widget>[
+        children: [
           40.heightBox,
           const NotificationListTileWidget(tileText: 'General Notification'),
           const NotificationListTileWidget(tileText: 'Sound'),
@@ -17,7 +17,6 @@ class NotificationSettings extends StatelessWidget {
           const NotificationListTileWidget(tileText: 'Vibrate'),
           const NotificationListTileWidget(tileText: 'Lock Screen'),
           const NotificationListTileWidget(tileText: 'Reminders'),
-          "notification".text.size(40).make()
         ],
       ).px(35.w),
     );

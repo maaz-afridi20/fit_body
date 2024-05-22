@@ -89,3 +89,6 @@ export 'package:fit_body/Utils/shimmers/profile_shimmer.dart';
 export 'package:fit_body/Features/personalization/screens/settings_screen.dart';
 export 'package:fit_body/Features/personalization/widgets/edit_notification_listile.dart';
 export 'package:fit_body/Features/personalization/screens/password_settings.dart';
+export 'package:fit_body/Features/gym/controllers/swith_btn_controllers/notification_page_switch_btn_controller.dart';
+
+export 'package:fit_body/Utils/bottom_sheets/delete_account_bottom_sheet.dart';

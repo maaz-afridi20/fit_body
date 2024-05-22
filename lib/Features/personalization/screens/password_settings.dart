@@ -12,14 +12,17 @@ class PasswordSettingsScreen extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
+          children: [
             40.heightBox,
             Text('Current Password',
                 style: MTextStyles.mNormalStyle(
                     fontWeight: FontWeight.w600,
                     color: MColors.darkPurpleColor)),
             10.heightBox,
-            MTextField(hintText: MTextString.starss),
+            MTextField(
+                hintText: MTextString.starss,
+                suffix: const Icon(Iconsax.eye_slash,
+                    color: MColors.darkPurpleColor)),
             20.heightBox,
             Align(
                 alignment: Alignment.centerRight,
@@ -32,7 +35,10 @@ class PasswordSettingsScreen extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     color: MColors.darkPurpleColor)),
             10.heightBox,
-            MTextField(hintText: MTextString.starss),
+            MTextField(
+                hintText: MTextString.starss,
+                suffix: const Icon(Iconsax.eye_slash,
+                    color: MColors.darkPurpleColor)),
             20.heightBox,
             Text('Confirm Password',
                 style: MTextStyles.mNormalStyle(
@@ -43,6 +49,14 @@ class PasswordSettingsScreen extends StatelessWidget {
                 hintText: MTextString.starss,
                 suffix: const Icon(Iconsax.eye_slash,
                     color: MColors.darkPurpleColor)),
+            60.heightBox,
+            Center(
+                child: MCircularContainer(
+                    titleText: "Change Password",
+                    heightOfContainer: 35.h,
+                    textFontsize: 17.sp,
+                    widthOfContainer: 200.w,
+                    backgroundColor: MColors.yellowishColor)),
           ],
         ).px(35.w),
       ),

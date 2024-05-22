@@ -20,8 +20,14 @@ class SettingsScreen extends StatelessWidget {
               tileText: "Password Settings",
               onTap: () => MHelperFunctions.navigateTo(
                   context, const PasswordSettingsScreen())),
-          const ProfileListile(
-              tileIcon: Iconsax.user, tileText: "Delete Account")
+          ProfileListile(
+            tileIcon: Iconsax.user,
+            tileText: "Delete Account",
+            onTap: () => showModalBottomSheet(
+              context: context,
+              builder: (context) => const LogoutBottomNavSheet(),
+            ),
+          )
         ],
       ),
     );
