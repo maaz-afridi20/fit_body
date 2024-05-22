@@ -39,7 +39,7 @@ class RowContainerWithAndImg extends StatelessWidget {
                     imageString,
                     placeHolder: (p0, p1) =>
                         GeneralShimmer(height: 125.h, width: 150.w),
-                    fit: BoxFit.fitHeight,
+                    fit: BoxFit.cover,
                   ),
                 ),
                 if (showPositonedIcon != null)

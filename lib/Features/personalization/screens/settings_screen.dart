@@ -1,0 +1,29 @@
+import '../../../Utils/constants/exports.dart';
+
+class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: MColors.balckColor,
+      appBar: const MAppbar(appbarTitle: "Settings"),
+      body: Column(
+        children: <Widget>[
+          ProfileListile(
+              tileIcon: Iconsax.notification,
+              tileText: "Notification Settings",
+              onTap: () => MHelperFunctions.navigateTo(
+                  context, const NotificationSettings())),
+          ProfileListile(
+              tileIcon: Icons.key_sharp,
+              tileText: "Password Settings",
+              onTap: () => MHelperFunctions.navigateTo(
+                  context, const PasswordSettingsScreen())),
+          const ProfileListile(
+              tileIcon: Iconsax.user, tileText: "Delete Account")
+        ],
+      ),
+    );
+  }
+}

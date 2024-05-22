@@ -11,7 +11,8 @@ class FavouritesScreenContainerList extends StatelessWidget {
       children: [
         FavouritesScreenContainer(
           mainTitle: "Upper Body",
-          imageString: MImageStrings.uppperbody,
+          imageString:
+              "https://images.pexels.com/photos/3820296/pexels-photo-3820296.jpeg?auto=compress&cs=tinysrgb&w=600",
           subTitle: [
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -43,7 +44,8 @@ class FavouritesScreenContainerList extends StatelessWidget {
         MHelperFunctions.giveHeight(20.h),
         FavouritesScreenContainer(
             mainTitle: "Boost Energy And Vitality",
-            imageString: MImageStrings.singlefemale,
+            imageString:
+                "https://images.pexels.com/photos/3768913/pexels-photo-3768913.jpeg?auto=compress&cs=tinysrgb&w=600",
             subTitle: [
               Text(MTextString.incorporating),
             ]),
@@ -53,7 +55,8 @@ class FavouritesScreenContainerList extends StatelessWidget {
         MHelperFunctions.giveHeight(20.h),
         FavouritesScreenContainer(
             mainTitle: "Lower Blast Body",
-            imageString: MImageStrings.lowerbody,
+            imageString:
+                "https://images.pexels.com/photos/5310890/pexels-photo-5310890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             subTitle: [
               Text(MTextString.incorporating),
             ]),
@@ -63,7 +66,8 @@ class FavouritesScreenContainerList extends StatelessWidget {
         MHelperFunctions.giveHeight(20.h),
         FavouritesScreenContainer(
             mainTitle: "Pull Out",
-            imageString: MImageStrings.pulloutwomen,
+            imageString:
+                "https://images.pexels.com/photos/4793200/pexels-photo-4793200.jpeg?auto=compress&cs=tinysrgb&w=600",
             subTitle: [
               Text(MTextString.incorporating),
             ]),
@@ -72,7 +76,8 @@ class FavouritesScreenContainerList extends StatelessWidget {
         MHelperFunctions.giveHeight(20.h),
         FavouritesScreenContainer(
             mainTitle: "Avacado And Egg Toast",
-            imageString: MImageStrings.avacadoandegg,
+            imageString:
+                "https://cdn.pixabay.com/photo/2020/06/23/15/17/avocado-5332878_1280.jpg",
             subTitle: [
               Row(
                   mainAxisAlignment: MainAxisAlignment.start,

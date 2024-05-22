@@ -17,7 +17,11 @@ class ProfileTileIconList extends StatelessWidget {
             tileIcon: Icons.star_rounded, tileText: "Favourite"),
         const ProfileListile(
             tileIcon: Icons.lock_outline, tileText: "Privacy Policy"),
-        const ProfileListile(tileIcon: Icons.settings, tileText: "Settings"),
+        ProfileListile(
+            tileIcon: Icons.settings,
+            tileText: "Settings",
+            onTap: () =>
+                MHelperFunctions.navigateTo(context, const SettingsScreen())),
         const ProfileListile(
             tileIcon: Icons.description_sharp, tileText: "Help"),
         const ProfileListile(tileIcon: Icons.logout, tileText: "LogOut"),
@@ -42,7 +46,7 @@ class ProfileListile extends StatelessWidget {
           height: 40.h,
           width: 40,
           decoration: const BoxDecoration(
-              shape: BoxShape.circle, color: MColors.purpleColor),
+              shape: BoxShape.circle, color: MColors.darkPurpleColor),
           child: Icon(tileIcon, color: Colors.white),
         ),
         title: Text(tileText,

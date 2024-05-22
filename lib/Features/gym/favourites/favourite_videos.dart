@@ -20,6 +20,7 @@ class _FavouriteVideosState extends State<FavouriteVideos> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const MAppbar(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -34,12 +35,6 @@ class _FavouriteVideosState extends State<FavouriteVideos> {
 
   void initializeVideoPlayer() {
     VideoPlayerController videoPlayerController;
-    // videoPlayerController =
-    //     VideoPlayerController.asset("assets/videos/butterfly.mp4")
-    //       ..initialize().then((value) {
-    //         setState(() {});
-    //       });
-
     videoPlayerController =
         VideoPlayerController.asset("assets/videos/butterfly.mp4")
           ..initialize().then((value) {

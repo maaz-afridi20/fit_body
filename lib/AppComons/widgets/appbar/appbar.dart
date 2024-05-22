@@ -30,7 +30,7 @@ class MAppbar extends StatelessWidget implements PreferredSizeWidget {
                   size: 15.sp, color: MColors.yellowishColor)),
       title: Text(appbarTitle ?? "Back",
           style: MTextStyles.mHeadingStyle(
-              fontSize: titleFontsize ?? 20,
+              fontSize: titleFontsize ?? 20.sp,
               color: titleColor ?? MColors.darkPurpleColor)),
       actions: action,
     );
