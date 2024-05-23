@@ -91,8 +91,7 @@ class MHelperFunctions {
 
   static Future<void> launchUlr(String url) async {
     var receivdeUrl = Uri.parse(url);
-    if (!await launchUrl(receivdeUrl,
-        mode: LaunchMode.externalNonBrowserApplication)) {
+    if (!await launchUrl(receivdeUrl, mode: LaunchMode.platformDefault)) {
       throw "Coudn't Launch Url";
     }
   }

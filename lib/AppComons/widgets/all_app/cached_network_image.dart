@@ -2,10 +2,11 @@ import 'package:fit_body/Utils/constants/exports.dart';
 
 class MCachedNetworkImage extends StatelessWidget {
   const MCachedNetworkImage(
-      {super.key, required this.imageUrl, this.placeHolder});
+      {super.key, required this.imageUrl, this.placeHolder, this.fit});
 
   final String imageUrl;
   final Widget Function(BuildContext, String)? placeHolder;
+  final BoxFit? fit;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class MCachedNetworkImage extends StatelessWidget {
       imageUrl: imageUrl,
       placeholder: placeHolder ??
           (context, url) => const Center(child: CircularProgressIndicator()),
-      fit: BoxFit.fitWidth,
+      fit: fit ?? BoxFit.cover,
       errorWidget: (context, url, error) => "Error Loading Image"
           .text
           .red500

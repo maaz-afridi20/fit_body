@@ -17,7 +17,7 @@ class VisibilityColumn extends StatelessWidget {
                 child: const AllVisibilityFaqsTile()),
             Visibility(
               visible: controller.selectedChips.contains("Contact Us"),
-              child: ContactUs(),
+              child: const ContactUs(),
             )
           ],
         );
