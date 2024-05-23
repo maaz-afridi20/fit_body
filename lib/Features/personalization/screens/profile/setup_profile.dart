@@ -18,7 +18,7 @@ class SetupProfileScreen extends StatelessWidget {
                   style: MTextStyles.mHeadingStyle(fontSize: 25)),
             ),
             MHelperFunctions.giveHeight(30.h),
-            Text(MTextString.loremIpsum,
+            Text(MTextString.edityourprofile,
                     style: MTextStyles.mNormalStyle(),
                     textAlign: TextAlign.center)
                 .px(35.w),

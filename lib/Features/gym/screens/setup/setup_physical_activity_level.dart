@@ -15,7 +15,7 @@ class SetupPhysicalActivityLevel extends StatelessWidget {
             Text(MTextString.physicalactiviylevel,
                 style: MTextStyles.mHeadingStyle(fontSize: 25)),
             MHelperFunctions.giveHeight(30.h),
-            Text(MTextString.loremIpsum,
+            Text(MTextString.physicalactivitydetail,
                 style: MTextStyles.mNormalStyle(), textAlign: TextAlign.center),
             MHelperFunctions.giveHeight(100.h),
             MCircularContainer(

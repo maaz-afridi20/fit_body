@@ -35,7 +35,7 @@ class SetupStartScreen extends StatelessWidget {
                   applyWidgetPadding: EdgeInsets.symmetric(horizontal: 35.w),
                   widgets: [
                     MHelperFunctions.giveHeight(30.h),
-                    Text(MTextString.loremIpsum,
+                    Text(MTextString.consistencyiskeydetail,
                             style: MTextStyles.mNormalStyle(
                                 color: MColors.balckColor),
                             textAlign: TextAlign.center)

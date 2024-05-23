@@ -23,7 +23,8 @@ class LogoutBottomNavSheet extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(confirmationText, style: MTextStyles.mHeadingStyle()),
+          Text(confirmationText,
+              textAlign: TextAlign.center, style: MTextStyles.mHeadingStyle()),
           40.heightBox,
           Row(
             mainAxisSize: MainAxisSize.min,

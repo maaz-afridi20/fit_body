@@ -11,12 +11,14 @@ class HomeNavBar extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         child: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
               //
               //! workout row..
               MHelperFunctions.giveHeight(12.h),
               const WorkOutRow(),
+
               //
               //! recommendation row...
               MHelperFunctions.giveHeight(5.h),

@@ -57,6 +57,13 @@ class MainProfileScreen extends StatelessWidget {
               //! profile listile...
               MHelperFunctions.giveHeight(48.h),
               const ProfileTileIconList(),
+
+              GestureDetector(
+                onTap: () => MHelperFunctions.launchUlr('https://flutter.dev'),
+                child: Text('April First',
+                    style: MTextStyles.mNormalStyle(
+                        fontSize: 13.sp, fontWeight: FontWeight.w700)),
+              ),
             ],
           ),
           //

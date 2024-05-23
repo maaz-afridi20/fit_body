@@ -33,8 +33,14 @@ class MTextString {
   static String physicalactiviylevel = "Physical Activity Level";
   static String fillprofile = "Fill Your Profile";
   static String chellengeyourlimit = "It's time to challenge your limit";
+  static String edityourprofile =
+      "Editing your profile allows you to update personal information, add a profile picture, and customize settings to better reflect your identity and preferences, ensuring your account is accurate and up-to-date";
 
   static String consistencyiskey =
       "Consistency Is The Key To Progress Don't Give Up!";
   static String starss = "* * * * * * *";
+  static String consistencyiskeydetail =
+      "Consistency is the key to achieving long-term success and reaching your goals. By maintaining a steady effort and staying dedicated to your tasks, even when progress seems slow, you build momentum and develop the habits necessary for meaningful and lasting accomplishments";
+  static String physicalactivitydetail =
+      "Regular physical activity is essential for maintaining good health. It helps improve cardiovascular fitness, strengthens muscles, boosts mental health, and increases overall energy levels";
 }

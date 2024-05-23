@@ -1,6 +1,7 @@
 import 'package:fit_body/Utils/constants/exports.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MHelperFunctions {
   static void showSnackBar(String message) {
@@ -87,4 +88,12 @@ class MHelperFunctions {
   static SizedBox giveHeight(double height) => SizedBox(height: height);
 
   static SizedBox giveWidth(double width) => SizedBox(width: width);
+
+  static Future<void> launchUlr(String url) async {
+    var receivdeUrl = Uri.parse(url);
+    if (!await launchUrl(receivdeUrl,
+        mode: LaunchMode.externalNonBrowserApplication)) {
+      throw "Coudn't Launch Url";
+    }
+  }
 }
