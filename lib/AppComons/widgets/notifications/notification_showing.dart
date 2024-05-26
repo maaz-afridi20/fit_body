@@ -1,7 +1,7 @@
 import '../../../Utils/constants/exports.dart';
 
-class NotificationListile extends StatelessWidget {
-  const NotificationListile(
+class NotificationShowing extends StatelessWidget {
+  const NotificationShowing(
       {super.key,
       required this.notificationSubTitle,
       required this.notificationTitle,
