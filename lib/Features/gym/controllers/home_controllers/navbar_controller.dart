@@ -9,7 +9,7 @@ class NavbarController extends GetxController {
 
   List<Widget> screenList = const [
     HomeNavBar(),
-    SizedBox(),
+    ProgressScreen(),
     AllFavouritesScreen(),
     MainProfileScreen(),
   ];

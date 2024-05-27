@@ -103,3 +103,6 @@ export 'package:fit_body/Features/personalization/screens/help/widgets/faqs/all_
 export 'package:fit_body/Features/gym/screens/home/home_screen_notifications/notifications_screen.dart';
 export 'package:fit_body/Features/personalization/screens/help/controllers/loading_website_contoller.dart';
 export 'package:fit_body/AppComons/widgets/notifications/notification_showing.dart';
+export 'package:fit_body/Features/gym/controllers/chip_controller/notification_chip_controller.dart';
+export 'package:fit_body/Features/gym/screens/progress/progress_screen.dart';
+export 'package:fit_body/Features/gym/controllers/tab_controllers/notification_showing_tabbar_controller.dart';

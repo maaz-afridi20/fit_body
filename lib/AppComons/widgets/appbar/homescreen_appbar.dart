@@ -22,8 +22,7 @@ class HomeScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
                   const Icon(Icons.search, color: MColors.darkPurpleColor),
                   MHelperFunctions.giveWidth(20.w),
                   GestureDetector(
-                    onTap: () => MHelperFunctions.navigateTo(
-                        context, const NotificationScreen()),
+                    onTap: () => Get.to(() => const NotificationScreen()),
                     child: const Icon(Icons.notifications,
                         color: MColors.darkPurpleColor),
                   ),

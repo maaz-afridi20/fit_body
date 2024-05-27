@@ -5,6 +5,7 @@ class NotificationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(NotificationChipController());
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -29,24 +30,47 @@ class NotificationScreen extends StatelessWidget {
                   )
                 ]),
             16.heightBox,
-            Row(
-              children: [
-                Expanded(
-                    child: MCircularContainer(
-                  titleText: "Reminders",
-                  heightOfContainer: 30,
-                  backgroundColor: MColors.yellowishColor,
-                  textFontsize: 17.sp,
-                )),
-                21.widthBox,
-                Expanded(
-                    child: MCircularContainer(
-                        titleText: "System",
-                        heightOfContainer: 30,
-                        textcolor: MColors.purpleColor,
-                        textFontsize: 17.sp)),
-              ],
-            ),
+            Obx(() {
+              return Row(
+                children: [
+                  Expanded(
+                      child: GestureDetector(
+                          onTap: () =>
+                              controller.toggleNotificationChip('Reminders'),
+                          child: MCircularContainer(
+                              titleText: "Reminders",
+                              heightOfContainer: 30,
+                              textcolor: controller.selectedNotificationChip
+                                      .contains("Reminders")
+                                  ? MColors.balckColor
+                                  : MColors.darkPurpleColor,
+                              backgroundColor: controller
+                                      .selectedNotificationChip
+                                      .contains("Reminders")
+                                  ? MColors.yellowishColor
+                                  : Colors.white,
+                              textFontsize: 17.sp))),
+                  21.widthBox,
+                  Expanded(
+                      child: GestureDetector(
+                          onTap: () =>
+                              controller.toggleNotificationChip('System'),
+                          child: MCircularContainer(
+                              titleText: "System",
+                              heightOfContainer: 30,
+                              textcolor: controller.selectedNotificationChip
+                                      .contains("System")
+                                  ? MColors.balckColor
+                                  : MColors.darkPurpleColor,
+                              backgroundColor: controller
+                                      .selectedNotificationChip
+                                      .contains("System")
+                                  ? MColors.yellowishColor
+                                  : Colors.white,
+                              textFontsize: 17.sp)))
+                ],
+              );
+            }),
             20.heightBox,
             Text('Today',
                 style: MTextStyles.mNormalStyle(
