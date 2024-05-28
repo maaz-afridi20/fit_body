@@ -1,0 +1,27 @@
+import 'package:fit_body/Utils/constants/exports.dart';
+
+class SystemNotification extends StatelessWidget {
+  const SystemNotification({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text('Today',
+            style: MTextStyles.mNormalStyle(
+                fontSize: 12.sp, color: MColors.yellowishColor)),
+        6.heightBox,
+        const NotificationShowing(
+            notificationTitle: 'New Workout Is Available',
+            notificationSubTitle: 'June 10 - 10:00 AM'),
+        16.heightBox,
+        const NotificationShowing(
+            notificationTitle: "Don't forget to drink water",
+            leadingContainerColor: MColors.yellowishColor,
+            leadingContainerIcon: Icons.light_rounded,
+            iconColor: MColors.balckColor,
+            notificationSubTitle: 'June 11 - 12:00 PM'),
+      ],
+    );
+  }
+}
