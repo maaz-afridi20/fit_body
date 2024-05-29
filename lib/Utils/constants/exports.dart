@@ -106,3 +106,5 @@ export 'package:fit_body/AppComons/widgets/notifications/notification_showing.da
 export 'package:fit_body/Features/gym/controllers/chip_controller/notification_chip_controller.dart';
 export 'package:fit_body/Features/gym/screens/progress/progress_screen.dart';
 export 'package:fit_body/Features/gym/controllers/tab_controllers/notification_showing_tabbar_controller.dart';
+export 'package:fit_body/Features/gym/screens/home/home_screen_notifications/reminders.dart';
+export 'package:fit_body/Features/gym/screens/home/home_screen_notifications/system_notification.dart';

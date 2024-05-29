@@ -10,6 +10,7 @@ class MCircularContainer extends StatelessWidget {
       this.textFontWeight,
       this.heightOfContainer,
       this.widthOfContainer,
+      this.contentPadding,
       this.onPress,
       required this.titleText});
 
@@ -22,6 +23,7 @@ class MCircularContainer extends StatelessWidget {
   final double? widthOfContainer;
   final double? radiusOfContaier;
   final Function()? onPress;
+  final EdgeInsetsGeometry? contentPadding;
 
   @override
   Widget build(BuildContext context) {
@@ -34,11 +36,14 @@ class MCircularContainer extends StatelessWidget {
             color: backgroundColor ?? Colors.white,
             borderRadius: BorderRadius.circular(radiusOfContaier ?? 30)),
         child: Center(
-            child: Text(titleText,
-                style: MTextStyles.mHeadingStyle(
-                    fontWeight: textFontWeight ?? FontWeight.normal,
-                    fontSize: textFontsize,
-                    color: textcolor ?? MColors.balckColor))),
+            child: Padding(
+          padding: contentPadding ?? EdgeInsets.zero,
+          child: Text(titleText,
+              style: MTextStyles.mHeadingStyle(
+                  fontWeight: textFontWeight ?? FontWeight.normal,
+                  fontSize: textFontsize,
+                  color: textcolor ?? MColors.balckColor)),
+        )),
       ),
     );
   }

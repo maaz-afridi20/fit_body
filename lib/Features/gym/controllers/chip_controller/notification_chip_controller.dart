@@ -7,6 +7,7 @@ class NotificationChipController extends GetxController {
     if (selectedNotificationChip.contains(chipTitle)) {
       selectedNotificationChip.remove(chipTitle);
     } else {
+      selectedNotificationChip.clear();
       selectedNotificationChip.add(chipTitle);
     }
   }

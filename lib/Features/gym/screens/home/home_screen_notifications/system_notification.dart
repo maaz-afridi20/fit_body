@@ -6,7 +6,9 @@ class SystemNotification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        20.heightBox,
         Text('Today',
             style: MTextStyles.mNormalStyle(
                 fontSize: 12.sp, color: MColors.yellowishColor)),
