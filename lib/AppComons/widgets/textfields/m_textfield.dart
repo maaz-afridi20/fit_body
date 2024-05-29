@@ -2,11 +2,16 @@ import 'package:fit_body/Utils/constants/exports.dart';
 
 class MTextField extends StatelessWidget {
   const MTextField(
-      {super.key, required this.hintText, this.keyboardInputType, this.suffix});
+      {super.key,
+      required this.hintText,
+      this.keyboardInputType,
+      this.suffix,
+      this.broderRadius});
 
   final String hintText;
   final TextInputType? keyboardInputType;
   final Widget? suffix;
+  final BorderRadius? broderRadius;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -25,7 +30,7 @@ class MTextField extends StatelessWidget {
               suffixIcon: suffix,
               border: OutlineInputBorder(
                   borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.circular(15.r)))),
+                  borderRadius: broderRadius ?? BorderRadius.circular(15.r)))),
     );
   }
 }

@@ -108,3 +108,5 @@ export 'package:fit_body/Features/gym/screens/progress/progress_screen.dart';
 export 'package:fit_body/Features/gym/controllers/tab_controllers/notification_showing_tabbar_controller.dart';
 export 'package:fit_body/Features/gym/screens/home/home_screen_notifications/reminders.dart';
 export 'package:fit_body/Features/gym/screens/home/home_screen_notifications/system_notification.dart';
+export 'package:fit_body/Features/gym/screens/home/home_screen_search/home_screen_search.dart';
+export 'package:fit_body/Features/gym/controllers/tab_controllers/search_tab_controller.dart';
