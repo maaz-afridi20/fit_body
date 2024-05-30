@@ -5,43 +5,62 @@ class ProgressScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final NotificationShowingTabbarController controller =
-        Get.put(NotificationShowingTabbarController());
+    final controller = Get.put(ProgressScreenTabcontroller());
     return Scaffold(
-      appBar: const MAppbar(appbarTitle: 'Progress Screen'),
-      body: SingleChildScrollView(
+      appBar: MAppbar(
+        appbarTitle: 'Progress Screen',
+        action: [
+          Row(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Icon(Icons.search, color: MColors.darkPurpleColor),
+                MHelperFunctions.giveWidth(20.w),
+                const Icon(Icons.notifications, color: MColors.darkPurpleColor),
+                MHelperFunctions.giveWidth(20.w),
+                const Icon(Icons.person_rounded, color: MColors.darkPurpleColor)
+              ]).pOnly(right: 35.w)
+        ],
+      ),
+      body: SafeArea(
         child: Column(
-          children: <Widget>[
-            SizedBox(
-              child: TabBar(
-                  dividerColor: Colors.transparent,
-                  automaticIndicatorColorAdjustment: false,
-                  labelColor: MColors.balckColor,
-                  indicatorColor: Colors.transparent,
-                  unselectedLabelColor: MColors.darkPurpleColor,
-                  controller: controller.tabController,
-                  tabs: const [
-                    // Tab(text: "Places"),
-                    // Tab(text: "inspiration"),
-                    // Tab(text: "patani")
+          children: [
+            //
+            //! personal details row above date picker
+            const PersonalDetailsInProgressScreen(),
 
-                    MCircularContainer(titleText: 'first'),
-                    MCircularContainer(titleText: 'second'),
-                    MCircularContainer(titleText: 'third'),
-                  ]),
-            ),
-            SizedBox(
-              height: double.maxFinite,
-              width: double.maxFinite,
+            //
+            //!
+            37.heightBox,
+
+            Obx(() => TabBar(
+                    controller: controller.tabController,
+                    dividerColor: Colors.transparent,
+                    splashFactory: NoSplash.splashFactory,
+                    indicatorColor: Colors.transparent,
+                    tabs: [
+                      Tab(
+                          child: MCircularContainer(
+                              titleText: 'Workout Log',
+                              backgroundColor: controller.getBackgroundColor(0),
+                              textcolor: controller.getTitleColor(0),
+                              heightOfContainer: 30.h)),
+                      Tab(
+                          child: MCircularContainer(
+                              titleText: 'Charts',
+                              backgroundColor: controller.getBackgroundColor(1),
+                              textcolor: controller.getTitleColor(1),
+                              heightOfContainer: 30.h))
+                    ])),
+
+            Expanded(
               child: TabBarView(
                   controller: controller.tabController,
-                  children: const [
-                    Text("first", style: TextStyle(color: Colors.white)),
-                    // NotificationScreen(),
-                    Text("second", style: TextStyle(color: Colors.white)),
-                    Text("third", style: TextStyle(color: Colors.white)),
+                  children: [
+                    const ProgressWorkoutLog(),
+                    "charts..".text.red600.size(40).make()
                   ]),
-            ),
+            )
           ],
         ),
       ),

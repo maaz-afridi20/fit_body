@@ -59,7 +59,7 @@ class HomeScreenAllSearch extends StatelessWidget {
                   children: const [
                     AllHomeScreenSearches(),
                     HomeSearchScreenWorkout(),
-                    HomeScreenSearchNutruition(),
+                    HomeScreenSearchNutruition()
                   ]),
             ),
           ],

@@ -49,7 +49,7 @@ class MainProfileScreen extends StatelessWidget {
                         ],
                       ),
                     ],
-                  ).animate().fadeIn(duration: const Duration(seconds: 3)),
+                  ).animate().fadeIn(duration: const Duration(seconds: 2)),
                 ),
                 30.heightBox,
               ]),
@@ -61,7 +61,6 @@ class MainProfileScreen extends StatelessWidget {
           ),
           //
           //! showing user weight, height container.
-          // const UserBodyInfoRowContainer(),
           Container(
             height: 60,
             width: double.infinity,

@@ -1,10 +1,11 @@
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class MDivider extends StatelessWidget {
-  const MDivider({super.key});
+  const MDivider({super.key, this.lineColor});
+  final Color? lineColor;
 
   @override
   Widget build(BuildContext context) {
-    return const Divider(color: MColors.yellowishColor, thickness: 2);
+    return Divider(color: lineColor ?? MColors.yellowishColor, thickness: 2);
   }
 }
