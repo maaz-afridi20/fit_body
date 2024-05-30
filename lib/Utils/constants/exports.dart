@@ -110,3 +110,9 @@ export 'package:fit_body/Features/gym/screens/home/home_screen_notifications/rem
 export 'package:fit_body/Features/gym/screens/home/home_screen_notifications/system_notification.dart';
 export 'package:fit_body/Features/gym/screens/home/home_screen_search/home_screen_search.dart';
 export 'package:fit_body/Features/gym/controllers/tab_controllers/search_tab_controller.dart';
+export 'package:fit_body/Features/gym/screens/home/home_screen_search/widgets/all_search_screen_img_and_text_widget.dart';
+export 'package:fit_body/Features/gym/screens/home/home_screen_search/widgets/row_container_img_and_with_details.dart';
+export 'package:fit_body/Features/gym/screens/home/home_screen_search/widgets/seach_found_tile.dart';
+export 'package:fit_body/Features/gym/screens/home/home_screen_search/all_searches.dart';
+export 'package:fit_body/Features/gym/screens/home/home_screen_search/home_screen_search_nutruition.dart';
+export 'package:fit_body/Features/gym/screens/home/home_screen_search/home_search_screen_workout.dart';

@@ -20,7 +20,7 @@ class HomeScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   GestureDetector(
-                      onTap: () => Get.to(() => const HomeScreenSearch()),
+                      onTap: () => Get.to(() => const HomeScreenAllSearch()),
                       child: const Icon(Icons.search,
                           color: MColors.darkPurpleColor)),
                   MHelperFunctions.giveWidth(20.w),

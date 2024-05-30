@@ -25,6 +25,7 @@ class WorkoutTimeContainer extends StatelessWidget {
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   SizedBox(
                     height: 90,
@@ -91,7 +92,8 @@ class WorkoutTimeContainer extends StatelessWidget {
                         )
                       ],
                     ).px(11.w),
-                  )
+                  ),
+                  10.heightBox
                 ],
               ),
               Positioned(

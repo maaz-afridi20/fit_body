@@ -1,7 +1,7 @@
 import 'package:fit_body/Utils/constants/exports.dart';
 
-class HomeScreenSearch extends StatelessWidget {
-  const HomeScreenSearch({super.key});
+class HomeScreenAllSearch extends StatelessWidget {
+  const HomeScreenAllSearch({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -54,13 +54,14 @@ class HomeScreenSearch extends StatelessWidget {
                               textcolor: controller.getTitleTextColor(2)))
                     ])),
             Expanded(
-              child:
-                  TabBarView(controller: controller.tabController, children: [
-                "one".text.white.size(20).make(),
-                "two".text.white.size(20).make(),
-                "three".text.white.size(20).make(),
-              ]),
-            )
+              child: TabBarView(
+                  controller: controller.tabController,
+                  children: const [
+                    AllHomeScreenSearches(),
+                    HomeSearchScreenWorkout(),
+                    HomeScreenSearchNutruition(),
+                  ]),
+            ),
           ],
         ).px(35.w),
       ),

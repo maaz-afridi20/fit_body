@@ -17,6 +17,7 @@ class RowContainerWithAndImg extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MHelperFunctions.screenWidth(),
+      height: 125,
       decoration: BoxDecoration(
           color: backgroundColor ?? Colors.white,
           borderRadius: BorderRadius.circular(20.r)),
@@ -24,22 +25,27 @@ class RowContainerWithAndImg extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Flexible(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: childrensInColumn,
-            ).pOnly(left: 25.w, right: 18.w),
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: childrensInColumn,
+              ).pOnly(left: 25.w, right: 8.w),
+            ),
           ),
           Flexible(
             child: Stack(
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(20.r),
-                  child: getImageWidget(
-                    imageString,
-                    placeHolder: (p0, p1) =>
-                        GeneralShimmer(height: 125.h, width: 150.w),
-                    fit: BoxFit.fill,
+                SizedBox(
+                  height: 125.h,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20.r),
+                    child: getImageWidget(
+                      imageString,
+                      placeHolder: (p0, p1) =>
+                          GeneralShimmer(height: 125.h, width: 150.w),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 if (showPositonedIcon != null)
