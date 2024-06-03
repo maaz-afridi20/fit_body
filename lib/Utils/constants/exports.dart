@@ -119,3 +119,4 @@ export 'package:fit_body/Features/gym/screens/home/home_screen_search/home_scree
 export 'package:fit_body/Features/gym/screens/home/home_screen_search/home_search_screen_workout.dart';
 export 'package:fit_body/Features/gym/controllers/tab_controllers/progress_screen_tabcontroller.dart';
 export 'package:fit_body/Features/gym/screens/progress/progress_workout_log.dart';
+export 'package:table_calendar/table_calendar.dart';

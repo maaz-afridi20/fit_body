@@ -5,29 +5,78 @@ class ProgressWorkoutLog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        29.heightBox,
-        const MDivider(lineColor: Colors.white),
-        15.heightBox,
-        Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              "choose data".text.white.make(),
-              "chhose month".text.white.make()
-            ]),
-        15.heightBox,
-        const MDivider(lineColor: Colors.white),
-        ElevatedButton(
-          onPressed: () {
-            showDatePicker(
-                context: context,
-                firstDate: DateTime(1980),
-                lastDate: DateTime(2100));
-          },
-          child: const Text('show date'),
-        )
-      ],
-    ).px(35.w);
+    final Rx<DateTime> todayDate = DateTime.now().obs;
+
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          29.heightBox,
+          const MDivider(lineColor: Colors.white),
+          15.heightBox,
+          Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                "choose data".text.white.make(),
+                "chhose month".text.white.make()
+              ]),
+          15.heightBox,
+          const MDivider(lineColor: Colors.white),
+          25.heightBox,
+          Obx(() => Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.r),
+                  color: Colors.white),
+              child: TableCalendar(
+                      startingDayOfWeek: StartingDayOfWeek.monday,
+                      calendarBuilders: CalendarBuilders(
+                        dowBuilder: (context, day) {
+                          return Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.amber,
+                                      borderRadius: BorderRadius.circular(8)),
+                                  child: Text('$day').centered())
+                              .pOnly(left: 5);
+                        },
+                      ),
+                      daysOfWeekHeight: 25,
+                      weekendDays: const [DateTime.sunday],
+                      daysOfWeekStyle: DaysOfWeekStyle(
+                          decoration: BoxDecoration(
+                              // gradient: const LinearGradient(colors: [
+                              //   MColors.darkPurpleColor,
+                              //   MColors.purpleColor
+                              // ]),
+                              borderRadius: BorderRadius.circular(8.r)),
+                          weekendStyle: const TextStyle(
+                              color: MColors.balckColor,
+                              fontWeight: FontWeight.w400),
+                          weekdayStyle: const TextStyle(color: Colors.white)),
+                      calendarStyle: const CalendarStyle(
+                          defaultTextStyle: TextStyle(
+                              color: MColors.darkPurpleColor,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600),
+                          outsideDaysVisible: false,
+                          todayTextStyle: TextStyle(
+                              color: MColors.balckColor,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600),
+                          weekendTextStyle: TextStyle(
+                              color: MColors.balckColor,
+                              fontWeight: FontWeight.w400)),
+                      onDaySelected: (selectedDay, focusedDay) =>
+                          todayDate.value = selectedDay,
+                      selectedDayPredicate: (day) =>
+                          isSameDay(day, todayDate.value),
+                      focusedDay: todayDate.value,
+                      headerStyle:
+                          const HeaderStyle(formatButtonVisible: false),
+                      headerVisible: false,
+                      firstDay: DateTime.utc(2010, 10, 16),
+                      lastDay: DateTime.utc(2030, 3, 14))
+                  .pSymmetric(h: 20.w, v: 15.h)))
+        ],
+      ).px(35.w),
+    );
   }
 }
