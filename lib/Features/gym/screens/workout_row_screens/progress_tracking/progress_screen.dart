@@ -5,10 +5,18 @@ class ProgressTrackingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(ProgressScreenTabcontroller());
+    final progressScreenTabController = Get.put(ProgressScreenTabcontroller());
+    final workoutRowwController = WorkoutRowController.instance;
     return Scaffold(
         appBar: MAppbar(
           appbarTitle: 'Progress Screen',
+          showLeading: GestureDetector(
+              onTap: () {
+                workoutRowwController.updateIndex(0);
+                Get.back();
+              },
+              child: const Icon(Icons.arrow_back_ios_new_rounded,
+                  color: MColors.yellowishColor)),
           action: [
             Row(
                 mainAxisSize: MainAxisSize.min,
@@ -35,7 +43,7 @@ class ProgressTrackingScreen extends StatelessWidget {
           37.heightBox,
 
           Obx(() => TabBar(
-                  controller: controller.tabController,
+                  controller: progressScreenTabController.tabController,
                   dividerColor: Colors.transparent,
                   splashFactory: NoSplash.splashFactory,
                   indicatorColor: Colors.transparent,
@@ -43,20 +51,24 @@ class ProgressTrackingScreen extends StatelessWidget {
                     Tab(
                         child: MCircularContainer(
                             titleText: 'Workout Log',
-                            backgroundColor: controller.getBackgroundColor(0),
-                            textcolor: controller.getTitleColor(0),
+                            backgroundColor: progressScreenTabController
+                                .getBackgroundColor(0),
+                            textcolor:
+                                progressScreenTabController.getTitleColor(0),
                             heightOfContainer: 30.h)),
                     Tab(
                         child: MCircularContainer(
                             titleText: 'Charts',
-                            backgroundColor: controller.getBackgroundColor(1),
-                            textcolor: controller.getTitleColor(1),
+                            backgroundColor: progressScreenTabController
+                                .getBackgroundColor(1),
+                            textcolor:
+                                progressScreenTabController.getTitleColor(1),
                             heightOfContainer: 30.h))
                   ])),
 
           Expanded(
               child: TabBarView(
-                  controller: controller.tabController,
+                  controller: progressScreenTabController.tabController,
                   children: const [ProgressWorkoutLog(), ProgressTracking()]))
         ])));
   }

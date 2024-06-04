@@ -117,7 +117,7 @@ export 'package:fit_body/Features/gym/screens/home/home_screen_search/all_search
 export 'package:fit_body/Features/gym/screens/home/home_screen_search/home_screen_search_nutruition.dart';
 export 'package:fit_body/Features/gym/screens/home/home_screen_search/home_search_screen_workout.dart';
 export 'package:fit_body/Features/gym/controllers/tab_controllers/progress_screen_tabcontroller.dart';
-export 'package:fit_body/Features/gym/screens/workout_row_screens/workout_log/progress_workout_log.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/progress_workout_log.dart';
 export 'package:table_calendar/table_calendar.dart';
 export 'package:fit_body/AppComons/widgets/all_app/table_calender.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workoutrow_reusable_widgets/progress_listile.dart';
@@ -127,3 +127,5 @@ export 'package:fit_body/Features/gym/controllers/home_controllers/workout_row_c
 export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/workout_row_nutritions.dart';
 export 'package:fit_body/Features/gym/screens/workout_videos/navbar_workout_videos_screen.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/progress_tracking/workout_row_progress_tracking.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/community/workout_row_community.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/main_workout_screen.dart';

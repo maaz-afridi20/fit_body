@@ -5,9 +5,17 @@ class WorkoutRowCommunityScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final workoutRowwController = WorkoutRowController.instance;
     return Scaffold(
-      appBar: AppBar(
-        title: "Workout Communty row screen".text.make(),
+      appBar: MAppbar(
+        appbarTitle: 'Community',
+        showLeading: GestureDetector(
+            onTap: () {
+              workoutRowwController.updateIndex(0);
+              Get.back();
+            },
+            child: const Icon(Icons.arrow_back_ios_new_rounded,
+                color: MColors.yellowishColor)),
       ),
     );
   }

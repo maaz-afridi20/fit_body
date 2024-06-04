@@ -8,8 +8,8 @@ class WorkOutRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(WorkoutRowController());
     return Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-      controller.columnWithImgAndText(CupertinoIcons.chart_bar_fill, "WorkOut",
-          0, () => Get.to(() => const ProgressTrackingScreen())),
+      controller.columnWithImgAndText(Icons.fitness_center, "WorkOut", 0,
+          () => Get.to(() => const MainWorkoutScreen())),
       StraightVerticleLine(
           height: 40.h, width: 1, color: MColors.darkPurpleColor),
       controller.columnWithImgAndText(CupertinoIcons.chart_bar_fill, "Progress",
@@ -21,7 +21,7 @@ class WorkOutRow extends StatelessWidget {
       StraightVerticleLine(
           height: 40.h, width: 1, color: MColors.darkPurpleColor),
       controller.columnWithImgAndText(CupertinoIcons.group_solid, "Community",
-          3, () => Get.to(() => const WorkoutNutritionsScreen()))
+          3, () => Get.to(() => const WorkoutRowCommunityScreen()))
     ]);
   }
 }

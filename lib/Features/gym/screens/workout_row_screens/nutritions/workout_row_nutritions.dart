@@ -5,8 +5,18 @@ class WorkoutNutritionsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final workoutRowwController = WorkoutRowController.instance;
     return Scaffold(
-      appBar: AppBar(title: "adfaf".text.make()),
+      appBar: MAppbar(
+        appbarTitle: 'Nutritions',
+        showLeading: GestureDetector(
+            onTap: () {
+              workoutRowwController.updateIndex(0);
+              Get.back();
+            },
+            child: const Icon(Icons.arrow_back_ios_new_rounded,
+                color: MColors.yellowishColor)),
+      ),
     );
   }
 }
