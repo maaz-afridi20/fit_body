@@ -129,3 +129,6 @@ export 'package:fit_body/Features/gym/screens/workout_videos/navbar_workout_vide
 export 'package:fit_body/Features/gym/screens/workout_row_screens/progress_tracking/workout_row_progress_tracking.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/community/workout_row_community.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/main_workout_screen.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/advance/advance_workout_screen.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/begginer/begginer_workout_screen.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/intermediate/intermediate_workout_screen.dart';

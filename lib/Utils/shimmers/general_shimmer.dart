@@ -13,7 +13,7 @@ class GeneralShimmer extends StatelessWidget {
         enabled: true,
         child: Container(
           height: height ?? 200,
-          width: width ?? 200,
+          // width: width ?? 200,
           decoration: BoxDecoration(
               color: Colors.white, borderRadius: BorderRadius.circular(20.r)),
           child: child,

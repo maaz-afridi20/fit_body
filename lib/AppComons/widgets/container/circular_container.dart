@@ -31,7 +31,7 @@ class MCircularContainer extends StatelessWidget {
       onTap: onPress,
       child: Container(
         height: heightOfContainer ?? 60.h,
-        width: widthOfContainer ?? double.infinity,
+        width: widthOfContainer ?? MHelperFunctions.screenWidth(),
         decoration: BoxDecoration(
             color: backgroundColor ?? Colors.white,
             borderRadius: BorderRadius.circular(radiusOfContaier ?? 30)),
@@ -39,6 +39,7 @@ class MCircularContainer extends StatelessWidget {
             child: Padding(
           padding: contentPadding ?? EdgeInsets.zero,
           child: Text(titleText,
+              overflow: TextOverflow.ellipsis,
               style: MTextStyles.mHeadingStyle(
                   fontWeight: textFontWeight ?? FontWeight.normal,
                   fontSize: textFontsize,
