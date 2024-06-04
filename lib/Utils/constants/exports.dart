@@ -122,3 +122,5 @@ export 'package:fit_body/Features/gym/screens/progress/progress_workout_log.dart
 export 'package:table_calendar/table_calendar.dart';
 export 'package:fit_body/AppComons/widgets/all_app/table_calender.dart';
 export 'package:fit_body/Features/gym/screens/progress/widgets/progress_listile.dart';
+export 'package:fl_chart/fl_chart.dart';
+export 'package:fit_body/Utils/charts/bar_chart.dart';
