@@ -1,8 +1,7 @@
-import 'package:fit_body/Features/gym/screens/progress/progress_tracking.dart';
 import 'package:fit_body/Utils/constants/exports.dart';
 
-class ProgressScreen extends StatelessWidget {
-  const ProgressScreen({super.key});
+class ProgressTrackingScreen extends StatelessWidget {
+  const ProgressTrackingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
