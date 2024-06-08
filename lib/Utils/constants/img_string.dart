@@ -4,6 +4,7 @@ class MImageStrings {
   static const fitbody = "assets/logos/fitbody.png";
   static const nutrituion = "assets/logos/nutritution.png";
   static const workout = "assets/logos/workout.png";
+  static const workoutwhite = "assets/logos/workoutwhite.png";
   static const dumble = "assets/icons/dumble.png";
   static const progress = "assets/logos/progress.png";
   static const dailyroutinemen = "assets/images/dailyroutinemen.jpg";

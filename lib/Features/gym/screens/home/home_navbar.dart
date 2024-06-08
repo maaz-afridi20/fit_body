@@ -7,20 +7,27 @@ class HomeNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: MAppbar(
-          showBottomWidget: true,
-          appbarTitle: "Hi, Madison",
-          showActionWidget: true,
-          onSearchIconTapped: () => Get.to(() => const HomeScreenAllSearch()),
-          onNotificationIconTapped: () =>
-              Get.to(() => const NotificationScreen()),
-        ),
+        appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            automaticallyImplyLeading: false),
         body: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
+              SizedBox(
+                height: 50,
+                child: MAppbar(
+                  showBottomWidget: true,
+                  appbarTitle: "Hi, Madison",
+                  showActionWidget: true,
+                  onSearchIconTapped: () =>
+                      Get.to(() => const HomeScreenAllSearch()),
+                  onNotificationIconTapped: () =>
+                      Get.to(() => const NotificationScreen()),
+                ),
+              ),
               //
               //! workout row..
               const WorkOutRow(),

@@ -4,7 +4,7 @@ import 'package:fit_body/Utils/themes/widget_themes/bottom_sheet_theme.dart';
 
 class MAppTheme {
   static ThemeData lightTheme = ThemeData(
-      scaffoldBackgroundColor: MColors.balckColor,
+      scaffoldBackgroundColor: MColors.homeContainerBlackClr,
       useMaterial3: true,
       fontFamily: 'Poppins',
       disabledColor: Colors.grey.withOpacity(.5),
@@ -13,7 +13,7 @@ class MAppTheme {
       bottomSheetTheme: MBottomSheetTheme.lightBottomSheetTheme);
 
   static ThemeData darkTheme = ThemeData(
-      scaffoldBackgroundColor: MColors.balckColor,
+      scaffoldBackgroundColor: MColors.homeContainerBlackClr,
       useMaterial3: true,
       fontFamily: 'Poppins',
       disabledColor: Colors.grey.withOpacity(.5),

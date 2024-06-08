@@ -131,3 +131,4 @@ export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/main_w
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/advance/advance_workout_screen.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/begginer/begginer_workout_screen.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/intermediate/intermediate_workout_screen.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/widgets/training_of_the_day_container.dart';

@@ -29,6 +29,7 @@ class MAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+        backgroundColor: MColors.homeContainerBlackClr,
         centerTitle: centerTitle,
         leading: showLeading ??
             GestureDetector(
@@ -63,7 +64,7 @@ class MAppbar extends StatelessWidget implements PreferredSizeWidget {
                     ]),
               ]
             : null,
-        bottom: showActionWidget
+        bottom: showBottomWidget == true
             ? PreferredSize(
                 preferredSize: const Size.fromHeight(kToolbarHeight),
                 child: Align(
