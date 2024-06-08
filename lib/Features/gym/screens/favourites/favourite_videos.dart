@@ -20,7 +20,7 @@ class _FavouriteVideosState extends State<FavouriteVideos> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const MAppbar(),
+      appBar: const MAppbar(showActionWidget: false),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

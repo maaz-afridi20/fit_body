@@ -8,28 +8,17 @@ class MainWorkoutScreen extends StatelessWidget {
     final workoutRowwController = WorkoutRowController.instance;
     return Scaffold(
       appBar: MAppbar(
-          appbarTitle: 'WorkOut',
-          showLeading: GestureDetector(
-              onTap: () {
-                workoutRowwController.updateIndex(0);
-                Get.back();
-              },
-              child: const Icon(Icons.arrow_back_ios_new_rounded,
-                  color: MColors.yellowishColor)),
-          action: [
-            Row(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Icon(Icons.search, color: MColors.darkPurpleColor),
-                  MHelperFunctions.giveWidth(20.w),
-                  const Icon(Icons.notifications,
-                      color: MColors.darkPurpleColor),
-                  MHelperFunctions.giveWidth(20.w),
-                  const Icon(Icons.person_rounded,
-                      color: MColors.darkPurpleColor)
-                ]).pOnly(right: 35.w)
-          ]),
+        appbarTitle: 'WorkOut',
+        showActionWidget: true,
+        showBottomWidget: true,
+        showLeading: GestureDetector(
+            onTap: () {
+              workoutRowwController.updateIndex(0);
+              Get.back();
+            },
+            child: const Icon(Icons.arrow_back_ios_new_rounded,
+                color: MColors.yellowishColor)),
+      ),
       body: Column(
         children: [
           Row(children: [
@@ -113,37 +102,12 @@ class MainWorkoutScreen extends StatelessWidget {
     );
   }
 }
-
-
-//  TabBar(controller: controller.tabController, tabs: [
-//             Tab(
-//                 height: 30,
-//                 child: MCircularContainer(
-//                     backgroundColor: MColors.yellowishColor,
-//                     titleText: 'Begginer',
-//                     textFontsize: 17.sp,
-//                     heightOfContainer: 30)),
-//             Tab(
-//                 height: 30,
-//                 child: MCircularContainer(
-//                     backgroundColor: MColors.yellowishColor,
-//                     titleText: 'Intermediate',
-//                     textFontsize: 17.sp,
-//                     heightOfContainer: 30)),
-//             Tab(
-//                 height: 30,
-//                 child: MCircularContainer(
-//                     backgroundColor: MColors.yellowishColor,
-//                     titleText: 'Advance',
-//                     textFontsize: 17.sp,
-//                     heightOfContainer: 30)),
-//           ]),
-//           Expanded(
-//             child: TabBarView(
-//                 controller: controller.tabController,
-//                 children: const [
-//                   BegginerWorkoutScreen(),
-//                   IntermediateWorkoutScreen(),
-//                   AdvanceWorkoutScreen(),
-//                 ]),
-//           )
+// PreferredSize(
+//                     preferredSize: const Size.fromHeight(kToolbarHeight),
+//                     child: Align(
+//                       alignment: Alignment.bottomLeft,
+//                       child: Text(
+//                         MTextString.chellengeyourlimit,
+//                         style: MTextStyles.mNormalStyle(),
+//                       ).px(16.w),
+//                     ))

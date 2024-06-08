@@ -10,7 +10,8 @@ class SetPasswordScreen extends StatelessWidget {
       appBar: const MAppbar(
           centerTitle: true,
           appbarTitle: "Set Password",
-          titleColor: MColors.yellowishColor),
+          titleColor: MColors.yellowishColor,
+          showActionWidget: false),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

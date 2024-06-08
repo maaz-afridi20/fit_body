@@ -7,7 +7,8 @@ class PasswordSettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MColors.balckColor,
-      appBar: const MAppbar(appbarTitle: "Password Settings"),
+      appBar: const MAppbar(
+          appbarTitle: "Password Settings", showActionWidget: false),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(

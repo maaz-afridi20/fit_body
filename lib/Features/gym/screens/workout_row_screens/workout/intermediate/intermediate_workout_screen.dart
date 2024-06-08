@@ -5,6 +5,7 @@ class IntermediateWorkoutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(appBar: MAppbar(appbarTitle: 'Intermediate'));
+    return const Scaffold(
+        appBar: MAppbar(appbarTitle: 'Intermediate', showActionWidget: true));
   }
 }

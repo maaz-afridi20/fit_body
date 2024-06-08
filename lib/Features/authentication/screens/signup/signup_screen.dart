@@ -10,6 +10,7 @@ class SignUpScreen extends StatelessWidget {
       appBar: const MAppbar(
           centerTitle: true,
           appbarTitle: "Create Account",
+          showActionWidget: false,
           titleColor: MColors.yellowishColor),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),

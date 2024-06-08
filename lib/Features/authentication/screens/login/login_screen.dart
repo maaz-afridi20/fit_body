@@ -13,6 +13,7 @@ class LoginScreen extends StatelessWidget {
         appBar: const MAppbar(
             centerTitle: true,
             showLeading: Text(''),
+            showActionWidget: false,
             appbarTitle: "Login",
             titleColor: MColors.yellowishColor),
         body: SingleChildScrollView(

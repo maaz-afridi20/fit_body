@@ -7,7 +7,10 @@ class SetupGoal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MAppbar(titleColor: MColors.yellowishColor, titleFontsize: 14.sp),
+      appBar: MAppbar(
+          titleColor: MColors.yellowishColor,
+          titleFontsize: 14.sp,
+          showActionWidget: false),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(

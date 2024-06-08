@@ -7,23 +7,10 @@ class NotificationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final tabsController = Get.put(NotificationShowingTabbarController());
     return Scaffold(
-      appBar: MAppbar(
+      appBar: const MAppbar(
           appbarTitle: "Notifications",
-          titleColor: MColors.darkPurpleColor,
-          action: [
-            Row(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  const Icon(Icons.search, color: MColors.darkPurpleColor),
-                  MHelperFunctions.giveWidth(20.w),
-                  const Icon(Icons.notifications,
-                      color: MColors.darkPurpleColor),
-                  MHelperFunctions.giveWidth(20.w),
-                  const Icon(Icons.person_rounded,
-                      color: MColors.darkPurpleColor)
-                ]).px(35.w)
-          ]),
+          showActionWidget: false,
+          titleColor: MColors.darkPurpleColor),
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.min,

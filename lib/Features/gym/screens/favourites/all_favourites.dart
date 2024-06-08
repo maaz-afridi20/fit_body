@@ -5,32 +5,18 @@ class AllFavouritesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          automaticallyImplyLeading: false,
-          backgroundColor: Colors.transparent),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        child: SafeArea(
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+            automaticallyImplyLeading: false,
+            backgroundColor: Colors.transparent),
+        body: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
-              MAppbar(
+              const MAppbar(
                 appbarTitle: "Favourites",
-                action: [
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      const Icon(Icons.search, color: MColors.darkPurpleColor),
-                      MHelperFunctions.giveWidth(20.w),
-                      const Icon(Icons.notifications,
-                          color: MColors.darkPurpleColor),
-                      MHelperFunctions.giveWidth(20.w),
-                      const Icon(Icons.person_rounded,
-                          color: MColors.darkPurpleColor),
-                    ],
-                  )
-                ],
+                showActionWidget: true,
               ),
               //
               //! sort by choice chips  (row.)

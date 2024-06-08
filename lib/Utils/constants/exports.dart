@@ -51,7 +51,6 @@ export 'package:fit_body/Features/personalization/screens/profile/setup_profile.
 export 'package:fit_body/Features/gym/screens/setup/widgets/lines_in_container.dart';
 export 'package:fit_body/AppComons/widgets/appbar/appbar.dart';
 export 'package:fit_body/Features/gym/screens/setup/setup_weight.dart';
-export 'package:fit_body/AppComons/widgets/appbar/homescreen_appbar.dart';
 export 'package:fit_body/Features/gym/screens/home/widgets/workout_row.dart';
 export 'package:fit_body/Features/gym/screens/home/widgets/recommendation_row.dart';
 export 'package:shared_preferences/shared_preferences.dart';

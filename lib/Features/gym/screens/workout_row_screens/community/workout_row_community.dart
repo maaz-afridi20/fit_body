@@ -9,6 +9,7 @@ class WorkoutRowCommunityScreen extends StatelessWidget {
     return Scaffold(
       appBar: MAppbar(
         appbarTitle: 'Community',
+        showActionWidget: false,
         showLeading: GestureDetector(
             onTap: () {
               workoutRowwController.updateIndex(0);

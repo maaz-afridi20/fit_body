@@ -9,6 +9,7 @@ class WorkoutNutritionsScreen extends StatelessWidget {
     return Scaffold(
       appBar: MAppbar(
         appbarTitle: 'Nutritions',
+        showActionWidget: false,
         showLeading: GestureDetector(
             onTap: () {
               workoutRowwController.updateIndex(0);

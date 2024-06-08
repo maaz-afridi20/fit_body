@@ -5,11 +5,13 @@ class FavouriteArticles extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: MColors.balckColor,
-      appBar: const MAppbar(),
-      body: SafeArea(
-        child: Column(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: MColors.balckColor,
+        appBar: const MAppbar(
+          showActionWidget: false,
+        ),
+        body: Column(
           children: [
             FavouritesScreenContainer(
                 mainTitle: "Boost Energy And Vitality",

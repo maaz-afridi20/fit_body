@@ -16,6 +16,7 @@ class MainProfileScreen extends StatelessWidget {
                 const MAppbar(
                     appbarTitle: "My Profile",
                     centerTitle: false,
+                    showActionWidget: false,
                     titleColor: Colors.white),
                 Center(
                   child: Column(

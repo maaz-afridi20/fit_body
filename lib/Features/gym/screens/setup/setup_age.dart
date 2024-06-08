@@ -8,8 +8,10 @@ class SetupAgeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(SetupAgeController());
     return Scaffold(
-        appBar:
-            MAppbar(titleColor: MColors.yellowishColor, titleFontsize: 14.sp),
+        appBar: MAppbar(
+            titleColor: MColors.yellowishColor,
+            titleFontsize: 14.sp,
+            showActionWidget: false),
         body: Stack(
           children: [
             Column(

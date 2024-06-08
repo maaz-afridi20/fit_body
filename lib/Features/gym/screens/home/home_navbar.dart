@@ -5,18 +5,24 @@ class HomeNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const HomeScreenAppbar(),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        child: SafeArea(
+    return SafeArea(
+      child: Scaffold(
+        appBar: MAppbar(
+          showBottomWidget: true,
+          appbarTitle: "Hi, Madison",
+          showActionWidget: true,
+          onSearchIconTapped: () => Get.to(() => const HomeScreenAllSearch()),
+          onNotificationIconTapped: () =>
+              Get.to(() => const NotificationScreen()),
+        ),
+        body: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
               //
               //! workout row..
-              MHelperFunctions.giveHeight(12.h),
               const WorkOutRow(),
 
               //
@@ -29,7 +35,6 @@ class HomeNavBar extends StatelessWidget {
               Row(
                 children: [
                   const WorkoutTimeContainer(
-                    // containerImage: MImageStrings.multiplewomens,
                     containerImage:
                         "https://images.pexels.com/photos/3775566/pexels-photo-3775566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
                     containerTitle: "Squat Exercise",

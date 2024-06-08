@@ -6,7 +6,7 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const MAppbar(appbarTitle: "Settings"),
+      appBar: const MAppbar(appbarTitle: "Settings", showActionWidget: false),
       body: Column(
         children: <Widget>[
           ProfileListile(

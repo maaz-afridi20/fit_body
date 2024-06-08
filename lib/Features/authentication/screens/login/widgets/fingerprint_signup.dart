@@ -10,6 +10,7 @@ class FingerPrintSignupScreen extends StatelessWidget {
       appBar: const MAppbar(
           centerTitle: true,
           appbarTitle: "Set Your Fingerprint",
+          showActionWidget: false,
           titleColor: MColors.yellowishColor),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

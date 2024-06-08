@@ -7,15 +7,7 @@ class HomeScreenAllSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(SearchTabController());
     return Scaffold(
-      appBar: MAppbar(
-        appbarTitle: "Search",
-        action: [
-          const Icon(Icons.notifications, color: MColors.darkPurpleColor),
-          20.widthBox,
-          const Icon(Icons.person_rounded, color: MColors.darkPurpleColor)
-              .pOnly(right: 35.w)
-        ],
-      ),
+      appBar: const MAppbar(appbarTitle: "Search", showActionWidget: true),
       body: SafeArea(
         child: Column(
           children: [

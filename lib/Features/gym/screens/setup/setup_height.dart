@@ -8,7 +8,10 @@ class SetupHeight extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = HeightWeightSelectController.instance;
     return Scaffold(
-      appBar: MAppbar(titleColor: MColors.yellowishColor, titleFontsize: 14.sp),
+      appBar: MAppbar(
+          titleColor: MColors.yellowishColor,
+          titleFontsize: 14.sp,
+          showActionWidget: false),
       body: Column(
         children: [
           Text(MTextString.whatisyourheight,

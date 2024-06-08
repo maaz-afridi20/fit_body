@@ -5,6 +5,7 @@ class AdvanceWorkoutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(appBar: MAppbar(appbarTitle: 'Advance'));
+    return const Scaffold(
+        appBar: MAppbar(appbarTitle: 'Advance', showActionWidget: true));
   }
 }

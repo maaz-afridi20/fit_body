@@ -10,6 +10,7 @@ class ForgotPasswordScreen extends StatelessWidget {
       appBar: const MAppbar(
           centerTitle: true,
           appbarTitle: "Forgot Password",
+          showActionWidget: false,
           titleColor: MColors.yellowishColor),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

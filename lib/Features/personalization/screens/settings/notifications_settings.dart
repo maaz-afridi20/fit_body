@@ -7,7 +7,8 @@ class NotificationSettings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MColors.balckColor,
-      appBar: const MAppbar(appbarTitle: "Notification Settings"),
+      appBar: const MAppbar(
+          appbarTitle: "Notification Settings", showActionWidget: false),
       body: Column(
         children: [
           40.heightBox,
