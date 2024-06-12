@@ -33,16 +33,20 @@ class SetupProfileScreen extends StatelessWidget {
               Center(
                 child: Stack(children: [
                   // Center(child: Image.asset(MImageStrings.profile)),
-                  Container(
+                  SizedBox(
                     height: 125.h,
                     width: 125.w,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(125.r),
-                        image: const DecorationImage(
-                            image: CachedNetworkImageProvider(
-                                "https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"),
-                            fit: BoxFit.fill)),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(100.r),
+                      child: getImageWidget(
+                        "https://images.pexels.com/photos/1542085/pexels-photo-1542085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                        fit: BoxFit.fill,
+                        placeHolder: (p0, p1) =>
+                            GeneralShimmer(height: 100.h, width: 100.w),
+                      ),
+                    ),
                   ),
+
                   Positioned(
                       right: 0.w,
                       bottom: 10.h,

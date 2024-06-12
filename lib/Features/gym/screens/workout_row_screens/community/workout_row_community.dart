@@ -10,7 +10,8 @@ class WorkoutRowCommunityScreen extends StatelessWidget {
       appBar: MAppbar(
         appbarTitle: 'Community',
         showActionWidget: false,
-        showLeading: GestureDetector(
+        showLeadingWidget: true,
+        leadingWidget: GestureDetector(
             onTap: () {
               workoutRowwController.updateIndex(0);
               Get.back();

@@ -10,7 +10,8 @@ class WorkoutNutritionsScreen extends StatelessWidget {
       appBar: MAppbar(
         appbarTitle: 'Nutritions',
         showActionWidget: false,
-        showLeading: GestureDetector(
+        showLeadingWidget: true,
+        leadingWidget: GestureDetector(
             onTap: () {
               workoutRowwController.updateIndex(0);
               Get.back();

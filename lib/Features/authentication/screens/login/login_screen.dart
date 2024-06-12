@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
       child: Scaffold(
         appBar: const MAppbar(
             centerTitle: true,
-            showLeading: Text(''),
+            leadingWidget: Text(''),
             showActionWidget: false,
             appbarTitle: "Login",
             titleColor: MColors.yellowishColor),

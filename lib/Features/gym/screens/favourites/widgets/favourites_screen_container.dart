@@ -29,9 +29,11 @@ class FavouritesScreenContainer extends StatelessWidget {
             textAlign: TextAlign.start,
             overflow: TextOverflow.ellipsis,
             child: Wrap(
-              alignment: WrapAlignment.start,
-              children: subTitle,
-            ),
+                alignment: WrapAlignment.start,
+                children: subTitle
+                    .map((mWidget) => Padding(
+                        padding: EdgeInsets.only(right: 10.w), child: mWidget))
+                    .toList()),
           ),
         ],
         showPositonedIcon: true);

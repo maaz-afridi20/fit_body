@@ -11,8 +11,8 @@ class ProgressTrackingScreen extends StatelessWidget {
         appBar: MAppbar(
             appbarTitle: 'Progress Screen',
             showActionWidget: true,
-            showBottomWidget: false,
-            showLeading: GestureDetector(
+            showLeadingWidget: true,
+            leadingWidget: GestureDetector(
                 onTap: () {
                   workoutRowwController.updateIndex(0);
                   Get.back();

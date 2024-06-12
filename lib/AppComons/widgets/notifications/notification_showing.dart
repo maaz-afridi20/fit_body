@@ -34,17 +34,17 @@ class NotificationShowing extends StatelessWidget {
                   color: iconColor ?? Colors.white)),
           6.widthBox,
           Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(notificationTitle,
-                  style: MTextStyles.mNormalStyle(
-                      fontSize: 13, color: MColors.balckColor)),
-              Text(notificationSubTitle,
-                  style: MTextStyles.mNormalStyle(
-                      fontSize: 12, color: MColors.purpleColor)),
-            ],
-          ),
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(notificationTitle,
+                    style: MTextStyles.mNormalStyle(
+                        fontSize: 13, color: MColors.balckColor)),
+                Text(notificationSubTitle,
+                    style: MTextStyles.mNormalStyle(
+                        fontSize: 12, color: MColors.purpleColor)),
+              ]),
+          const Text('afasfasfa'),
         ],
       ).px(10.w),
     );

@@ -8,8 +8,9 @@ class HomeNavBar extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-            backgroundColor: Colors.transparent,
-            automaticallyImplyLeading: false),
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.transparent,
+        ),
         body: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
@@ -19,13 +20,20 @@ class HomeNavBar extends StatelessWidget {
               SizedBox(
                 height: 50,
                 child: MAppbar(
-                  showBottomWidget: true,
+                  showLeadingWidget: false,
                   appbarTitle: "Hi, Madison",
                   showActionWidget: true,
                   onSearchIconTapped: () =>
                       Get.to(() => const HomeScreenAllSearch()),
                   onNotificationIconTapped: () =>
                       Get.to(() => const NotificationScreen()),
+                  bottom: PreferredSize(
+                      preferredSize: const Size.fromHeight(kToolbarHeight),
+                      child: Align(
+                          alignment: Alignment.bottomLeft,
+                          child: Text(MTextString.chellengeyourlimit,
+                                  style: MTextStyles.mNormalStyle())
+                              .pOnly(left: 50.w))),
                 ),
               ),
               //
@@ -96,7 +104,7 @@ class HomeNavBar extends StatelessWidget {
                 physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
