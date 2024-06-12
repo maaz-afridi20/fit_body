@@ -46,14 +46,14 @@ class TrainingOfTheDayContainer extends StatelessWidget {
               bottom: 0,
               child: Container(
                   width: MHelperFunctions.screenWidth() - 42,
-                  height: MHelperFunctions.screenHeight() * .050,
+                  height: MHelperFunctions.screenHeight() * .060,
                   decoration: BoxDecoration(
                       color: MColors.listileBlackColor.withOpacity(0.7),
                       borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(20.r),
                           bottomRight: Radius.circular(20.r))),
                   child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         if (trainingName != null && trainingName!.isNotEmpty)

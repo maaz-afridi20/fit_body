@@ -6,6 +6,7 @@ class NotificationShowing extends StatelessWidget {
       required this.notificationSubTitle,
       required this.notificationTitle,
       this.leadingContainerIcon,
+      this.actionText,
       this.iconColor,
       this.leadingContainerColor});
 
@@ -14,6 +15,7 @@ class NotificationShowing extends StatelessWidget {
   final Color? leadingContainerColor;
   final IconData? leadingContainerIcon;
   final Color? iconColor;
+  final String? actionText;
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +25,7 @@ class NotificationShowing extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(36.r), color: Colors.white),
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           Container(
               height: 48.h,
@@ -39,12 +42,22 @@ class NotificationShowing extends StatelessWidget {
               children: [
                 Text(notificationTitle,
                     style: MTextStyles.mNormalStyle(
-                        fontSize: 13, color: MColors.balckColor)),
+                        fontSize: 13,
+                        color: MColors.balckColor,
+                        fontWeight: FontWeight.w500)),
                 Text(notificationSubTitle,
                     style: MTextStyles.mNormalStyle(
-                        fontSize: 12, color: MColors.purpleColor)),
+                        fontSize: 12,
+                        color: MColors.purpleColor,
+                        fontWeight: FontWeight.w500))
               ]),
-          const Text('afasfasfa'),
+          const Spacer(),
+          if (actionText.isNotEmptyAndNotNull)
+            Text(actionText!,
+                style: MTextStyles.mNormalStyle(
+                    fontWeight: FontWeight.w500,
+                    color: MColors.darkPurpleColor)),
+          8.widthBox
         ],
       ).px(10.w),
     );
