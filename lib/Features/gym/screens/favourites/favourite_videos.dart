@@ -35,11 +35,11 @@ class _FavouriteVideosState extends State<FavouriteVideos> {
 
   void initializeVideoPlayer() {
     VideoPlayerController videoPlayerController;
-    videoPlayerController =
-        VideoPlayerController.asset("assets/videos/butterfly.mp4")
-          ..initialize().then((value) {
-            setState(() {});
-          });
+    videoPlayerController = VideoPlayerController.networkUrl(Uri.parse(
+        'https://videos.pexels.com/video-files/3209068/3209068-sd_640_360_25fps.mp4'))
+      ..initialize().then((value) {
+        setState(() {});
+      });
 
     customVideoPlayerController = CustomVideoPlayerController(
         customVideoPlayerSettings: CustomVideoPlayerSettings(

@@ -5,8 +5,10 @@ class NavbarWorkoutVideosScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: "Navbar Workout videos".text.white.make()),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(title: "Navbar Workout videos".text.white.make()),
+      ),
     );
   }
 }

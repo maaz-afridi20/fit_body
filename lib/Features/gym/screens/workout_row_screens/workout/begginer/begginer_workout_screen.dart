@@ -38,15 +38,15 @@ class BegginerWorkoutScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final notificationn = beginnerTrainingTilesRound1[index];
                     return NotificationShowing(
-                            notificationSubTitle:
-                                notificationn.notificationSubTitle,
-                            notificationTitle: notificationn.notificationTitle,
-                            leadingContainerIcon:
-                                notificationn.leadingContainerIcon,
-                            leadingContainerColor:
-                                notificationn.leadingContainerColor,
-                            actionText: notificationn.actionText)
-                        .pOnly(bottom: 16.h);
+                      notificationSubTitle: notificationn.notificationSubTitle,
+                      notificationTitle: notificationn.notificationTitle,
+                      leadingContainerIcon: notificationn.leadingContainerIcon,
+                      leadingContainerColor:
+                          notificationn.leadingContainerColor,
+                      actionText: notificationn.actionText,
+                      onPlayIconTapped: () =>
+                          Get.to(() => const CreateYourOwnBeginnerRoutine()),
+                    ).pOnly(bottom: 16.h);
                   }),
               15.heightBox,
               Text("Round 2",
@@ -68,7 +68,9 @@ class BegginerWorkoutScreen extends StatelessWidget {
                                 notificationn2.leadingContainerIcon,
                             leadingContainerColor:
                                 notificationn2.leadingContainerColor,
-                            actionText: notificationn2.actionText)
+                            actionText: notificationn2.actionText,
+                            onPlayIconTapped: () => Get.to(
+                                () => const CreateYourOwnBeginnerRoutine()))
                         .pOnly(bottom: 16.h);
                   })
             ]).px(35.w),

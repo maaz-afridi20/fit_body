@@ -8,6 +8,7 @@ class NotificationShowing extends StatelessWidget {
       this.leadingContainerIcon,
       this.actionText,
       this.iconColor,
+      this.onPlayIconTapped,
       this.leadingContainerColor});
 
   final String notificationTitle;
@@ -16,6 +17,7 @@ class NotificationShowing extends StatelessWidget {
   final IconData? leadingContainerIcon;
   final Color? iconColor;
   final String? actionText;
+  final Function()? onPlayIconTapped;
 
   @override
   Widget build(BuildContext context) {
@@ -27,14 +29,17 @@ class NotificationShowing extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Container(
-              height: 48.h,
-              width: 48.w,
-              decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: leadingContainerColor ?? MColors.purpleColor),
-              child: Icon(leadingContainerIcon ?? Icons.star_rate_rounded,
-                  color: iconColor ?? Colors.white)),
+          GestureDetector(
+            onTap: onPlayIconTapped,
+            child: Container(
+                height: 48.h,
+                width: 48.w,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: leadingContainerColor ?? MColors.purpleColor),
+                child: Icon(leadingContainerIcon ?? Icons.star_rate_rounded,
+                    color: iconColor ?? Colors.white)),
+          ),
           6.widthBox,
           Column(
               mainAxisAlignment: MainAxisAlignment.center,
