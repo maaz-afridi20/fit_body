@@ -19,7 +19,6 @@ class MPlayVerticalVideo extends StatelessWidget {
                   .value.isInitialized
               ? ResizableContainer(widgets: [
                   SizedBox(
-                          width: 320.w,
                           height: 460.h,
                           child: ClipRRect(
                               borderRadius: BorderRadius.circular(20.r),

@@ -17,7 +17,11 @@ class CreateYourOwnBeginnerRoutine extends StatelessWidget {
           //
           //
           //! exerciese names etc and details container...
-          const ExerciseDetailsContainer(),
+          const ExerciseDetailsContainer(
+            exerciseName: "Squats",
+            infoAboutExercise:
+                'Squats are one of the most fundamental and effective exercises for building strength',
+          ).px(35.w),
         ]));
   }
 }
