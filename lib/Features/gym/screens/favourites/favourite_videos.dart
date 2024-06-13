@@ -1,4 +1,3 @@
-import 'package:appinio_video_player/appinio_video_player.dart';
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class FavouriteVideos extends StatefulWidget {

@@ -37,7 +37,7 @@ export 'package:fit_body/Features/gym/controllers/chip_controller/notification_c
 export 'package:fit_body/Features/gym/controllers/home_controllers/like_btn_controller.dart';
 export 'package:fit_body/Features/gym/controllers/home_controllers/navbar_controller.dart';
 export 'package:fit_body/Features/gym/controllers/home_controllers/workout_row_controller.dart';
-export 'package:fit_body/Features/gym/controllers/playing_videos_controller/general_video_player_controller.dart';
+export 'package:fit_body/Features/gym/controllers/playing_videos_controller/video_player_controller.dart';
 export 'package:fit_body/Features/gym/controllers/setup_body_controllers/height_select_controller.dart';
 export 'package:fit_body/Features/gym/controllers/setup_body_controllers/setup_age_controller.dart';
 export 'package:fit_body/Features/gym/controllers/setup_body_controllers/setup_goal_controller.dart';
@@ -92,6 +92,8 @@ export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/beggin
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/intermediate/intermediate_workout_screen.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/main_workout_screen.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/progress_workout_log.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/widgets/exercise_details_container.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/widgets/play_vertical_video.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/widgets/training_of_the_day_container.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workoutrow_reusable_widgets/personal_detail_in_progress_screen.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workoutrow_reusable_widgets/progress_listile.dart';

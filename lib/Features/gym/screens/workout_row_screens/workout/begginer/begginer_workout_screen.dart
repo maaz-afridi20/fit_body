@@ -44,8 +44,10 @@ class BegginerWorkoutScreen extends StatelessWidget {
                       leadingContainerColor:
                           notificationn.leadingContainerColor,
                       actionText: notificationn.actionText,
-                      onPlayIconTapped: () =>
-                          Get.to(() => const CreateYourOwnBeginnerRoutine()),
+                      onPlayIconTapped: () => Get.to(() =>
+                          const CreateYourOwnBeginnerRoutine(
+                              videoUrl:
+                                  "https://videos.pexels.com/video-files/5320011/5320011-sd_540_960_25fps.mp4")),
                     ).pOnly(bottom: 16.h);
                   }),
               15.heightBox,
@@ -69,8 +71,10 @@ class BegginerWorkoutScreen extends StatelessWidget {
                             leadingContainerColor:
                                 notificationn2.leadingContainerColor,
                             actionText: notificationn2.actionText,
-                            onPlayIconTapped: () => Get.to(
-                                () => const CreateYourOwnBeginnerRoutine()))
+                            onPlayIconTapped: () => Get.to(() =>
+                                const CreateYourOwnBeginnerRoutine(
+                                    videoUrl:
+                                        "https://videos.pexels.com/video-files/5319426/5319426-sd_540_960_25fps.mp4")))
                         .pOnly(bottom: 16.h);
                   })
             ]).px(35.w),
