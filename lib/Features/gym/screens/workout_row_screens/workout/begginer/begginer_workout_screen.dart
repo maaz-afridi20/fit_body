@@ -45,9 +45,13 @@ class BegginerWorkoutScreen extends StatelessWidget {
                           notificationn.leadingContainerColor,
                       actionText: notificationn.actionText,
                       onPlayIconTapped: () => Get.to(() =>
-                          const CreateYourOwnBeginnerRoutine(
+                          const VideoWithExerciseDetailsContainer(
                               videoUrl:
-                                  "https://videos.pexels.com/video-files/5320011/5320011-sd_540_960_25fps.mp4")),
+                                  "https://videos.pexels.com/video-files/5320011/5320011-sd_540_960_25fps.mp4",
+                              appbarTitle: "Beginner",
+                              exerciseInfo:
+                                  "Squats are one of the most fundamental and effective exercises for building strength",
+                              exerciseName: "Squats")),
                     ).pOnly(bottom: 16.h);
                   }),
               15.heightBox,
@@ -63,19 +67,23 @@ class BegginerWorkoutScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final notificationn2 = beginnerTrainingTilesRound2[index];
                     return NotificationShowing(
-                            notificationSubTitle:
-                                notificationn2.notificationSubTitle,
-                            notificationTitle: notificationn2.notificationTitle,
-                            leadingContainerIcon:
-                                notificationn2.leadingContainerIcon,
-                            leadingContainerColor:
-                                notificationn2.leadingContainerColor,
-                            actionText: notificationn2.actionText,
-                            onPlayIconTapped: () => Get.to(() =>
-                                const CreateYourOwnBeginnerRoutine(
-                                    videoUrl:
-                                        "https://videos.pexels.com/video-files/5319426/5319426-sd_540_960_25fps.mp4")))
-                        .pOnly(bottom: 16.h);
+                        notificationSubTitle:
+                            notificationn2.notificationSubTitle,
+                        notificationTitle: notificationn2.notificationTitle,
+                        leadingContainerIcon:
+                            notificationn2.leadingContainerIcon,
+                        leadingContainerColor:
+                            notificationn2.leadingContainerColor,
+                        actionText: notificationn2.actionText,
+                        onPlayIconTapped: () => Get.to(() =>
+                            const VideoWithExerciseDetailsContainer(
+                                videoUrl:
+                                    "https://videos.pexels.com/video-files/5319426/5319426-sd_540_960_25fps.mp4",
+                                appbarTitle: "Beginner",
+                                exerciseInfo:
+                                    "This exercise builds strength and power in the hips, glutes, and core",
+                                exerciseName: "Concentration Curl"))).pOnly(
+                        bottom: 16.h);
                   })
             ]).px(35.w),
           ],

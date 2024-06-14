@@ -25,7 +25,6 @@ class MPlayVerticalVideo extends StatelessWidget {
                               child: CustomVideoPlayer(
                                   customVideoPlayerController: videoController
                                       .customVideoPlayerController)))
-                      .px(35.w)
                       .py(23.h)
                 ])
               : const Column(
