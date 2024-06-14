@@ -27,10 +27,10 @@ class MPlayVerticalVideo extends StatelessWidget {
                                       .customVideoPlayerController)))
                       .py(23.h)
                 ])
-              : const Column(
+              : Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [GeneralShimmer(height: 460, width: 300)]);
+                  children: [GeneralShimmer(height: 400.h, width: 270.w)]);
         });
   }
 }

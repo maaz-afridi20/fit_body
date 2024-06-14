@@ -52,18 +52,3 @@ class MVideoPlayerController extends GetxController {
     super.onClose();
   }
 }
-
-
-    // VideoPlayerController videoPlayerController =
-    //     VideoPlayerController.networkUrl(Uri.parse(
-    //         "https://videos.pexels.com/video-files/4761426/4761426-sd_640_338_25fps.mp4"))
-    //       ..initialize().then((value) {
-    //         update();
-    //       });
-    //
-    //
-    // VideoPlayerController videoPlayerController =
-    //     VideoPlayerController.asset('assets/videos/butterfly.mp4')
-    //       ..initialize().then((value) {
-    //         update();
-    //       });
