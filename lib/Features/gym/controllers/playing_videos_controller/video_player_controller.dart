@@ -1,4 +1,5 @@
 import 'package:fit_body/Utils/constants/exports.dart';
+import 'package:flutter/cupertino.dart';
 
 class MVideoPlayerController extends GetxController {
   late CustomVideoPlayerController customVideoPlayerController;
@@ -13,13 +14,25 @@ class MVideoPlayerController extends GetxController {
           });
 
     customVideoPlayerController = CustomVideoPlayerController(
-        customVideoPlayerSettings: const CustomVideoPlayerSettings(
+        customVideoPlayerSettings: CustomVideoPlayerSettings(
+            alwaysShowThumbnailOnVideoPaused: true,
+            settingsButton: const Icon(Iconsax.setting_2, color: Colors.white),
             customAspectRatio: 9 / 16,
-            pauseButton: Icon(Icons.pause, color: Colors.white),
-            playButton: Icon(Icons.play_arrow, color: Colors.white),
+            playButton: Center(
+                child: Container(
+                    decoration: const BoxDecoration(
+                        color: Color(0xff896cfe), shape: BoxShape.circle),
+                    child: const Icon(CupertinoIcons.play_fill,
+                        color: Colors.white, size: 30))),
+            pauseButton: Center(
+                child: Container(
+                    decoration: const BoxDecoration(
+                        color: Color(0xff896cfe), shape: BoxShape.circle),
+                    child: const Icon(Iconsax.pause,
+                        color: Colors.white, size: 30))),
             showSeekButtons: true,
             exitFullscreenOnEnd: true,
-            placeholderWidget: Center(child: CircularProgressIndicator()),
+            placeholderWidget: const Center(child: CircularProgressIndicator()),
             showPlayButton: true),
         context: Get.context!,
         videoPlayerController: videoPlayerController);
