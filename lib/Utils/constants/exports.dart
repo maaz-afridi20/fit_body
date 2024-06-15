@@ -42,6 +42,7 @@ export 'package:fit_body/Features/gym/controllers/setup_body_controllers/height_
 export 'package:fit_body/Features/gym/controllers/setup_body_controllers/setup_age_controller.dart';
 export 'package:fit_body/Features/gym/controllers/setup_body_controllers/setup_goal_controller.dart';
 export 'package:fit_body/Features/gym/controllers/splash_controllers/splash_controller.dart';
+export 'package:fit_body/Features/gym/controllers/swith_btn_controllers/adding_custom_routine_controller.dart';
 export 'package:fit_body/Features/gym/controllers/swith_btn_controllers/notification_page_switch_btn_controller.dart';
 export 'package:fit_body/Features/gym/controllers/tab_controllers/notification_showing_tabbar_controller.dart';
 export 'package:fit_body/Features/gym/controllers/tab_controllers/progress_screen_tabcontroller.dart';
@@ -90,6 +91,8 @@ export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/advanc
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/advance/start_advance_screen.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/begginer/begginer_workout_screen.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/begginer/start_beginner_screen.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/create_your_custom_routine/check_your_custom_routine.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/create_your_custom_routine/create_your_custom_routine.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/intermediate/intermediate_workout_screen.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/intermediate/start_intermediate_screen.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/main_workout_screen.dart';
@@ -130,6 +133,7 @@ export 'package:fit_body/Utils/helpers/helper_functions.dart';
 export 'package:fit_body/Utils/shimmers/general_shimmer.dart';
 export 'package:fit_body/Utils/shimmers/profile_shimmer.dart';
 export 'package:fit_body/app.dart';
+export 'package:fit_body/data/local_data_lists/create_your_own_routine_data.dart';
 export 'package:fl_chart/fl_chart.dart';
 export 'package:flutter/material.dart';
 export 'package:flutter_screenutil/flutter_screenutil.dart';
