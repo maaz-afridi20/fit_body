@@ -16,12 +16,11 @@ class AdvanceWorkoutScreen extends StatelessWidget {
                     EdgeInsets.symmetric(horizontal: 22.w, vertical: 35.h),
                 widgets: const [
                   TrainingOfTheDayContainer(
-                    img:
-                        "https://cdn.muscleandstrength.com/sites/default/files/images/cable-tricep-extension.jpg",
-                    trainingName: "",
-                    topRightTitle: "Upper Body Fitness",
-                    containerHeight: 160,
-                  )
+                      img:
+                          "https://cdn.muscleandstrength.com/sites/default/files/images/cable-tricep-extension.jpg",
+                      trainingName: "",
+                      topRightTitle: "Upper Body Fitness",
+                      containerHeight: 160)
                 ]),
             25.heightBox,
             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

@@ -6,6 +6,7 @@ class TrainingOfTheDayContainer extends StatelessWidget {
       required this.img,
       required this.trainingName,
       this.topRightTitle,
+      this.showNumberOfExercises,
       this.onTapp,
       this.containerHeight});
 
@@ -13,6 +14,7 @@ class TrainingOfTheDayContainer extends StatelessWidget {
   final String? trainingName;
   final double? containerHeight;
   final String? topRightTitle;
+  final bool? showNumberOfExercises;
   final Function()? onTapp;
 
   @override
@@ -29,7 +31,7 @@ class TrainingOfTheDayContainer extends StatelessWidget {
                 child: getImageWidget(
                     placeHolder: (p0, p1) => const GeneralShimmer(),
                     img,
-                    fit: BoxFit.cover)),
+                    fit: BoxFit.fill)),
             Positioned(
                 right: 0,
                 top: 0,
@@ -48,8 +50,9 @@ class TrainingOfTheDayContainer extends StatelessWidget {
                                 fontSize: 12.sp, color: MColors.balckColor))))),
             Positioned(
                 bottom: 0,
+                right: 0,
+                left: 0,
                 child: Container(
-                    width: MHelperFunctions.screenWidth() - 42,
                     height: MHelperFunctions.screenHeight() * .060,
                     decoration: BoxDecoration(
                         color: MColors.listileBlackColor.withOpacity(0.7),
@@ -80,15 +83,16 @@ class TrainingOfTheDayContainer extends StatelessWidget {
                               '1450 KCal'.text.size(12.sp).light.white.make()
                             ]),
                             25.widthBox,
-                            Row(children: [
-                              SizedBox(
-                                  height: 10,
-                                  width: 10,
-                                  child: getImageWidget(
-                                      MImageStrings.workoutwhite)),
-                              3.widthBox,
-                              '5 Exercise'.text.size(12.sp).light.white.make()
-                            ]),
+                            if (showNumberOfExercises ?? true)
+                              Row(children: [
+                                SizedBox(
+                                    height: 10,
+                                    width: 10,
+                                    child: getImageWidget(
+                                        MImageStrings.workoutwhite)),
+                                3.widthBox,
+                                '5 Exercise'.text.size(12.sp).light.white.make()
+                              ]),
                             const Spacer(),
                             const Icon(Icons.star_rounded, color: Colors.white)
                           ]),

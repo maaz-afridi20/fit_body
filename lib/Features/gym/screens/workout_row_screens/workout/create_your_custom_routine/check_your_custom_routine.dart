@@ -25,8 +25,6 @@ class CheckYourCustomRoutine extends StatelessWidget {
             itemBuilder: (context, index) {
               final itemIndex = controller.addedItems[index];
               final exercise = customExerciseRoutineData[itemIndex];
-              print(
-                  "Exercise : ${exercise.exerciseName}, Video Url : ${exercise.videoUrl}, Info ${exercise.exerciseInfo}");
               return Expanded(
                   child: Container(
                       height: 160.h,
