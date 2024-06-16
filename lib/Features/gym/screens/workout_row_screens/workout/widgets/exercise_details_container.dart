@@ -29,6 +29,7 @@ class ExerciseDetailsContainer extends StatelessWidget {
           10.heightBox,
           Text(infoAboutExercise,
                   textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
                   style: MTextStyles.mNormalStyle(
                       color: Colors.black, fontSize: 12.sp))
               .px(8.w),

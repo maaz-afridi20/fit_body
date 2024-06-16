@@ -25,6 +25,8 @@ class CheckYourCustomRoutine extends StatelessWidget {
             itemBuilder: (context, index) {
               final itemIndex = controller.addedItems[index];
               final exercise = customExerciseRoutineData[itemIndex];
+              print(
+                  "Exercise : ${exercise.exerciseName}, Video Url : ${exercise.videoUrl}, Info ${exercise.exerciseInfo}");
               return Expanded(
                   child: Container(
                       height: 160.h,
@@ -61,11 +63,10 @@ class CheckYourCustomRoutine extends StatelessWidget {
                                     .centered()
                                     .onTap(() {
                                   Get.to(() => VideoWithExerciseDetailsContainer(
-                                      videoUrl:
-                                          "https://videos.pexels.com/video-files/4944395/4944395-hd_720_1366_24fps.mp4",
+                                      videoUrl: exercise.videoUrl!,
                                       appbarTitle: "Custom Routine",
-                                      exerciseInfo:
-                                          "The leg press isolates muscles in the lower body, primarily activating the quadriceps, hamstring",
+                                      exerciseInfo: exercise.exerciseInfo ??
+                                          "Some Error Occured While Loading Exercise Info...!",
                                       exerciseName: exercise.exerciseName));
                                 }))),
                         //
