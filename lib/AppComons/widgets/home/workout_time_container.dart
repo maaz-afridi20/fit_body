@@ -19,7 +19,7 @@ class WorkoutTimeContainer extends StatelessWidget {
           height: 160.h,
           width: MHelperFunctions.screenWidth(),
           decoration: BoxDecoration(
-              color: MColors.homeContainerBlackClr,
+              color: MColors.balckColor,
               borderRadius: BorderRadius.circular(16.r)),
           child: Stack(
             children: [
@@ -50,49 +50,20 @@ class WorkoutTimeContainer extends StatelessWidget {
                       .px(11.w),
                   MHelperFunctions.giveHeight(5.h),
                   Flexible(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          mainAxisSize: MainAxisSize.min,
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const SizedBox(
-                              child: Icon(Icons.access_time_filled_rounded,
-                                  color: Colors.white, size: 15),
-                            ),
-                            MHelperFunctions.giveWidth(5.w),
-                            Flexible(
-                              child: Text('12 Minutes',
-                                  style:
-                                      MTextStyles.mNormalStyle(fontSize: 12.sp),
-                                  overflow: TextOverflow.ellipsis),
-                            ),
-                          ],
-                        ),
                         Flexible(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              const SizedBox(
-                                child: Icon(Icons.fire_extinguisher,
-                                    color: Colors.white, size: 15),
-                              ),
-                              MHelperFunctions.giveWidth(3.w),
-                              Flexible(
-                                child: Text(
-                                  '120 KCal',
-                                  style:
-                                      MTextStyles.mNormalStyle(fontSize: 12.sp),
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
-                    ).px(11.w),
-                  ),
+                            child: Text('12 Minutes',
+                                style:
+                                    MTextStyles.mNormalStyle(fontSize: 12.sp),
+                                overflow: TextOverflow.ellipsis)),
+                        Flexible(
+                            child: Text('120 KCal',
+                                style:
+                                    MTextStyles.mNormalStyle(fontSize: 12.sp),
+                                overflow: TextOverflow.ellipsis))
+                      ]).px(11.w)),
                   10.heightBox
                 ],
               ),

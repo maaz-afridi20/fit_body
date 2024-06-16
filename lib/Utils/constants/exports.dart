@@ -132,6 +132,7 @@ export 'package:fit_body/Utils/dividers/divider.dart';
 export 'package:fit_body/Utils/helpers/helper_functions.dart';
 export 'package:fit_body/Utils/shimmers/general_shimmer.dart';
 export 'package:fit_body/Utils/shimmers/profile_shimmer.dart';
+export 'package:fit_body/Utils/useful_extentions/widget_extentions.dart';
 export 'package:fit_body/app.dart';
 export 'package:fit_body/data/local_data_lists/create_your_own_routine_data.dart';
 export 'package:fl_chart/fl_chart.dart';
