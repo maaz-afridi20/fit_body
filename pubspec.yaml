@@ -53,6 +53,7 @@ dependencies:
   fl_chart: ^0.68.0
   http: ^1.2.1
   local_auth: ^2.2.0
+  uuid: ^4.4.0
 
 
 dev_dependencies:

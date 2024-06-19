@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class SplashController extends GetxController {
@@ -18,7 +19,7 @@ class SplashController extends GetxController {
     SharedPreferences pref = await SharedPreferences.getInstance();
     final bool isFirstTime = await checkFirstTime();
     if (isFirstTime) {
-      Get.offAll(() => const LoginScreen());
+      Get.offAll(() => const HomeScreen());
     } else {
       pref.setBool('firstTime', true);
       Get.offAll(() => const OnBoardingScreen());

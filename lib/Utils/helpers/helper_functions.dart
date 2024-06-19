@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:fit_body/Utils/constants/exports.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
@@ -94,5 +96,14 @@ class MHelperFunctions {
     if (!await launchUrl(receivdeUrl, mode: LaunchMode.platformDefault)) {
       throw "Coudn't Launch Url";
     }
+  }
+
+//! generate random number...
+  String generateUniqueStringId() {
+    final Random rand = Random();
+    final randomNumber = rand.nextInt(100000);
+    final randomStringId =
+        "${DateTime.now().millisecondsSinceEpoch}- $randomNumber";
+    return randomStringId;
   }
 }

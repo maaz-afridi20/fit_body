@@ -51,7 +51,7 @@ class SetupPhysicalActivityLevel extends StatelessWidget {
 
             MHelperFunctions.giveHeight(30.h),
           ],
-        ).px(35.w).animate().fadeIn(duration: const Duration(seconds: 3)),
+        ).px(35.w).animate().fadeIn(duration: const Duration(seconds: 2)),
       ),
     );
   }

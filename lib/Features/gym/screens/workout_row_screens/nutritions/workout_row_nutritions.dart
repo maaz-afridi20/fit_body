@@ -25,10 +25,11 @@ class WorkoutNutritionsScreen extends StatelessWidget {
               Row(children: [
                 Expanded(
                     child: MCircularContainer(
-                        titleText: "Meal Plans",
-                        heightOfContainer: 32.h,
-                        textcolor: MColors.balckColor,
-                        backgroundColor: MColors.yellowishColor)),
+                            titleText: "Meal Plans",
+                            heightOfContainer: 32.h,
+                            textcolor: MColors.balckColor,
+                            backgroundColor: MColors.yellowishColor)
+                        .onTap(() => Get.to(() => const MealPlans()))),
                 9.widthBox,
                 Expanded(
                     child: MCircularContainer(
@@ -57,17 +58,17 @@ class WorkoutNutritionsScreen extends StatelessWidget {
                   .px32(),
               9.heightBox,
               Row(children: [
-                const WorkoutTimeContainer(
+                WorkoutTimeContainer(
                     containerImage:
                         "https://images.pexels.com/photos/775032/pexels-photo-775032.jpeg?auto=compress&cs=tinysrgb&w=600",
                     containerTitle: "Fruit Smoothie",
-                    id: "nutrition1"),
+                    id: MHelperFunctions().generateUniqueStringId()),
                 9.widthBox,
-                const WorkoutTimeContainer(
+                WorkoutTimeContainer(
                     containerImage:
                         "https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=600",
                     containerTitle: "Salads With Quinoa",
-                    id: "nutrition2")
+                    id: MHelperFunctions().generateUniqueStringId())
               ]).px(35.w),
               9.heightBox,
               "Recipies For You"
