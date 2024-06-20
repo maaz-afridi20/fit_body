@@ -7,37 +7,34 @@ class SetupGoal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MAppbar(
-          titleColor: MColors.yellowishColor,
-          titleFontsize: 14.sp,
-          showActionWidget: false),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        child: Column(
-          children: [
-            Text(MTextString.whatisyourgoal,
-                style: MTextStyles.mHeadingStyle(fontSize: 25)),
-            MHelperFunctions.giveHeight(30.h),
-            Text(MTextString.loremIpsum,
-                    style: MTextStyles.mNormalStyle(),
-                    textAlign: TextAlign.center)
-                .px(35.w),
-            MHelperFunctions.giveHeight(40.h),
+        appBar: MAppbar(
+            titleColor: MColors.yellowishColor,
+            titleFontsize: 14.sp,
+            showActionWidget: false),
+        body: Column(children: [
+          Text(MTextString.whatisyourgoal,
+              style: MTextStyles.mHeadingStyle(fontSize: 25)),
+          MHelperFunctions.mHeightBox(30),
+          Text(MTextString.loremIpsum,
+                  style: MTextStyles.mNormalStyle(),
+                  textAlign: TextAlign.center)
+              .px(35.w),
+          MHelperFunctions.mHeightBox(40),
 
-            //
-            //! Goal selecting radio form...
-            const GoalSelectorForm(),
+          //
+          //! Goal selecting radio form...
+          const GoalSelectorForm(),
 
-            //
-            MHelperFunctions.giveHeight(50.h),
-            GlassyEffectElevatedBtn(
-                btnText: "Continue",
-                onPress: () => MHelperFunctions.navigateTo(
-                    context, const SetupPhysicalActivityLevel())),
-            MHelperFunctions.giveHeight(30.h),
-          ],
-        ).animate().fadeIn(duration: const Duration(seconds: 3)),
-      ),
-    );
+          //
+          MHelperFunctions.mHeightBox(50),
+          GlassyEffectElevatedBtn(
+              btnText: "Continue",
+              onPress: () => MHelperFunctions.navigateTo(
+                  context, const SetupPhysicalActivityLevel())),
+          MHelperFunctions.mHeightBox(30)
+        ])
+            .wrapWithSingleChildScrollView()
+            .animate()
+            .fadeIn(duration: const Duration(seconds: 2)));
   }
 }

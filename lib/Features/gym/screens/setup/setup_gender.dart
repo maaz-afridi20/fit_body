@@ -8,55 +8,52 @@ class SetupGenderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MAppbar(
-          titleColor: MColors.yellowishColor,
-          titleFontsize: 14.sp,
-          showActionWidget: false),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        child: Column(
-          children: [
-            MHelperFunctions.giveHeight(30.h),
-            Text(MTextString.whatsyourgendr,
-                style: MTextStyles.mHeadingStyle(fontSize: 25)),
-            MHelperFunctions.giveHeight(15.h),
-            ResizableContainer(
-                applyWidgetPadding: EdgeInsets.symmetric(horizontal: 35.w),
-                widgets: [
-                  MHelperFunctions.giveHeight(18.h),
-                  Text(
-                    MTextString.loremIpsum,
-                    style: MTextStyles.mNormalStyle(),
-                    textAlign: TextAlign.center,
-                  ).animate().fadeIn(duration: const Duration(seconds: 3)),
-                  MHelperFunctions.giveHeight(18.h),
-                ]),
-            MHelperFunctions.giveHeight(45.h),
+        appBar: MAppbar(
+            titleColor: MColors.yellowishColor,
+            titleFontsize: 14.sp,
+            showActionWidget: false),
+        body: Column(children: [
+          MHelperFunctions.mHeightBox(30),
+          Text(MTextString.whatsyourgendr,
+              style: MTextStyles.mHeadingStyle(fontSize: 25)),
+          MHelperFunctions.mHeightBox(15),
+          ResizableContainer(
+              applyWidgetPadding: EdgeInsets.symmetric(horizontal: 35.w),
+              widgets: [
+                MHelperFunctions.mHeightBox(18),
+                Text(
+                  MTextString.loremIpsum,
+                  style: MTextStyles.mNormalStyle(),
+                  textAlign: TextAlign.center,
+                ).animate().fadeIn(duration: const Duration(seconds: 3)),
+                MHelperFunctions.mHeightBox(18),
+              ]),
+          MHelperFunctions.mHeightBox(45),
 
-            //! gender container.
-            MGenderContainer(
-              backgroundColor: Colors.white.withOpacity(0.2),
-              backgroundImage: const AssetImage(MImageStrings.gendermale),
-              borderWidth: 1.4.w,
-            ),
-            MHelperFunctions.giveHeight(10.h),
-            Text("Male", style: MTextStyles.mHeadingStyle(fontSize: 20)),
-            MHelperFunctions.giveHeight(19.h),
-            const MGenderContainer(
-              backgroundColor: MColors.yellowishColor,
-              backgroundImage: AssetImage(MImageStrings.genderfemale),
-            ),
-            MHelperFunctions.giveHeight(10.h),
-            Text("Female", style: MTextStyles.mHeadingStyle(fontSize: 20)),
-            MHelperFunctions.giveHeight(45.h),
-            GlassyEffectElevatedBtn(
-                btnText: "Continue",
-                onPress: () => MHelperFunctions.navigateTo(
-                    context, const SetupAgeScreen())),
-            MHelperFunctions.giveHeight(20.h),
-          ],
-        ).animate().fadeIn(duration: const Duration(seconds: 2)),
-      ),
-    );
+          //! gender container.
+          MGenderContainer(
+            backgroundColor: Colors.white.withOpacity(0.2),
+            backgroundImage: const AssetImage(MImageStrings.gendermale),
+            borderWidth: 1.4.w,
+          ),
+          MHelperFunctions.mHeightBox(10),
+          Text("Male", style: MTextStyles.mHeadingStyle(fontSize: 20)),
+          MHelperFunctions.mHeightBox(19),
+          const MGenderContainer(
+            backgroundColor: MColors.yellowishColor,
+            backgroundImage: AssetImage(MImageStrings.genderfemale),
+          ),
+          MHelperFunctions.mHeightBox(10),
+          Text("Female", style: MTextStyles.mHeadingStyle(fontSize: 20)),
+          MHelperFunctions.mHeightBox(45),
+          GlassyEffectElevatedBtn(
+              btnText: "Continue",
+              onPress: () =>
+                  MHelperFunctions.navigateTo(context, const SetupAgeScreen())),
+          MHelperFunctions.mHeightBox(20)
+        ])
+            .wrapWithSingleChildScrollView()
+            .animate()
+            .fadeIn(duration: const Duration(seconds: 2)));
   }
 }

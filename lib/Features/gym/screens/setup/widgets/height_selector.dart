@@ -1,17 +1,13 @@
 import '../../../../../Utils/constants/exports.dart';
 
 class HeightSelector extends StatelessWidget {
-  const HeightSelector({
-    super.key,
-  });
+  const HeightSelector({super.key});
 
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(HeightWeightSelectController());
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        SizedBox(
+    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      SizedBox(
           height: 300.h,
           width: 100.w,
           child: ListWheelScrollView(
@@ -25,11 +21,10 @@ class HeightSelector extends StatelessWidget {
                   250,
                   (index) => Center(
                       child: Text('${index + 1}',
-                          style: MTextStyles.mHeadingStyle(fontSize: 40.sp))))),
-        ),
-        MHelperFunctions.giveWidth(5.w),
-        const LinerInContainer(direction: Axis.vertical)
-      ],
-    );
+                          style:
+                              MTextStyles.mHeadingStyle(fontSize: 40.sp)))))),
+      MHelperFunctions.mWidthBox(5),
+      const LinerInContainer(direction: Axis.vertical)
+    ]);
   }
 }

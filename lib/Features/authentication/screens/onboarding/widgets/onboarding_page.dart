@@ -47,9 +47,12 @@ class OnBoardingPage extends StatelessWidget {
           ]),
 
           //!  next page.
-          GlassyEffectElevatedBtn(
-              btnText: "Next",
-              onPress: () => OnboardingController.instance.nextPage())
+          Positioned(
+            bottom: 250.h,
+            child: GlassyEffectElevatedBtn(
+                btnText: "Next",
+                onPress: () => OnboardingController.instance.nextPage()),
+          )
         ],
       ),
     );

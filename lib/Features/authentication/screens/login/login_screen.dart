@@ -7,80 +7,73 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopScope(
-      canPop: false,
-      onPopInvoked: (didPop) => MHelperFunctions.showAppExitDialogue(context),
-      child: Scaffold(
-        appBar: const MAppbar(
-            centerTitle: true,
-            leadingWidget: Text(''),
-            showActionWidget: false,
-            appbarTitle: "Login",
-            titleColor: MColors.yellowishColor),
-        body: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          child: Animate(
-            effects: const [FadeEffect(duration: Duration(seconds: 3))],
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MHelperFunctions.giveHeight(50.h),
-                Text(MTextString.wellcome, style: MTextStyles.mHeadingStyle())
-                    .px(35.w),
-                MHelperFunctions.giveHeight(23.h),
-                Text(MTextString.loremIpsum,
-                        style: MTextStyles.mNormalStyle(),
-                        textAlign: TextAlign.center)
-                    .px(35.w),
-                MHelperFunctions.giveHeight(74.h),
+        canPop: false,
+        onPopInvoked: (didPop) => MHelperFunctions.showAppExitDialogue(context),
+        child: Scaffold(
+            appBar: const MAppbar(
+                centerTitle: true,
+                leadingWidget: Text(''),
+                showActionWidget: false,
+                appbarTitle: "Login",
+                titleColor: MColors.yellowishColor),
+            body: Animate(
+                effects: const [FadeEffect(duration: Duration(seconds: 3))],
+                child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      MHelperFunctions.mHeightBox(50),
+                      Text(MTextString.wellcome,
+                              style: MTextStyles.mHeadingStyle())
+                          .px(35.w),
+                      MHelperFunctions.mHeightBox(23),
+                      Text(MTextString.loremIpsum,
+                              style: MTextStyles.mNormalStyle(),
+                              textAlign: TextAlign.center)
+                          .px(35.w),
+                      MHelperFunctions.mHeightBox(74),
 
-                //
-                //! Login Form...
-                const MLoginForm(),
+                      //
+                      //! Login Form...
+                      const MLoginForm(),
 
-                //! login btn..
-                MHelperFunctions.giveHeight(40.h),
-                GlassyEffectElevatedBtn(
-                    btnText: MTextString.login,
-                    onPress: () => MHelperFunctions.navigateOff(
-                        context, const SetupStartScreen())),
+                      //! login btn..
+                      MHelperFunctions.mHeightBox(40),
+                      GlassyEffectElevatedBtn(
+                          btnText: MTextString.login,
+                          onPress: () => MHelperFunctions.navigateOff(
+                              context, const SetupStartScreen())),
 
-                //!
-                MHelperFunctions.giveHeight(29.h),
-                Text(MTextString.orsignupwith,
-                    style: MTextStyles.mNormalStyle()),
+                      //!
+                      MHelperFunctions.mHeightBox(29),
+                      Text(MTextString.orsignupwith,
+                          style: MTextStyles.mNormalStyle()),
 
-                //!social icons row...
-                MHelperFunctions.giveHeight(20.h),
-                MSocialIconRow(
-                  fingerprintOnPress: () =>
-                      Get.to(() => const FingerPrintSignupScreen()),
-                ),
+                      //!social icons row...
+                      MHelperFunctions.mHeightBox(20),
+                      MSocialIconRow(
+                        fingerprintOnPress: () =>
+                            Get.to(() => const FingerPrintSignupScreen()),
+                      ),
 
-                MHelperFunctions.giveHeight(50.h),
-                GestureDetector(
-                  onTap: () => MHelperFunctions.navigateTo(
-                      context, const SignUpScreen()),
-                  child: RichText(
-                      text: TextSpan(children: [
-                    TextSpan(
-                      text: MTextString.dontaccount,
-                      style: MTextStyles.mNormalStyle(),
-                    ),
-                    TextSpan(
-                      text: MTextString.signup,
-                      style: MTextStyles.mNormalStyle(
-                          color: MColors.yellowishColor),
-                    )
-                  ])),
-                ),
+                      MHelperFunctions.mHeightBox(50),
+                      GestureDetector(
+                          onTap: () => MHelperFunctions.navigateTo(
+                              context, const SignUpScreen()),
+                          child: RichText(
+                              text: TextSpan(children: [
+                            TextSpan(
+                              text: MTextString.dontaccount,
+                              style: MTextStyles.mNormalStyle(),
+                            ),
+                            TextSpan(
+                              text: MTextString.signup,
+                              style: MTextStyles.mNormalStyle(
+                                  color: MColors.yellowishColor),
+                            )
+                          ]))),
 
-                MHelperFunctions.giveHeight(20.h),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+                      MHelperFunctions.mHeightBox(20)
+                    ]).wrapWithSingleChildScrollView())));
   }
 }

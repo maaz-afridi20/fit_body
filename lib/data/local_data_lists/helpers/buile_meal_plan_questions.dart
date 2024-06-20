@@ -31,3 +31,18 @@ List<Widget> buildQuestionsOfMealPlanB(List<Question> question) {
     );
   }).toList();
 }
+
+List<Widget> buildQuestionForBreakfastPlan(
+    List<BreakfastPlan> breakfastQuestions) {
+  return breakfastQuestions
+      .map((e) => Row(mainAxisSize: MainAxisSize.min, children: [
+            Radio(value: 'ab', groupValue: 'ab', onChanged: (onChanged) {}),
+            FavouritesScreenContainer(
+                    mainTitle: e.title,
+                    subTitle: [Text(e.time), Text(e.calories)],
+                    imageString: e.imageUrl)
+                .py12()
+                .wrapWithExpanded()
+          ]))
+      .toList();
+}

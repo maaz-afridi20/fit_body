@@ -15,31 +15,31 @@ class ForgotPasswordScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          MHelperFunctions.giveHeight(30.h),
+          MHelperFunctions.mHeightBox(30),
           Text(MTextString.forgotpass, style: MTextStyles.mHeadingStyle()),
-          MHelperFunctions.giveHeight(20.h),
+          MHelperFunctions.mHeightBox(20),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 35.w),
-            child: Text(MTextString.loremIpsum,
-                style: MTextStyles.mNormalStyle(), textAlign: TextAlign.center),
-          ),
-          MHelperFunctions.giveHeight(37.h),
+              padding: EdgeInsets.symmetric(horizontal: 35.w),
+              child: Text(MTextString.loremIpsum,
+                  style: MTextStyles.mNormalStyle(),
+                  textAlign: TextAlign.center)),
+          MHelperFunctions.mHeightBox(37),
           ResizableContainer(
               applyWidgetPadding: EdgeInsets.symmetric(horizontal: 45.w),
               widgets: [
-                MHelperFunctions.giveHeight(25.h),
+                MHelperFunctions.mHeightBox(25),
                 Text(MTextString.enteremail,
                     style: MTextStyles.mHeadingStyle(
                         color: MColors.balckColor,
                         fontWeight: FontWeight.w500)),
-                MHelperFunctions.giveHeight(9.h),
+                MHelperFunctions.mHeightBox(9),
                 MTextField(hintText: MTextString.examplpe),
-                MHelperFunctions.giveHeight(26.h),
+                MHelperFunctions.mHeightBox(26)
               ]),
-          MHelperFunctions.giveHeight(45.h),
+          MHelperFunctions.mHeightBox(45),
           GlassyEffectElevatedBtn(
               btnText: "Continue",
-              onPress: () => Get.to(() => const SetPasswordScreen())),
+              onPress: () => Get.to(() => const SetPasswordScreen()))
         ],
       ),
     );

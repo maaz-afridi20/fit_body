@@ -87,9 +87,9 @@ class MHelperFunctions {
     return MediaQuery.of(Get.context!).size.height;
   }
 
-  static SizedBox giveHeight(double height) => SizedBox(height: height);
+  static SizedBox mHeightBox(double height) => SizedBox(height: height.h);
 
-  static SizedBox giveWidth(double width) => SizedBox(width: width);
+  static SizedBox mWidthBox(double width) => SizedBox(width: width.w);
 
   static Future<void> launchUlr(String url) async {
     var receivdeUrl = Uri.parse(url);

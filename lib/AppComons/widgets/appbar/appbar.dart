@@ -53,13 +53,13 @@ class MAppbar extends StatelessWidget implements PreferredSizeWidget {
                         onTap: onSearchIconTapped,
                         child: const Icon(Icons.search,
                             color: MColors.darkPurpleColor)),
-                    MHelperFunctions.giveWidth(20.w),
+                    MHelperFunctions.mWidthBox(20),
                     GestureDetector(
                       onTap: onNotificationIconTapped,
                       child: const Icon(Icons.notifications,
                           color: MColors.darkPurpleColor),
                     ),
-                    MHelperFunctions.giveWidth(20.w),
+                    MHelperFunctions.mWidthBox(20),
                     GestureDetector(
                         onTap: onPersonIconTapped,
                         child: const Icon(Icons.person_rounded,

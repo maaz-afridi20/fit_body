@@ -22,7 +22,7 @@ class RowContainerWithImageAndDetails extends StatelessWidget {
           style: MTextStyles.mNormalStyle(
               color: MColors.balckColor, fontSize: 18.sp),
           textAlign: TextAlign.center),
-      MHelperFunctions.giveHeight(10.h),
+      MHelperFunctions.mHeightBox(10),
       Wrap(
           children: details.map((detail) {
         return Row(children: [

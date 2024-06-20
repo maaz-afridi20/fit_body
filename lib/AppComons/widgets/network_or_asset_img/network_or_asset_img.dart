@@ -9,6 +9,14 @@ Widget getImageWidget(String img,
           imageUrl: img, placeHolder: placeHolder, fit: fit),
     );
   } else {
-    return Image.asset(img, fit: fit);
+    return Image.asset(img,
+        fit: fit,
+        errorBuilder: (context, error, stackTrace) => const Text(
+              "Error While Loading Image",
+              textAlign: TextAlign.start,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
+              style: TextStyle(color: Colors.red),
+            ).centered().px8());
   }
 }

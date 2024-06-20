@@ -20,7 +20,7 @@ class WorkoutRowController extends GetxController {
               color: currentIndex.value == index
                   ? MColors.yellowishColor
                   : MColors.purpleColor),
-          MHelperFunctions.giveHeight(6.h),
+          MHelperFunctions.mHeightBox(6),
           Text(text,
               style: MTextStyles.mNormalStyle(
                   color: currentIndex.value == index

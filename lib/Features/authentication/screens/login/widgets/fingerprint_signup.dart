@@ -6,36 +6,31 @@ class FingerPrintSignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MColors.balckColor,
-      appBar: const MAppbar(
-          centerTitle: true,
-          appbarTitle: "Set Your Fingerprint",
-          showActionWidget: false,
-          titleColor: MColors.yellowishColor),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        backgroundColor: MColors.balckColor,
+        appBar: const MAppbar(
+            centerTitle: true,
+            appbarTitle: "Set Your Fingerprint",
+            showActionWidget: false,
+            titleColor: MColors.yellowishColor),
+        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Text(MTextString.loremIpsum,
                   style: MTextStyles.mNormalStyle(),
                   textAlign: TextAlign.center)
               .px(35.w),
-          MHelperFunctions.giveHeight(30.h),
+          MHelperFunctions.mHeightBox(30),
           ResizableContainer(widgets: [
-            MHelperFunctions.giveHeight(20.h),
+            MHelperFunctions.mHeightBox(20),
             const Center(
                 child: Image(
                     image: AssetImage(MImageStrings.fingerprintmarkimage))),
-            MHelperFunctions.giveHeight(20.h),
+            MHelperFunctions.mHeightBox(20),
           ]),
-          MHelperFunctions.giveHeight(45.h),
+          MHelperFunctions.mHeightBox(45),
           GlassyEffectElevatedBtn(
-            btnText: "Skip",
-            onPress: () => MHelperFunctions.navigateBack(context),
-          ),
-          MHelperFunctions.giveHeight(16.h),
-          const GlassyEffectElevatedBtn(btnText: "Continue"),
-        ],
-      ),
-    );
+              btnText: "Skip",
+              onPress: () => MHelperFunctions.navigateBack(context)),
+          MHelperFunctions.mHeightBox(16),
+          const GlassyEffectElevatedBtn(btnText: "Continue")
+        ]));
   }
 }

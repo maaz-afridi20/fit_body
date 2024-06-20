@@ -39,13 +39,13 @@ class WorkoutTimeContainer extends StatelessWidget {
                                 fit: BoxFit.fitWidth,
                                 placeHolder: (p0, p1) =>
                                     const GeneralShimmer(height: 90)))),
-                    MHelperFunctions.giveHeight(5.h),
+                    MHelperFunctions.mHeightBox(5),
                     Text(containerTitle,
                             style: MTextStyles.mNormalStyle(
                                 fontSize: 12.sp, color: MColors.yellowishColor),
                             overflow: TextOverflow.ellipsis)
                         .px(11.w),
-                    MHelperFunctions.giveHeight(5.h),
+                    MHelperFunctions.mHeightBox(5),
                     Flexible(
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -61,7 +61,7 @@ class WorkoutTimeContainer extends StatelessWidget {
                                       MTextStyles.mNormalStyle(fontSize: 12.sp),
                                   overflow: TextOverflow.ellipsis))
                         ]).px(11.w)),
-                    10.heightBox
+                    MHelperFunctions.mHeightBox(10)
                   ]),
               Positioned(
                   right: 10.w,

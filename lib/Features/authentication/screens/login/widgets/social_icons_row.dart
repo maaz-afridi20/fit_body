@@ -13,27 +13,22 @@ class MSocialIconRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        GestureDetector(
-          onTap: gmailOnPress,
-          child: const MLoginSignupIconContainer(
-              logo: AssetImage(MImageStrings.gmailLogo)),
-        ),
-        MHelperFunctions.giveWidth(16.w),
-        GestureDetector(
+    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      GestureDetector(
+        onTap: gmailOnPress,
+        child: const MLoginSignupIconContainer(
+            logo: AssetImage(MImageStrings.gmailLogo)),
+      ),
+      MHelperFunctions.mWidthBox(16),
+      GestureDetector(
           onTap: facebookOnPress,
           child: const MLoginSignupIconContainer(
-              logo: AssetImage(MImageStrings.facebookLogo)),
-        ),
-        MHelperFunctions.giveWidth(16.w),
-        GestureDetector(
+              logo: AssetImage(MImageStrings.facebookLogo))),
+      MHelperFunctions.mWidthBox(16),
+      GestureDetector(
           onTap: fingerprintOnPress,
           child: const MLoginSignupIconContainer(
-              logo: AssetImage(MImageStrings.fingerprintlogo)),
-        ),
-      ],
-    );
+              logo: AssetImage(MImageStrings.fingerprintlogo)))
+    ]);
   }
 }

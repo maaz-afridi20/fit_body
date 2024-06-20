@@ -8,30 +8,30 @@ class SignupForm extends StatelessWidget {
     return ResizableContainer(
         applyWidgetPadding: EdgeInsets.symmetric(horizontal: 40.w),
         widgets: [
-          MHelperFunctions.giveHeight(32.h),
+          MHelperFunctions.mHeightBox(32),
           Text(MTextString.fullname,
               style: MTextStyles.mHeadingStyle(
                   color: MColors.balckColor, fontWeight: FontWeight.w500)),
-          MHelperFunctions.giveHeight(7.h),
+          MHelperFunctions.mHeightBox(7),
           const MTextField(hintText: "Example peter"),
-          MHelperFunctions.giveHeight(19.h),
+          MHelperFunctions.mHeightBox(19),
           Text(MTextString.emailormobile,
               style: MTextStyles.mHeadingStyle(
                   color: MColors.balckColor, fontWeight: FontWeight.w500)),
-          MHelperFunctions.giveHeight(7.h),
+          MHelperFunctions.mHeightBox(7),
           const MTextField(hintText: "+9246372891"),
-          MHelperFunctions.giveHeight(19.h),
+          MHelperFunctions.mHeightBox(19),
           Text(MTextString.password,
               style: MTextStyles.mHeadingStyle(
                   color: MColors.balckColor, fontWeight: FontWeight.w500)),
-          MHelperFunctions.giveHeight(7.h),
+          MHelperFunctions.mHeightBox(7),
           const MTextField(hintText: "* * * * *"),
-          MHelperFunctions.giveHeight(19.h),
+          MHelperFunctions.mHeightBox(19),
           Text(MTextString.confirmpassword,
               style: MTextStyles.mHeadingStyle(
                   color: MColors.balckColor, fontWeight: FontWeight.w500)),
           const MTextField(hintText: "* * * * *"),
-          MHelperFunctions.giveHeight(29.h),
+          MHelperFunctions.mHeightBox(29)
         ]);
   }
 }

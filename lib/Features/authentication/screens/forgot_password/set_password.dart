@@ -6,49 +6,45 @@ class SetPasswordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MColors.balckColor,
-      appBar: const MAppbar(
-          centerTitle: true,
-          appbarTitle: "Set Password",
-          titleColor: MColors.yellowishColor,
-          showActionWidget: false),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          MHelperFunctions.giveHeight(30.h),
+        backgroundColor: MColors.balckColor,
+        appBar: const MAppbar(
+            centerTitle: true,
+            appbarTitle: "Set Password",
+            titleColor: MColors.yellowishColor,
+            showActionWidget: false),
+        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          MHelperFunctions.mHeightBox(30),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 35.w),
-            child: Text(MTextString.loremIpsum,
-                style: MTextStyles.mNormalStyle(), textAlign: TextAlign.center),
-          ),
-          MHelperFunctions.giveHeight(39.h),
+              padding: EdgeInsets.symmetric(horizontal: 35.w),
+              child: Text(MTextString.loremIpsum,
+                  style: MTextStyles.mNormalStyle(),
+                  textAlign: TextAlign.center)),
+          MHelperFunctions.mHeightBox(39),
           //
           //! form...
           ResizableContainer(
               applyWidgetPadding: EdgeInsets.symmetric(horizontal: 45.w),
               widgets: [
-                MHelperFunctions.giveHeight(25.h),
+                MHelperFunctions.mHeightBox(25),
                 Text(MTextString.password,
                     style: MTextStyles.mHeadingStyle(
                         fontWeight: FontWeight.w500,
                         color: MColors.balckColor)),
-                MHelperFunctions.giveHeight(9.h),
+                MHelperFunctions.mHeightBox(9),
                 MTextField(hintText: MTextString.starss),
-                MHelperFunctions.giveHeight(13.h),
+                MHelperFunctions.mHeightBox(13),
                 Text(MTextString.confirmpassword,
                     style: MTextStyles.mHeadingStyle(
                         fontWeight: FontWeight.w500,
                         color: MColors.balckColor)),
-                MHelperFunctions.giveHeight(9.h),
+                MHelperFunctions.mHeightBox(9),
                 MTextField(hintText: MTextString.starss),
-                MHelperFunctions.giveHeight(35.h),
+                MHelperFunctions.mHeightBox(35)
               ]),
           //
           //! reset pass text.
-          MHelperFunctions.giveHeight(45.h),
-          GlassyEffectElevatedBtn(btnText: MTextString.resetpass),
-        ],
-      ),
-    );
+          MHelperFunctions.mHeightBox(45),
+          GlassyEffectElevatedBtn(btnText: MTextString.resetpass)
+        ]));
   }
 }

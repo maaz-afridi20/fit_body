@@ -21,20 +21,20 @@ class FavouritesScreenContainer extends StatelessWidget {
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w500,
                   color: MColors.balckColor)),
-          MHelperFunctions.giveHeight(10.h),
+          MHelperFunctions.mHeightBox(10),
           DefaultTextStyle(
-            style: MTextStyles.mNormalStyle(
-                color: MColors.balckColor, fontSize: 12.sp),
-            maxLines: 2,
-            textAlign: TextAlign.start,
-            overflow: TextOverflow.ellipsis,
-            child: Wrap(
-                alignment: WrapAlignment.start,
-                children: subTitle
-                    .map((mWidget) => Padding(
-                        padding: EdgeInsets.only(right: 10.w), child: mWidget))
-                    .toList()),
-          ),
+              style: MTextStyles.mNormalStyle(
+                  color: MColors.balckColor, fontSize: 12.sp),
+              maxLines: 2,
+              textAlign: TextAlign.start,
+              overflow: TextOverflow.ellipsis,
+              child: Wrap(
+                  alignment: WrapAlignment.start,
+                  children: subTitle
+                      .map((mWidget) => Padding(
+                          padding: EdgeInsets.only(right: 10.w),
+                          child: mWidget))
+                      .toList()))
         ],
         showPositonedIcon: true);
   }
