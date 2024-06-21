@@ -1,7 +1,7 @@
-import 'package:fit_body/Utils/constants/exports.dart';
+import '../../../../../../../Utils/constants/exports.dart';
 
-class BreakfastMealIdeasB extends StatelessWidget {
-  const BreakfastMealIdeasB({super.key});
+class DinnerMealIdeasB extends StatelessWidget {
+  const DinnerMealIdeasB({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,42 +10,20 @@ class BreakfastMealIdeasB extends StatelessWidget {
             const MAppbar(showActionWidget: true, appbarTitle: "Meal Ideas"),
         body: Column(children: [
           Column(children: [
-            Row(children: [
-              MCircularContainer(
-                      titleText: "BreakFast",
-                      heightOfContainer: 32.h,
-                      textcolor: MColors.balckColor,
-                      backgroundColor: MColors.yellowishColor)
-                  .wrapWithExpanded(),
-              MHelperFunctions.mWidthBox(9),
-              MCircularContainer(
-                      titleText: "Lunch",
-                      heightOfContainer: 32.h,
-                      textcolor: MColors.darkPurpleColor)
-                  .wrapWithExpanded(),
-              MHelperFunctions.mWidthBox(9),
-              MCircularContainer(
-                      titleText: "Dinner",
-                      heightOfContainer: 32.h,
-                      textcolor: MColors.darkPurpleColor)
-                  .wrapWithExpanded()
-            ]),
-            MHelperFunctions.mHeightBox(40),
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               Flexible(
-                child: Text('Spinach And Tomato Omellete',
-                    style: MTextStyles.mHeadingStyle(
-                        fontWeight: FontWeight.w600,
-                        color: MColors.yellowishColor)),
-              ),
+                  child: Text('Chicken Breas Stuffed With Spinach',
+                      style: MTextStyles.mHeadingStyle(
+                          fontWeight: FontWeight.w600,
+                          color: MColors.yellowishColor))),
               MHelperFunctions.mWidthBox(25),
               const Icon(Icons.star_rounded, color: Colors.white)
             ]),
             MHelperFunctions.mHeightBox(13),
             Row(children: [
-              Text('15 Minutes', style: MTextStyles.mNormalStyle()),
+              Text('30 Minutes', style: MTextStyles.mNormalStyle()),
               MHelperFunctions.mWidthBox(25),
-              Text('150 KCal', style: MTextStyles.mNormalStyle())
+              Text('275 KCal', style: MTextStyles.mNormalStyle())
             ])
           ]).px32(),
           MHelperFunctions.mHeightBox(25),
@@ -53,7 +31,7 @@ class BreakfastMealIdeasB extends StatelessWidget {
             ClipRRect(
                 borderRadius: BorderRadius.circular(20.r),
                 child: getImageWidget(
-                    "https://images.pexels.com/photos/2059151/pexels-photo-2059151.jpeg?auto=compress&cs=tinysrgb&w=600",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuYeRKksliiRM3QqU793YASGbclyXepNxppw&s",
                     placeHolder: (_, __) => const GeneralShimmer(
                         height: 150, width: 250))).px32().py24()
           ]),
@@ -67,23 +45,19 @@ class BreakfastMealIdeasB extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                         color: MColors.yellowishColor)),
                 MHelperFunctions.mHeightBox(8),
-                Text("2-3 Eggs",
+                Text("1 bonelessm skinless chicken breast (150g)",
                     style:
                         MTextStyles.mNormalStyle(fontWeight: FontWeight.w200)),
                 MHelperFunctions.mHeightBox(5),
-                Text("A hanful of fresh spinach",
+                Text("1 cup fresh spinach",
                     style:
                         MTextStyles.mNormalStyle(fontWeight: FontWeight.w200)),
                 MHelperFunctions.mHeightBox(5),
-                Text("1 small tomato",
+                Text("30g crumbled feta cheese",
                     style:
                         MTextStyles.mNormalStyle(fontWeight: FontWeight.w200)),
                 MHelperFunctions.mHeightBox(5),
-                Text("Salt and pepper to taste",
-                    style:
-                        MTextStyles.mNormalStyle(fontWeight: FontWeight.w200)),
-                MHelperFunctions.mHeightBox(5),
-                Text("Olive oil or butter",
+                Text("Lemon juice garlic powder, salt and pepper",
                     style:
                         MTextStyles.mNormalStyle(fontWeight: FontWeight.w200)),
                 MHelperFunctions.mHeightBox(20),

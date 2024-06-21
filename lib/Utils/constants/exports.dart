@@ -85,6 +85,11 @@ export 'package:fit_body/Features/gym/screens/setup/widgets/select_goal_radio_bt
 export 'package:fit_body/Features/gym/screens/splash/splash.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/community/workout_row_community.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_ideas/breakfast_meal_ideas/breakfast_meal_ideas_a.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_ideas/breakfast_meal_ideas/breakfast_meal_ideas_b.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_ideas/dinner_meal_ideas/dinner_meal_ideas_a.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_ideas/dinner_meal_ideas/dinner_meal_ideas_b.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_ideas/lunch_meal_ideas/lunch_meal_ideas_a.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_ideas/lunch_meal_ideas/lunch_meal_ideas_b.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_ideas/meal_ideas_intro_page.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_ideas/meal_ideas_tabbar_page.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_plans/meal_plans_a.dart';

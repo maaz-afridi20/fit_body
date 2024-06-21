@@ -1,7 +1,7 @@
 import 'package:fit_body/Utils/constants/exports.dart';
 
-class BreakfastMealIdeasB extends StatelessWidget {
-  const BreakfastMealIdeasB({super.key});
+class LunchMealIdeasB extends StatelessWidget {
+  const LunchMealIdeasB({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,42 +10,20 @@ class BreakfastMealIdeasB extends StatelessWidget {
             const MAppbar(showActionWidget: true, appbarTitle: "Meal Ideas"),
         body: Column(children: [
           Column(children: [
-            Row(children: [
-              MCircularContainer(
-                      titleText: "BreakFast",
-                      heightOfContainer: 32.h,
-                      textcolor: MColors.balckColor,
-                      backgroundColor: MColors.yellowishColor)
-                  .wrapWithExpanded(),
-              MHelperFunctions.mWidthBox(9),
-              MCircularContainer(
-                      titleText: "Lunch",
-                      heightOfContainer: 32.h,
-                      textcolor: MColors.darkPurpleColor)
-                  .wrapWithExpanded(),
-              MHelperFunctions.mWidthBox(9),
-              MCircularContainer(
-                      titleText: "Dinner",
-                      heightOfContainer: 32.h,
-                      textcolor: MColors.darkPurpleColor)
-                  .wrapWithExpanded()
-            ]),
-            MHelperFunctions.mHeightBox(40),
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               Flexible(
-                child: Text('Spinach And Tomato Omellete',
-                    style: MTextStyles.mHeadingStyle(
-                        fontWeight: FontWeight.w600,
-                        color: MColors.yellowishColor)),
-              ),
+                  child: Text('Teriyaki Chicken With Brown Rice',
+                      style: MTextStyles.mHeadingStyle(
+                          fontWeight: FontWeight.w600,
+                          color: MColors.yellowishColor))),
               MHelperFunctions.mWidthBox(25),
               const Icon(Icons.star_rounded, color: Colors.white)
             ]),
             MHelperFunctions.mHeightBox(13),
             Row(children: [
-              Text('15 Minutes', style: MTextStyles.mNormalStyle()),
+              Text('45 Minutes', style: MTextStyles.mNormalStyle()),
               MHelperFunctions.mWidthBox(25),
-              Text('150 KCal', style: MTextStyles.mNormalStyle())
+              Text('375 KCal', style: MTextStyles.mNormalStyle())
             ])
           ]).px32(),
           MHelperFunctions.mHeightBox(25),
@@ -53,7 +31,7 @@ class BreakfastMealIdeasB extends StatelessWidget {
             ClipRRect(
                 borderRadius: BorderRadius.circular(20.r),
                 child: getImageWidget(
-                    "https://images.pexels.com/photos/2059151/pexels-photo-2059151.jpeg?auto=compress&cs=tinysrgb&w=600",
+                    "https://images.pexels.com/photos/17593646/pexels-photo-17593646/free-photo-of-close-up-of-a-chicken-curry-katsu-dish.jpeg",
                     placeHolder: (_, __) => const GeneralShimmer(
                         height: 150, width: 250))).px32().py24()
           ]),
@@ -67,15 +45,15 @@ class BreakfastMealIdeasB extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                         color: MColors.yellowishColor)),
                 MHelperFunctions.mHeightBox(8),
-                Text("2-3 Eggs",
+                Text("Chicken Breast",
                     style:
                         MTextStyles.mNormalStyle(fontWeight: FontWeight.w200)),
                 MHelperFunctions.mHeightBox(5),
-                Text("A hanful of fresh spinach",
+                Text("Teriyaki Sauce",
                     style:
                         MTextStyles.mNormalStyle(fontWeight: FontWeight.w200)),
                 MHelperFunctions.mHeightBox(5),
-                Text("1 small tomato",
+                Text("Brown Rice",
                     style:
                         MTextStyles.mNormalStyle(fontWeight: FontWeight.w200)),
                 MHelperFunctions.mHeightBox(5),
@@ -83,7 +61,7 @@ class BreakfastMealIdeasB extends StatelessWidget {
                     style:
                         MTextStyles.mNormalStyle(fontWeight: FontWeight.w200)),
                 MHelperFunctions.mHeightBox(5),
-                Text("Olive oil or butter",
+                Text("Fresh broccoli",
                     style:
                         MTextStyles.mNormalStyle(fontWeight: FontWeight.w200)),
                 MHelperFunctions.mHeightBox(20),

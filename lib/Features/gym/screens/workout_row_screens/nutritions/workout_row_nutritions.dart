@@ -25,21 +25,19 @@ class WorkoutNutritionsScreen extends StatelessWidget {
             children: [
               Row(children: [
                 MCircularContainer(
-                        titleText: "Meal Plans",
-                        heightOfContainer: 32.h,
-                        textcolor: MColors.balckColor,
-                        backgroundColor: MColors.yellowishColor)
-                    .onTap(() => MHelperFunctions.navigateTo(
-                        context, const MealPlansA()))
-                    .wrapWithExpanded(),
+                    titleText: "Meal Plans",
+                    heightOfContainer: 32.h,
+                    textcolor: MColors.balckColor,
+                    backgroundColor: MColors.yellowishColor,
+                    onPress: () => MHelperFunctions.navigateTo(
+                        context, const MealPlansA())).wrapWithExpanded(),
                 MHelperFunctions.mWidthBox(9),
                 MCircularContainer(
-                        titleText: "Meal Ideas",
-                        heightOfContainer: 32.h,
-                        textcolor: MColors.darkPurpleColor)
-                    .onTap(() => MHelperFunctions.navigateTo(
-                        context, const MealIdeasA()))
-                    .wrapWithExpanded()
+                    titleText: "Meal Ideas",
+                    heightOfContainer: 32.h,
+                    textcolor: MColors.darkPurpleColor,
+                    onPress: () => MHelperFunctions.navigateTo(
+                        context, const MealIdeasA())).wrapWithExpanded()
               ]).px32(),
               MHelperFunctions.mHeightBox(23),
               ResizableContainer(widgets: [

@@ -36,20 +36,12 @@ class MealIdeasTabbarPage extends StatelessWidget {
                                 titleText: "Dinner",
                                 heightOfContainer: 35,
                                 backgroundColor:
-                                    controller.getBackgroundColor(2))),
+                                    controller.getBackgroundColor(2)))
                       ])),
-              TabBarView(controller: controller.tabController, children: [
-                const BreakfastMealIdeasA(),
-                Container(
-                    height: 100,
-                    width: 200,
-                    color: Colors.red,
-                    child: "second".text.make()),
-                Container(
-                    height: 100,
-                    width: 200,
-                    color: Colors.red,
-                    child: "third".text.make())
+              TabBarView(controller: controller.tabController, children: const [
+                BreakfastMealIdeasA(),
+                LunchMealIdeasA(),
+                DinnerMealIdeasA()
               ]).wrapWithExpanded()
             ]));
   }

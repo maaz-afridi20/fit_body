@@ -17,9 +17,9 @@ class FavouritesScreenContainer extends StatelessWidget {
         imageString: imageString,
         childrensInColumn: [
           Text(mainTitle,
-              style: MTextStyles.mNormalStyle(
+              style: MTextStyles.mHeadingStyle(
                   fontSize: 18.sp,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w600,
                   color: MColors.balckColor)),
           MHelperFunctions.mHeightBox(10),
           DefaultTextStyle(

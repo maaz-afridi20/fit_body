@@ -1,7 +1,7 @@
-import 'package:fit_body/Utils/constants/exports.dart';
+import '../../../../../../../Utils/constants/exports.dart';
 
-class BreakfastMealIdeasA extends StatelessWidget {
-  const BreakfastMealIdeasA({super.key});
+class LunchMealIdeasA extends StatelessWidget {
+  const LunchMealIdeasA({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,14 +10,13 @@ class BreakfastMealIdeasA extends StatelessWidget {
       MHelperFunctions.mHeightBox(20),
       ResizableContainer(widgets: [
         TrainingOfTheDayContainer(
-          img:
-              "https://images.pexels.com/photos/3768001/pexels-photo-3768001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-          trainingName: "Spinach And Tomato Omellete",
-          topRightTitle: "Recipie Of The Day",
-          showNumberOfExercises: false,
-          onTapp: () =>
-              MHelperFunctions.navigateTo(context, const BreakfastMealIdeasB()),
-        ).px32().py20()
+            img:
+                "https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            trainingName: "Salmon And Avacado Salad",
+            topRightTitle: "Recipie Of The Day",
+            showNumberOfExercises: false,
+            onTapp: () => MHelperFunctions.navigateTo(
+                context, const LunchMealIdeasB())).px32().py20()
       ]),
       MHelperFunctions.mHeightBox(20),
       Column(
@@ -32,16 +31,16 @@ class BreakfastMealIdeasA extends StatelessWidget {
             Row(children: [
               WorkoutTimeContainer(
                 containerImage:
-                    "https://images.pexels.com/photos/5150125/pexels-photo-5150125.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-                containerTitle: "Fruit Smoothie",
+                    "https://www.healthygffamily.com/wp-content/uploads/2020/01/0DD3228A-4432-4DD4-BEFE-E5F405501066-scaled.jpg",
+                containerTitle: "Quinoa Salad",
                 // id: MHelperFunctions().generateUniqueStringId()
                 id: uuid.v4(),
               ),
               MHelperFunctions.mWidthBox(9),
               WorkoutTimeContainer(
                   containerImage:
-                      "https://images.pexels.com/photos/12049996/pexels-photo-12049996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-                  containerTitle: "Green Celery Juice",
+                      "https://images.pexels.com/photos/2175211/pexels-photo-2175211.jpeg",
+                  containerTitle: "Buritto With Vegetables",
                   // id: MHelperFunctions().generateUniqueStringId()
                   id: uuid.v4())
             ]),
@@ -52,10 +51,10 @@ class BreakfastMealIdeasA extends StatelessWidget {
                     color: MColors.yellowishColor)),
             MHelperFunctions.mHeightBox(9),
             const FavouritesScreenContainer(
-                mainTitle: "Delight With Greek Yougurt",
-                subTitle: [Text('6 Minutes'), Text('200 Cal')],
+                mainTitle: "Teriyaki Chicken With Brown Rice",
+                subTitle: [Text('46 Minutes'), Text('370 Cal')],
                 imageString:
-                    "https://img.freepik.com/premium-photo/homemade-greek-yogurt-fresh-berries-delight_893571-10789.jpg"),
+                    "https://images.pexels.com/photos/17593646/pexels-photo-17593646/free-photo-of-close-up-of-a-chicken-curry-katsu-dish.jpeg"),
             MHelperFunctions.mHeightBox(16),
             const FavouritesScreenContainer(
                 mainTitle: "Baked Salmon",
