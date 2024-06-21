@@ -1,4 +1,4 @@
-import '../../../../../Utils/constants/exports.dart';
+import 'package:fit_body/Utils/constants/exports.dart';
 
 class PersonalDetailsInProgressScreen extends StatelessWidget {
   const PersonalDetailsInProgressScreen({

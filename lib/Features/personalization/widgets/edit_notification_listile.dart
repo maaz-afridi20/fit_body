@@ -1,6 +1,4 @@
 import 'package:fit_body/Utils/constants/exports.dart';
-// ignore: depend_on_referenced_packages
-import 'package:uuid/uuid.dart';
 
 class NotificationListTileWidget extends StatelessWidget {
   const NotificationListTileWidget({super.key, required this.tileText});

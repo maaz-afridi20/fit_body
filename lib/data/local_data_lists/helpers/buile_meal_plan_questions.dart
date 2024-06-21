@@ -6,7 +6,7 @@ List<Widget> buildQuestionsOfMealPlanC(List<Question> question) {
     return MealQuestionAskingWidgetWithRadioBtns(
         questionTopicHeading: e.topic,
         askingQuestion: e.question,
-        controllerTag: e.controllerTag,
+        // controllerTag: e.controllerTag,
         questionChoices: e.choices.map((choice) {
           return SettingMealPlanQuestions(
               titleOfBtn: choice.title,
@@ -21,7 +21,7 @@ List<Widget> buildQuestionsOfMealPlanB(List<Question> question) {
     return MealQuestionAskingWidgetWithRadioBtns(
       questionTopicHeading: e.topic,
       askingQuestion: e.question,
-      controllerTag: e.controllerTag,
+      // controllerTag: e.controllerTag,
       questionChoices: e.choices
           .map((choice) => SettingMealPlanQuestions(
               titleOfBtn: choice.title,
@@ -36,7 +36,7 @@ List<Widget> buildQuestionForBreakfastPlan(
     List<BreakfastPlan> breakfastQuestions) {
   return breakfastQuestions
       .map((e) => Row(mainAxisSize: MainAxisSize.min, children: [
-            Radio(value: 'ab', groupValue: 'ab', onChanged: (onChanged) {}),
+            Radio(value: "", groupValue: "this", onChanged: (newValue) {}),
             FavouritesScreenContainer(
                     mainTitle: e.title,
                     subTitle: [Text(e.time), Text(e.calories)],

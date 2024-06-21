@@ -1,10 +1,9 @@
 import 'dart:math';
 
-import 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_plans/meal_plans_b.dart';
 import 'package:fit_body/Utils/constants/exports.dart';
 
-class MealPlansA extends StatelessWidget {
-  const MealPlansA({super.key});
+class MealIdeasA extends StatelessWidget {
+  const MealIdeasA({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +11,7 @@ class MealPlansA extends StatelessWidget {
         body: Stack(children: [
       Positioned.fill(
           child: getImageWidget(
-              'https://images.pexels.com/photos/5638268/pexels-photo-5638268.jpeg?auto=compress&cs=tinysrgb&w=600',
+              'https://images.pexels.com/photos/709567/pexels-photo-709567.jpeg?auto=compress&cs=tinysrgb&w=600',
               fit: BoxFit.fitHeight,
               placeHolder: (p0, p1) => GeneralShimmer(
                   height: MHelperFunctions.screenHeight(),
@@ -42,7 +41,7 @@ class MealPlansA extends StatelessWidget {
               width: 39.w,
               child: getImageWidget(MImageStrings.nutrituion)),
           9.widthBox,
-          Text('Meal Plans', style: MTextStyles.mHeadingStyle(fontSize: 20))
+          Text('Meal Ideas', style: MTextStyles.mHeadingStyle(fontSize: 20))
         ]),
         const Text(
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
@@ -53,8 +52,9 @@ class MealPlansA extends StatelessWidget {
           bottom: 270,
           left: 99,
           child: GlassyEffectElevatedBtn(
-              btnText: "Know Your Plan",
-              onPress: () => Get.to(() => const MealPlansB())))
+              btnText: "Discover",
+              onPress: () => MHelperFunctions.navigateTo(
+                  context, const MealIdeasTabbarPage())))
     ]));
   }
 }

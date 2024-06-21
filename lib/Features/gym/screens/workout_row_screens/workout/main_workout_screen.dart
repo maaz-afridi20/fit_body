@@ -58,14 +58,13 @@ class MainWorkoutScreen extends StatelessWidget {
                       )
                     ])),
             24.heightBox,
-            Expanded(
-                child: TabBarView(
-                    controller: tabController.tabController,
-                    children: const [
+            TabBarView(
+                controller: tabController.tabController,
+                children: const [
                   StartBeginnerScreen(),
                   StartIntermediateScreen(),
                   StartAdvanceScreen()
-                ]))
+                ]).wrapWithExpanded()
           ]),
       floatingActionButton: FloatingActionButton(
           onPressed: () => Get.to(() => const CreateYourCustomRoutine()),

@@ -11,16 +11,16 @@ class SettingMealPlanQuestions extends StatelessWidget {
   final String controllerTag;
   @override
   Widget build(BuildContext context) {
-    final controller =
-        Get.put(MealPlansQuestioningContoler(), tag: controllerTag);
+    final controller = Get.put(RadioBtnControllers(), tag: controllerTag);
     return Obx(() => Row(
             mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
               Radio(
                   value: valueOfRadio,
-                  groupValue: controller.seletedValue.value,
-                  onChanged: (value) => controller.seletedValue.value = value!,
+                  groupValue: controller.mealPlanQuestionSelectedValue.value,
+                  onChanged: (value) =>
+                      controller.mealPlanQuestionSelectedValue.value = value!,
                   activeColor: MColors.yellowishColor),
               5.widthBox,
               titleOfBtn.text.white.size(14).make()

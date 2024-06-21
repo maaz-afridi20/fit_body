@@ -84,6 +84,9 @@ export 'package:fit_body/Features/gym/screens/setup/widgets/number_selector.dart
 export 'package:fit_body/Features/gym/screens/setup/widgets/select_goal_radio_btn.dart';
 export 'package:fit_body/Features/gym/screens/splash/splash.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/community/workout_row_community.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_ideas/breakfast_meal_ideas/breakfast_meal_ideas_a.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_ideas/meal_ideas_intro_page.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_ideas/meal_ideas_tabbar_page.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_plans/meal_plans_a.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_plans/meal_plans_c.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/nutritions/meal_plans/meal_plans_d.dart';
@@ -107,8 +110,8 @@ export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/widget
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/widgets/play_vertical_video.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/widgets/training_of_the_day_container.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/widgets/video_with_exercise_detail_container.dart';
-export 'package:fit_body/Features/gym/screens/workout_row_screens/workoutrow_reusable_widgets/personal_detail_in_progress_screen.dart';
-export 'package:fit_body/Features/gym/screens/workout_row_screens/workoutrow_reusable_widgets/progress_listile.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/widgets/workoutrow_reusable_widgets/personal_detail_in_progress_screen.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/widgets/workoutrow_reusable_widgets/progress_listile.dart';
 export 'package:fit_body/Features/gym/screens/workout_videos/navbar_workout_videos_screen.dart';
 export 'package:fit_body/Features/personalization/screens/help/controllers/loading_website_contoller.dart';
 export 'package:fit_body/Features/personalization/screens/help/help.dart';
@@ -154,4 +157,5 @@ export 'package:shared_preferences/shared_preferences.dart';
 export 'package:shimmer/shimmer.dart';
 export 'package:smooth_page_indicator/smooth_page_indicator.dart';
 export 'package:table_calendar/table_calendar.dart';
+export 'package:uuid/uuid.dart';
 export 'package:velocity_x/velocity_x.dart';

@@ -6,6 +6,7 @@ class WorkoutNutritionsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final workoutRowwController = WorkoutRowController.instance;
+    const uuid = Uuid();
     return Scaffold(
         appBar: MAppbar(
             appbarTitle: 'Nutritions',
@@ -23,21 +24,24 @@ class WorkoutNutritionsScreen extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Row(children: [
-                Expanded(
-                    child: MCircularContainer(
-                            titleText: "Meal Plans",
-                            heightOfContainer: 32.h,
-                            textcolor: MColors.balckColor,
-                            backgroundColor: MColors.yellowishColor)
-                        .onTap(() => Get.to(() => const MealPlans()))),
-                9.widthBox,
-                Expanded(
-                    child: MCircularContainer(
+                MCircularContainer(
+                        titleText: "Meal Plans",
+                        heightOfContainer: 32.h,
+                        textcolor: MColors.balckColor,
+                        backgroundColor: MColors.yellowishColor)
+                    .onTap(() => MHelperFunctions.navigateTo(
+                        context, const MealPlansA()))
+                    .wrapWithExpanded(),
+                MHelperFunctions.mWidthBox(9),
+                MCircularContainer(
                         titleText: "Meal Ideas",
                         heightOfContainer: 32.h,
-                        textcolor: MColors.darkPurpleColor))
+                        textcolor: MColors.darkPurpleColor)
+                    .onTap(() => MHelperFunctions.navigateTo(
+                        context, const MealIdeasA()))
+                    .wrapWithExpanded()
               ]).px32(),
-              23.heightBox,
+              MHelperFunctions.mHeightBox(23),
               ResizableContainer(widgets: [
                 const TrainingOfTheDayContainer(
                         img:
@@ -48,50 +52,46 @@ class WorkoutNutritionsScreen extends StatelessWidget {
                     .px(35.w)
                     .py(22.h)
               ]),
-              20.heightBox,
-              "Recommended"
-                  .text
-                  .size(20.sp)
-                  .medium
-                  .color(MColors.yellowishColor)
-                  .make()
-                  .px32(),
-              9.heightBox,
-              Row(children: [
-                WorkoutTimeContainer(
-                    containerImage:
-                        "https://images.pexels.com/photos/775032/pexels-photo-775032.jpeg?auto=compress&cs=tinysrgb&w=600",
-                    containerTitle: "Fruit Smoothie",
-                    id: MHelperFunctions().generateUniqueStringId()),
-                9.widthBox,
-                WorkoutTimeContainer(
-                    containerImage:
-                        "https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=600",
-                    containerTitle: "Salads With Quinoa",
-                    id: MHelperFunctions().generateUniqueStringId())
-              ]).px(35.w),
-              9.heightBox,
-              "Recipies For You"
-                  .text
-                  .size(20.sp)
-                  .medium
-                  .color(MColors.yellowishColor)
-                  .make()
-                  .px32(),
-              9.heightBox,
-              const FavouritesScreenContainer(
-                      mainTitle: "Delight With Greek Yougurt",
-                      subTitle: [Text('6 Minutes'), Text('200 Cal')],
-                      imageString:
-                          "https://img.freepik.com/premium-photo/homemade-greek-yogurt-fresh-berries-delight_893571-10789.jpg")
-                  .px32(),
-              16.heightBox,
-              const FavouritesScreenContainer(
-                      mainTitle: "Baked Salmon",
-                      subTitle: [Text('30 Minutes'), Text('250 Cal')],
-                      imageString:
-                          "https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
-                  .px32()
+              MHelperFunctions.mHeightBox(20),
+              Column(mainAxisSize: MainAxisSize.min, children: [
+                Text("Recommended",
+                    style: MTextStyles.mHeadingStyle(
+                        color: MColors.yellowishColor,
+                        fontWeight: FontWeight.w500)),
+                MHelperFunctions.mHeightBox(9),
+                Row(children: [
+                  WorkoutTimeContainer(
+                      containerImage:
+                          "https://images.pexels.com/photos/775032/pexels-photo-775032.jpeg?auto=compress&cs=tinysrgb&w=600",
+                      containerTitle: "Fruit Smoothie",
+                      // id: MHelperFunctions().generateUniqueStringId(),
+                      id: uuid.v4()),
+                  MHelperFunctions.mWidthBox(9),
+                  WorkoutTimeContainer(
+                      containerImage:
+                          "https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=600",
+                      containerTitle: "Salads With Quinoa",
+                      // id: MHelperFunctions().generateUniqueStringId()
+                      id: uuid.v4())
+                ]),
+                MHelperFunctions.mHeightBox(9),
+                Text("Recipies For You",
+                    style: MTextStyles.mHeadingStyle(
+                        fontWeight: FontWeight.w400,
+                        color: MColors.yellowishColor)),
+                MHelperFunctions.mHeightBox(9),
+                const FavouritesScreenContainer(
+                    mainTitle: "Delight With Greek Yougurt",
+                    subTitle: [Text('6 Minutes'), Text('200 Cal')],
+                    imageString:
+                        "https://img.freepik.com/premium-photo/homemade-greek-yogurt-fresh-berries-delight_893571-10789.jpg"),
+                MHelperFunctions.mHeightBox(16),
+                const FavouritesScreenContainer(
+                    mainTitle: "Baked Salmon",
+                    subTitle: [Text('30 Minutes'), Text('250 Cal')],
+                    imageString:
+                        "https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+              ]).px32()
             ]).wrapWithSingleChildScrollView());
   }
 }

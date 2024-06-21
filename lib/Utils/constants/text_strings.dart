@@ -43,4 +43,6 @@ class MTextString {
       "Consistency is the key to achieving long-term success and reaching your goals. By maintaining a steady effort and staying dedicated to your tasks, even when progress seems slow, you build momentum and develop the habits necessary for meaningful and lasting accomplishments";
   static String physicalactivitydetail =
       "Regular physical activity is essential for maintaining good health. It helps improve cardiovascular fitness, strengthens muscles, boosts mental health, and increases overall energy levels";
+  static String recipieDetails =
+      "Sed earum sequi est magnam doloremque aut porro dolores sit molestiae fuga. Et rerum inventore ut perspiciatis dolorum sed internos porro aut labore dolorem At quia reiciendis in consequuntur possimus.";
 }

@@ -6,10 +6,9 @@ import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MHelperFunctions {
-  static void showSnackBar(String message) {
-    ScaffoldMessenger.of(Get.context!).showSnackBar(
-      SnackBar(content: Text(message)),
-    );
+  static showSnackBar(String message) {
+    ScaffoldMessenger.of(Get.context!)
+        .showSnackBar(SnackBar(content: Text(message)));
   }
 
   onBackButtonPressed(BuildContext context) async {
