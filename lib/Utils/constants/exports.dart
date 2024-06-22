@@ -83,6 +83,9 @@ export 'package:fit_body/Features/gym/screens/setup/widgets/lines_in_container.d
 export 'package:fit_body/Features/gym/screens/setup/widgets/number_selector.dart';
 export 'package:fit_body/Features/gym/screens/setup/widgets/select_goal_radio_btn.dart';
 export 'package:fit_body/Features/gym/screens/splash/splash.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/community/challenges/challenges_a.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/community/challenges/challenges_b.dart';
+export 'package:fit_body/Features/gym/screens/workout_row_screens/community/challenges/challenges_c.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/community/discussion_forums/discussion_forums_a.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/community/discussion_forums/discussion_forums_b.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/community/widgets/forum_details_widget.dart';

@@ -1,9 +1,7 @@
 import '../../../../../../Utils/constants/exports.dart';
 
 class ForumDetailsWidget extends StatelessWidget {
-  const ForumDetailsWidget({
-    super.key,
-  });
+  const ForumDetailsWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

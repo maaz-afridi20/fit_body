@@ -10,7 +10,7 @@ class WorkoutRowCommunityScreen extends StatelessWidget {
     return Scaffold(
       appBar: MAppbar(
           appbarTitle: 'Community',
-          showActionWidget: false,
+          showActionWidget: true,
           showLeadingWidget: true,
           leadingWidget: GestureDetector(
               onTap: () {
@@ -43,10 +43,10 @@ class WorkoutRowCommunityScreen extends StatelessWidget {
                           backgroundColor: tabController.getBackgroundColor(1),
                           textcolor: tabController.getTitleTextColor(1)))
                 ])),
-        TabBarView(controller: tabController.tabController, children: [
-          const DiscussionForumsA(),
-          Container(height: 300, width: 423, color: Colors.green)
-        ]).wrapWithExpanded(),
+        TabBarView(
+                controller: tabController.tabController,
+                children: const [DiscussionForumsA(), ChallengesA()])
+            .wrapWithExpanded(),
       ]),
     );
   }
