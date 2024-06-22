@@ -37,14 +37,13 @@ class MCircularContainer extends StatelessWidget {
             borderRadius: BorderRadius.circular(radiusOfContaier ?? 30)),
         child: Center(
             child: Padding(
-          padding: contentPadding ?? EdgeInsets.zero,
-          child: Text(titleText,
-              overflow: TextOverflow.ellipsis,
-              style: MTextStyles.mHeadingStyle(
-                  fontWeight: textFontWeight ?? FontWeight.normal,
-                  fontSize: textFontsize,
-                  color: textcolor ?? MColors.balckColor)),
-        )),
+                padding: contentPadding ?? EdgeInsets.zero,
+                child: Text(titleText,
+                    overflow: TextOverflow.ellipsis,
+                    style: MTextStyles.mHeadingStyle(
+                        fontWeight: textFontWeight ?? FontWeight.normal,
+                        fontSize: textFontsize,
+                        color: textcolor ?? MColors.balckColor)))),
       ),
     );
   }

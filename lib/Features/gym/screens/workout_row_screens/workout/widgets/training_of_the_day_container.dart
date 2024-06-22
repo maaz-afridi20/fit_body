@@ -8,7 +8,7 @@ class TrainingOfTheDayContainer extends StatelessWidget {
       this.topRightTitle,
       this.showNumberOfExercises,
       this.onTapp,
-      this.showTopRightTitle,
+      this.showTopRightTitle = true,
       this.containerHeight});
 
   final String img;
@@ -16,7 +16,7 @@ class TrainingOfTheDayContainer extends StatelessWidget {
   final double? containerHeight;
   final String? topRightTitle;
   final bool? showNumberOfExercises;
-  final bool? showTopRightTitle;
+  final bool showTopRightTitle;
   final Function()? onTapp;
 
   @override
@@ -34,24 +34,24 @@ class TrainingOfTheDayContainer extends StatelessWidget {
                     placeHolder: (p0, p1) => const GeneralShimmer(),
                     img,
                     fit: BoxFit.fill)),
-            Positioned(
-                    right: 0,
-                    top: 0,
-                    child: Container(
-                        height: 18,
-                        width: 130,
-                        decoration: BoxDecoration(
-                            color: MColors.yellowishColor,
-                            borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(25.r),
-                              topLeft: Radius.circular(35.r),
-                            )),
-                        child: Center(
-                            child: Text(topRightTitle ?? "Training of the day",
-                                style: MTextStyles.mNormalStyle(
-                                    fontSize: 12.sp,
-                                    color: MColors.balckColor)))))
-                .when(showTopRightTitle != null),
+            if (showTopRightTitle)
+              Positioned(
+                  right: 0,
+                  top: 0,
+                  child: Container(
+                      height: 18,
+                      width: 130,
+                      decoration: BoxDecoration(
+                          color: MColors.yellowishColor,
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(25.r),
+                            topLeft: Radius.circular(35.r),
+                          )),
+                      child: Center(
+                          child: Text(topRightTitle ?? "Training of the day",
+                              style: MTextStyles.mNormalStyle(
+                                  fontSize: 12.sp,
+                                  color: MColors.balckColor))))),
             Positioned(
                 bottom: 0,
                 right: 0,

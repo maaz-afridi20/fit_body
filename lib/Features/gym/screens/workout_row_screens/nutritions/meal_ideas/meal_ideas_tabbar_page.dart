@@ -21,22 +21,25 @@ class MealIdeasTabbarPage extends StatelessWidget {
                       tabs: [
                         Tab(
                             child: MCircularContainer(
-                                titleText: "BreakFast",
-                                heightOfContainer: 35,
-                                backgroundColor:
-                                    controller.getBackgroundColor(0))),
+                          titleText: "BreakFast",
+                          heightOfContainer: 35,
+                          backgroundColor: controller.getBackgroundColor(0),
+                          textcolor: controller.getTitleTextColor(0),
+                        )),
                         Tab(
                             child: MCircularContainer(
                                 titleText: "Lunch",
                                 heightOfContainer: 35,
                                 backgroundColor:
-                                    controller.getBackgroundColor(1))),
+                                    controller.getBackgroundColor(1),
+                                textcolor: controller.getTitleTextColor(1))),
                         Tab(
                             child: MCircularContainer(
                                 titleText: "Dinner",
                                 heightOfContainer: 35,
                                 backgroundColor:
-                                    controller.getBackgroundColor(2)))
+                                    controller.getBackgroundColor(2),
+                                textcolor: controller.getTitleTextColor(2)))
                       ])),
               TabBarView(controller: controller.tabController, children: const [
                 BreakfastMealIdeasA(),
