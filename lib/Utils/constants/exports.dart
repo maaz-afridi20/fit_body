@@ -124,7 +124,9 @@ export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/widget
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/widgets/video_with_exercise_detail_container.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/widgets/workoutrow_reusable_widgets/personal_detail_in_progress_screen.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/workout/widgets/workoutrow_reusable_widgets/progress_listile.dart';
-export 'package:fit_body/Features/gym/screens/workout_videos/navbar_workout_videos_screen.dart';
+export 'package:fit_body/Features/gym/screens/workoutvideos_and_articles/article_and_tips.dart';
+export 'package:fit_body/Features/gym/screens/workoutvideos_and_articles/workout_videos.dart';
+export 'package:fit_body/Features/gym/screens/workoutvideos_and_articles/workoutvideos_article_and_tips_main_page.dart';
 export 'package:fit_body/Features/personalization/screens/help/controllers/loading_website_contoller.dart';
 export 'package:fit_body/Features/personalization/screens/help/help.dart';
 export 'package:fit_body/Features/personalization/screens/help/widgets/contact_us/contact_us.dart';

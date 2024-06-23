@@ -5,11 +5,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopScope(
-      canPop: false,
-      onPopInvoked: (didPop) => MHelperFunctions.showAppExitDialogue(context),
-      child: const Scaffold(
-        bottomNavigationBar: NavBarWidget(),
+    return SafeArea(
+      child: PopScope(
+        canPop: false,
+        onPopInvoked: (didPop) => MHelperFunctions.showAppExitDialogue(context),
+        child: const Scaffold(
+          bottomNavigationBar: NavBarWidget(),
+        ),
       ),
     );
   }

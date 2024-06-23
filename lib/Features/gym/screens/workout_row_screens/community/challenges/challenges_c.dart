@@ -69,7 +69,7 @@ class ChallengesC extends StatelessWidget {
                         context,
                         VideoWithExerciseDetailsContainer(
                             videoUrl:
-                                "https://videos.pexels.com/video-files/3694913/3694913-sd_360_640_30fps.mp4",
+                                "https://videos.pexels.com/video-files/3694913/3694913-uhd_1440_2560_30fps.mp4",
                             appbarTitle: "Weekly Challenges",
                             exerciseInfo: "This is a random gym video",
                             exerciseName: data.notificationTitle))).pOnly(
