@@ -7,27 +7,35 @@ class WorkoutVideos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: GridView.builder(
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            itemCount: 6,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                mainAxisSpacing: 20.h,
-                crossAxisSpacing: 9.w,
-                crossAxisCount: 2),
-            itemBuilder: (context, index) {
-              final exercise = workoutAndArticleVideosData[index];
-              return WorkoutTimeContainer(
-                containerImage: exercise.imgUrl,
-                containerTitle: exercise.mainTitle,
-                onVideoIconTapped: () => Get.to(() =>
-                    VideoWithExerciseDetailsContainer(
-                        videoUrl: exercise.videoUrl,
-                        appbarTitle: "Resources",
-                        exerciseInfo: exercise.exerciseInfo,
-                        exerciseName: exercise.mainTitle)),
-                id: MHelperFunctions().generateUniqueStringId(),
-              );
-            }).px32());
+        body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      MHelperFunctions.mHeightBox(10),
+      Text('Quick and easy workout videos',
+          style: MTextStyles.mHeadingStyle(
+              fontWeight: FontWeight.w500, color: MColors.yellowishColor)),
+      MHelperFunctions.mHeightBox(10),
+      Text('Discover fresh workouts : Elevate yout training',
+          style: MTextStyles.mNormalStyle(fontSize: 12.sp)),
+      MHelperFunctions.mHeightBox(25),
+      GridView.builder(
+          physics: const NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          itemCount: workoutAndArticleVideosData.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              mainAxisSpacing: 15.h, crossAxisSpacing: 9.w, crossAxisCount: 2),
+          itemBuilder: (context, index) {
+            final exercise = workoutAndArticleVideosData[index];
+            return WorkoutTimeContainer(
+              containerImage: exercise.imgUrl,
+              containerTitle: exercise.mainTitle,
+              onVideoIconTapped: () => Get.to(() =>
+                  VideoWithExerciseDetailsContainer(
+                      videoUrl: exercise.videoUrl,
+                      appbarTitle: "Resources",
+                      exerciseInfo: exercise.exerciseInfo,
+                      exerciseName: exercise.mainTitle)),
+              id: MHelperFunctions().generateUniqueStringId(),
+            );
+          })
+    ]).px32());
   }
 }

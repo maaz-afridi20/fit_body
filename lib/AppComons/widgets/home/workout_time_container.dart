@@ -38,7 +38,7 @@ class WorkoutTimeContainer extends StatelessWidget {
                             fit: BoxFit.fitWidth,
                             placeHolder: (p0, p1) =>
                                 const GeneralShimmer(height: 90)))),
-                MHelperFunctions.mHeightBox(5),
+                MHelperFunctions.mHeightBox(8),
                 Text(containerTitle,
                         style: MTextStyles.mNormalStyle(
                             fontSize: 12.sp, color: MColors.yellowishColor),

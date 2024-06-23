@@ -20,9 +20,10 @@ class VideoWithExerciseDetailsContainer extends StatelessWidget {
       appBar: MAppbar(appbarTitle: appbarTitle, showActionWidget: true),
       body: Column(
         children: [
+          MHelperFunctions.mHeightBox(25),
           MPlayVerticalVideo(
               videoUrl: videoUrl, videoController: videoController),
-          26.heightBox,
+          MHelperFunctions.mHeightBox(26),
           ExerciseDetailsContainer(
             exerciseName: exerciseName,
             infoAboutExercise: exerciseInfo,
