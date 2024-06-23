@@ -156,6 +156,7 @@ export 'package:fit_body/Utils/shimmers/profile_shimmer.dart';
 export 'package:fit_body/Utils/useful_extentions/widget_extentions.dart';
 export 'package:fit_body/app.dart';
 export 'package:fit_body/data/local_data_lists/breakfase_plan_data.dart';
+export 'package:fit_body/data/local_data_lists/community_challenges_data.dart';
 export 'package:fit_body/data/local_data_lists/create_your_own_routine_data.dart';
 export 'package:fit_body/data/local_data_lists/helpers/buile_meal_plan_questions.dart';
 export 'package:fit_body/data/local_data_lists/meal_routine_questions_data.dart';
