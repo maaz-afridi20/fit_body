@@ -7,7 +7,7 @@ class ArticleAndTips extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        physics: const NeverScrollableScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         itemCount: articleAndTipePageData.length,
         itemBuilder: (context, index) {
           final data = articleAndTipePageData[index];
@@ -21,11 +21,3 @@ class ArticleAndTips extends StatelessWidget {
         }).px32();
   }
 }
-
-
-  // MHelperFunctions.navigateTo(
-  //               context,
-  //               ArticleDetails(
-  //                   heading: data.mainTitle,
-  //                   timeOnPublished: "Published on september 15",
-  //                   imgUrl: data.imageString));
