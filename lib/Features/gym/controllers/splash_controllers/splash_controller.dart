@@ -19,7 +19,7 @@ class SplashController extends GetxController {
     SharedPreferences pref = await SharedPreferences.getInstance();
     final bool isFirstTime = await checkFirstTime();
     if (isFirstTime) {
-      Get.offAll(() => const HomeScreen());
+      Get.offAll(() => const LoginScreen());
     } else {
       pref.setBool('firstTime', true);
       Get.offAll(() => const OnBoardingScreen());

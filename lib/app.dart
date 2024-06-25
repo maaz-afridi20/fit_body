@@ -7,16 +7,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(MediaQuery.of(context).size.width,
-          MediaQuery.of(context).size.height),
-      builder: (_, child) => GetMaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Choopan Gym',
-        themeMode: ThemeMode.system,
-        theme: MAppTheme.lightTheme,
-        darkTheme: MAppTheme.darkTheme,
-        home: const SplashScreen(),
-      ),
-    );
+        designSize: Size(MediaQuery.of(context).size.width,
+            MediaQuery.of(context).size.height),
+        builder: (_, child) => GetMaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Choopan Gym',
+            themeMode: ThemeMode.system,
+            theme: MAppTheme.lightTheme,
+            darkTheme: MAppTheme.darkTheme,
+            home: const Center(child: CircularProgressIndicator())));
   }
 }

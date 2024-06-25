@@ -54,6 +54,7 @@ dependencies:
   http: ^1.2.1
   local_auth: ^2.2.0
   uuid: ^4.4.0
+  flutter_native_splash: ^2.4.0
 
 
 dev_dependencies:
@@ -119,3 +120,29 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+
+
+
+
+#! flutter native splash.....
+#!
+flutter_native_splash:
+  color: "#232323"
+  color_dark: "#232323"
+  image: assets/logos/applogo.png
+  branding: assets/logos/fitbody.png
+  branding_mode: center
+  android_gravity: center
+  ios_content_mode: center
+
+  android_12:
+    color: "#232323"
+    color_dark: "#232323"
+    image: assets/logos/applogo.png
+    branding: assets/logos/fitbody.png 
+    branding_mode: center
+    android_gravity: center
+    ios_content_mode: center
+  
+  web: false

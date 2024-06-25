@@ -17,11 +17,8 @@ class HomeNavBar extends StatelessWidget {
                     Get.to(() => const NotificationScreen()),
                 bottom: PreferredSize(
                     preferredSize: const Size.fromHeight(kToolbarHeight),
-                    child: Align(
-                        alignment: Alignment.bottomLeft,
-                        child: Text(MTextString.chellengeyourlimit,
-                                style: MTextStyles.mNormalStyle())
-                            .pOnly(left: 50.w)))),
+                    child: Text(MTextString.chellengeyourlimit,
+                        style: MTextStyles.mNormalStyle()))),
             body: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,

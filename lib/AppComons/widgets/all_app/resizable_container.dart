@@ -16,6 +16,7 @@ class ResizableContainer extends StatelessWidget {
           padding: applyWidgetPadding ?? EdgeInsets.zero,
           child: Column(
             mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: widgets,
           ),
         ));
