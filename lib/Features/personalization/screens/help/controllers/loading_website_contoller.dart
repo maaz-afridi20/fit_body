@@ -16,7 +16,7 @@ class LoadingWebsiteContoller extends GetxController {
     try {
       switch (title) {
         case "Customer Service":
-          MHelperFunctions.launchUlr('https://www.investopedia.com/');
+          MHelperFunctions.navigateTo(context, const CustomerService());
           break;
 
         case "Website":

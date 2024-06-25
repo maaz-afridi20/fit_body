@@ -1,10 +1,6 @@
 import 'package:fit_body/Utils/constants/exports.dart';
 
 class HelpChipController extends GetxController {
-  // final RxString selectedChip = ''.obs;
-  // void selectChip(String chipTitle) {
-  //   selectedChip.value = chipTitle;
-  // }
   static HelpChipController get instance => Get.find();
   final selectedChips = <String>{}.obs;
 

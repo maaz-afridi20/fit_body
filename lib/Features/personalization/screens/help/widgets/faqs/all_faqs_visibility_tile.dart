@@ -5,36 +5,25 @@ class AllVisibilityFaqsTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      physics: BouncingScrollPhysics(),
-      child: Column(
+    return const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           MDivider(),
           MExpandableListile(
-              title: "What services do you offer?",
-              expandedText: """ We offer a wide range of services including 
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-      molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-      numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiu """),
+              title: "What is this app/company about?",
+              expandedText:
+                  """Our app/company provides [specific services/products],helping you to [solve a problem/achieve a goal]. We focus on delivering the best [product/service] to improve your [specific aspect of life/business] """),
           MDivider(),
           MExpandableListile(
-              title: "How can I contact customer support?",
-              expandedText: """We offer a wide range of services including 
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-      molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-      numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-       """),
+              title: "How do I create an account?",
+              expandedText:
+                  """To create an account, click on the "Sign Up" button on the home screen,fill in your details such as name, email, and password,and then follow the on-screen instructions to complete the registration process"""),
           MDivider(),
           MExpandableListile(
-              title: "What are your business hours?",
-              expandedText: """We offer a wide range of services including 
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-      molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-      numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-      """),
-          MDivider(),
-        ],
-      ),
-    );
+              title: "What should I do if I forget my password",
+              expandedText:
+                  """If you forget your password,click on the "Forgot Password" link on the login page.Enter your registered email address, and we will send you instructions to reset your password"""),
+          MDivider()
+        ]).wrapWithSingleChildScrollView();
   }
 }

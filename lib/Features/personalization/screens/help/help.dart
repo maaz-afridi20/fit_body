@@ -11,8 +11,8 @@ class HelpScreen extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
           child: Column(
             mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              50.heightBox,
               Text('How Can We Help You?',
                   style:
                       MTextStyles.mHeadingStyle(fontWeight: FontWeight.w500)),

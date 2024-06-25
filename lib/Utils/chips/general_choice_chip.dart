@@ -11,7 +11,6 @@ class GeneralChoiceChip extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(HelpChipController());
     return Obx(() {
-      // final isSelected = controller.selectedChip.value == chipTitle;
       final isSelected = controller.selectedChips.contains(chipTitle);
       return MCircularContainer(
         onPress: () {

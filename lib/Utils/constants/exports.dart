@@ -138,9 +138,11 @@ export 'package:fit_body/Features/personalization/screens/help/widgets/visibilit
 export 'package:fit_body/Features/personalization/screens/profile/edit_profile.dart';
 export 'package:fit_body/Features/personalization/screens/profile/main_profile_screen.dart';
 export 'package:fit_body/Features/personalization/screens/profile/setup_profile.dart';
+export 'package:fit_body/Features/personalization/screens/settings/customer_service.dart';
 export 'package:fit_body/Features/personalization/screens/settings/notifications_settings.dart';
 export 'package:fit_body/Features/personalization/screens/settings/password_settings.dart';
 export 'package:fit_body/Features/personalization/screens/settings/settings_screen.dart';
+export 'package:fit_body/Features/personalization/screens/settings/talking_assistant.dart';
 export 'package:fit_body/Features/personalization/widgets/edit_notification_listile.dart';
 export 'package:fit_body/Features/personalization/widgets/edit_profile_form.dart';
 export 'package:fit_body/Features/personalization/widgets/profile_info_form.dart';
