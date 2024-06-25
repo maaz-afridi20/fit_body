@@ -17,19 +17,16 @@ class VideoWithExerciseDetailsContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     final videoController = Get.put(MVideoPlayerController(videoUrl));
     return Scaffold(
-      appBar: MAppbar(appbarTitle: appbarTitle, showActionWidget: true),
-      body: Column(
-        children: [
+        appBar: MAppbar(appbarTitle: appbarTitle, showActionWidget: true),
+        body: Column(children: [
           MHelperFunctions.mHeightBox(25),
           MPlayVerticalVideo(
               videoUrl: videoUrl, videoController: videoController),
           MHelperFunctions.mHeightBox(26),
           ExerciseDetailsContainer(
-            exerciseName: exerciseName,
-            infoAboutExercise: exerciseInfo,
-          ).px(35.w),
-        ],
-      ),
-    );
+                  exerciseName: exerciseName, infoAboutExercise: exerciseInfo)
+              .px(35.w),
+          MHelperFunctions.mHeightBox(20)
+        ]).wrapWithSingleChildScrollView());
   }
 }

@@ -7,31 +7,26 @@ class HomeNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            appBar: AppBar(
-                automaticallyImplyLeading: false,
-                backgroundColor: Colors.transparent),
+            appBar: MAppbar(
+                showLeadingWidget: false,
+                appbarTitle: "Hi, Madison",
+                showActionWidget: true,
+                onSearchIconTapped: () =>
+                    Get.to(() => const HomeScreenAllSearch()),
+                onNotificationIconTapped: () =>
+                    Get.to(() => const NotificationScreen()),
+                bottom: PreferredSize(
+                    preferredSize: const Size.fromHeight(kToolbarHeight),
+                    child: Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Text(MTextString.chellengeyourlimit,
+                                style: MTextStyles.mNormalStyle())
+                            .pOnly(left: 50.w)))),
             body: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  SizedBox(
-                      height: 50,
-                      child: MAppbar(
-                          showLeadingWidget: false,
-                          appbarTitle: "Hi, Madison",
-                          showActionWidget: true,
-                          onSearchIconTapped: () =>
-                              Get.to(() => const HomeScreenAllSearch()),
-                          onNotificationIconTapped: () =>
-                              Get.to(() => const NotificationScreen()),
-                          bottom: PreferredSize(
-                              preferredSize:
-                                  const Size.fromHeight(kToolbarHeight),
-                              child: Align(
-                                  alignment: Alignment.bottomLeft,
-                                  child: Text(MTextString.chellengeyourlimit,
-                                          style: MTextStyles.mNormalStyle())
-                                      .pOnly(left: 50.w))))),
+                  MHelperFunctions.mHeightBox(8),
                   //
                   //! workout row..
                   const WorkOutRow(),

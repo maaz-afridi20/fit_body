@@ -51,11 +51,12 @@ class MainProfileScreen extends StatelessWidget {
       ]),
       //
       //! showing user weight, height container.
-      Container(
-          height: 60,
-          width: double.infinity,
-          decoration: BoxDecoration(
-              color: Colors.amber, borderRadius: BorderRadius.circular(20)))
     ]).wrapWithSingleChildScrollView()));
   }
 }
+
+  // Container(
+  //         height: 60,
+  //         width: double.infinity,
+  //         decoration: BoxDecoration(
+  //             color: Colors.amber, borderRadius: BorderRadius.circular(20)))

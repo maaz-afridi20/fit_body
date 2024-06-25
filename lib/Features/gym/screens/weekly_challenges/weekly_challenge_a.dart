@@ -1,9 +1,10 @@
 import 'dart:math';
 
+import 'package:fit_body/Features/gym/screens/weekly_challenges/weekly_challenges_b.dart';
 import 'package:fit_body/Utils/constants/exports.dart';
 
-class ChallegesB extends StatelessWidget {
-  const ChallegesB({super.key});
+class WeeklyChallengeA extends StatelessWidget {
+  const WeeklyChallengeA({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class ChallegesB extends StatelessWidget {
         body: Stack(children: [
       Positioned.fill(
           child: getImageWidget(
-              'https://fitwithursula.com/wp-content/uploads/2023/06/people-doing-indoor-cycling.jpg',
+              'https://images.pexels.com/photos/13106590/pexels-photo-13106590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
               fit: BoxFit.fitHeight,
               placeHolder: (p0, p1) => GeneralShimmer(
                   height: MHelperFunctions.screenHeight(),
@@ -40,7 +41,7 @@ class ChallegesB extends StatelessWidget {
               width: 39.w,
               child: getImageWidget(MImageStrings.workout)),
           MHelperFunctions.mWidthBox(9),
-          Text('Cycling Challenges',
+          Text('Weekly Challenge',
               style: MTextStyles.mHeadingStyle(fontSize: 20))
         ]),
         Text(MTextString.loremIpsum, textAlign: TextAlign.center)
@@ -48,12 +49,12 @@ class ChallegesB extends StatelessWidget {
             .py(20.h)
       ]).centered(),
       Positioned(
-          bottom: 250,
-          left: 99,
+          bottom: 250.h,
+          left: 99.w,
           child: GlassyEffectElevatedBtn(
               btnText: "Start Now",
-              onPress: () =>
-                  MHelperFunctions.navigateTo(context, const ChallengesC())))
+              onPress: () => MHelperFunctions.navigateTo(
+                  context, const WeeklyChallengeB())))
     ]));
   }
 }

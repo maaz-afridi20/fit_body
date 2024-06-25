@@ -18,6 +18,7 @@ class WorkoutVideosArticleAndTipsMainPage extends StatelessWidget {
                     Tab(
                         child: MCircularContainer(
                             titleText: "Workout Videos",
+                            textFontsize: 17.sp,
                             contentPadding:
                                 const EdgeInsets.symmetric(horizontal: 8),
                             backgroundColor: controller.getBackgroundColor(0),
@@ -26,6 +27,7 @@ class WorkoutVideosArticleAndTipsMainPage extends StatelessWidget {
                     Tab(
                         child: MCircularContainer(
                             titleText: "Articles And Tips",
+                            textFontsize: 17.sp,
                             contentPadding:
                                 const EdgeInsets.symmetric(horizontal: 8),
                             backgroundColor: controller.getBackgroundColor(1),

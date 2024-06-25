@@ -36,6 +36,6 @@ class WorkoutVideos extends StatelessWidget {
               id: MHelperFunctions().generateUniqueStringId(),
             );
           })
-    ]).px32());
+    ]).px32().wrapWithSingleChildScrollView());
   }
 }

@@ -83,6 +83,7 @@ export 'package:fit_body/Features/gym/screens/setup/widgets/lines_in_container.d
 export 'package:fit_body/Features/gym/screens/setup/widgets/number_selector.dart';
 export 'package:fit_body/Features/gym/screens/setup/widgets/select_goal_radio_btn.dart';
 export 'package:fit_body/Features/gym/screens/splash/splash.dart';
+export 'package:fit_body/Features/gym/screens/weekly_challenges/weekly_challenge_a.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/community/challenges/challenges_a.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/community/challenges/challenges_b.dart';
 export 'package:fit_body/Features/gym/screens/workout_row_screens/community/challenges/challenges_c.dart';
@@ -162,6 +163,7 @@ export 'package:fit_body/data/local_data_lists/community_challenges_data.dart';
 export 'package:fit_body/data/local_data_lists/create_your_own_routine_data.dart';
 export 'package:fit_body/data/local_data_lists/helpers/buile_meal_plan_questions.dart';
 export 'package:fit_body/data/local_data_lists/meal_routine_questions_data.dart';
+export 'package:fit_body/data/local_data_lists/weekly_challeges_data.dart';
 export 'package:fit_body/data/models/breakfast_plan_model.dart';
 export 'package:fl_chart/fl_chart.dart';
 export 'package:flutter/material.dart';
