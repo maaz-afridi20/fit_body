@@ -6,14 +6,13 @@ class FingerPrintSignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: MColors.balckColor,
         appBar: const MAppbar(
             centerTitle: true,
             appbarTitle: "Set Your Fingerprint",
             showActionWidget: false,
             titleColor: MColors.yellowishColor),
         body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(MTextString.loremIpsum,
+          Text(MTextString.addFingerprint,
                   style: MTextStyles.mNormalStyle(),
                   textAlign: TextAlign.center)
               .px(35.w),

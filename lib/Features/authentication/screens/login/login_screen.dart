@@ -14,6 +14,7 @@ class LoginScreen extends StatelessWidget {
                 centerTitle: true,
                 leadingWidget: Text(''),
                 showActionWidget: false,
+                showLeadingWidget: false,
                 appbarTitle: "Login",
                 titleColor: MColors.yellowishColor),
             body: Animate(

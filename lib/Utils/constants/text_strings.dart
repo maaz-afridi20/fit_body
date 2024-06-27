@@ -45,4 +45,6 @@ class MTextString {
       "Regular physical activity is essential for maintaining good health. It helps improve cardiovascular fitness, strengthens muscles, boosts mental health, and increases overall energy levels";
   static String recipieDetails =
       "Sed earum sequi est magnam doloremque aut porro dolores sit molestiae fuga. Et rerum inventore ut perspiciatis dolorum sed internos porro aut labore dolorem At quia reiciendis in consequuntur possimus.";
+  static String addFingerprint =
+      "Adding a fingerprint to your device enhances security and convenience.Fingerprints are unique to each individual, making it difficult for unauthorized users to access your device.Quickly unlock your device without the need to remember passwords or PINs";
 }
