@@ -5,6 +5,7 @@ class FingerPrintSignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LocalAuthRepo());
     return Scaffold(
         appBar: const MAppbar(
             centerTitle: true,
@@ -29,7 +30,8 @@ class FingerPrintSignupScreen extends StatelessWidget {
               btnText: "Skip",
               onPress: () => MHelperFunctions.navigateBack(context)),
           MHelperFunctions.mHeightBox(16),
-          const GlassyEffectElevatedBtn(btnText: "Continue")
+          GlassyEffectElevatedBtn(
+              btnText: "Continue", onPress: () => controller.authenticateUser())
         ]));
   }
 }

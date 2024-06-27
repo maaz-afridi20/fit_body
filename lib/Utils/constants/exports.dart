@@ -167,11 +167,15 @@ export 'package:fit_body/data/local_data_lists/helpers/buile_meal_plan_questions
 export 'package:fit_body/data/local_data_lists/meal_routine_questions_data.dart';
 export 'package:fit_body/data/local_data_lists/weekly_challeges_data.dart';
 export 'package:fit_body/data/models/breakfast_plan_model.dart';
+export 'package:fit_body/data/repositories/authentication_repository/authentication_repo.dart';
+export 'package:fit_body/data/repositories/authentication_repository/local_auth_repo.dart';
 export 'package:fl_chart/fl_chart.dart';
 export 'package:flutter/material.dart';
+export 'package:flutter_native_splash/flutter_native_splash.dart';
 export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:get/get.dart';
 export 'package:iconsax_flutter/iconsax_flutter.dart';
+export 'package:local_auth/local_auth.dart';
 export 'package:shared_preferences/shared_preferences.dart';
 export 'package:shimmer/shimmer.dart';
 export 'package:smooth_page_indicator/smooth_page_indicator.dart';

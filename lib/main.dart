@@ -1,5 +1,3 @@
-import 'package:flutter_native_splash/flutter_native_splash.dart';
-
 import '../../../../Utils/constants/exports.dart';
 
 void main() async {
@@ -10,6 +8,6 @@ void main() async {
 }
 
 Future<void> initializeApp() async {
-  Get.put(SplashController());
+  Get.put(AuthenticationRepo());
   FlutterNativeSplash.remove();
 }
